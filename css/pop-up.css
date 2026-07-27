@@ -1,0 +1,539 @@
+/* Pop-up ana alan */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    z-index: 999;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+.popup-box {
+    position: relative;
+
+    width: min(1200px, 96%);
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 35px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(32, 20, 12, 0.98),
+            rgba(8, 6, 5, 0.98)
+        );
+
+    border: 2px solid rgba(245, 210, 122, 0.55);
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 35px rgba(0, 0, 0, 0.9),
+        0 0 35px rgba(245, 210, 122, 0.18);
+}
+
+.popup-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    color: #f5d27a;
+    background: rgba(120, 0, 0, 0.8);
+
+    border: 1px solid rgba(245, 210, 122, 0.5);
+    border-radius: 50%;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.popup-close:hover {
+    background: #a40000;
+}
+
+.popup-box h2 {
+    padding-right: 45px;
+
+    color: #f5d27a;
+    font-size: 36px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 20px rgba(245, 210, 122, 0.35);
+}
+
+.popup-content {
+    margin-top: 22px;
+
+    color: #e5d2ad;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.popup-content ul {
+    margin-top: 18px;
+    padding-left: 25px;
+}
+
+.popup-content li {
+    margin-bottom: 8px;
+}
+
+/* Pop-up içindeki ortak kutular */
+.rep-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.important-box,
+.craft-box,
+.medal-box,
+.calc-box,
+.total-box,
+.calculator-box,
+.npc-box,
+.quest-box {
+    padding: 22px;
+
+    background: rgba(255, 238, 196, 0.06);
+    border: 1px solid rgba(245, 210, 122, 0.28);
+    border-radius: 10px;
+}
+
+.important-box h3,
+.craft-box h3,
+.medal-box h3,
+.calc-box h3,
+.total-box h3,
+.calculator-box h3,
+.npc-box h3,
+.quest-box h3 {
+    margin-bottom: 16px;
+
+    color: #f5d27a;
+    font-size: 26px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 16px rgba(245, 210, 122, 0.25);
+}
+
+.important-box ul {
+    padding-left: 22px;
+}
+
+.important-box li {
+    margin-bottom: 10px;
+
+    color: #ead7b3;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.important-box strong {
+    color: #ffd66b;
+}
+
+/* Üretim / dönüşüm tablo yapısı */
+.craft-table {
+    overflow: hidden;
+
+    border: 1px solid rgba(245, 210, 122, 0.32);
+    border-radius: 8px;
+}
+
+.craft-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+
+    border-bottom: 1px solid rgba(245, 210, 122, 0.2);
+}
+
+.craft-row:last-child {
+    border-bottom: none;
+}
+
+.craft-head {
+    color: #ffd66b;
+    background: rgba(120, 0, 0, 0.45);
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.craft-row > div {
+    padding: 14px;
+}
+
+.craft-rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ff3b3b;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.craft-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.craft-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #ead7b3;
+    font-size: 18px;
+}
+
+.craft-item img {
+    width: 54px;
+    height: 54px;
+
+    object-fit: cover;
+
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(245, 210, 122, 0.35);
+    border-radius: 6px;
+}
+
+.craft-3col {
+    grid-template-columns: 160px 1fr 120px;
+}
+
+.craft-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffd66b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Madalyon kartları */
+.medal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+}
+
+.medal-card {
+    padding: 16px;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 10px;
+}
+
+.medal-card img {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+}
+
+.medal-card h4 {
+    color: #ffd66b;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.medal-card p {
+    color: #ead7b3;
+    font-size: 16px;
+}
+
+/* Hesap ve genel toplam tabloları */
+.calc-table-wrap {
+    overflow-x: auto;
+}
+
+.calc-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calc-table th,
+.calc-table td {
+    padding: 12px;
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+
+    text-align: center;
+
+    color: #ead7b3;
+    font-size: 17px;
+}
+
+.calc-table th {
+    background: rgba(120, 0, 0, 0.45);
+
+    color: #ffd66b;
+    font-size: 18px;
+}
+
+.total-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.total-card {
+    padding: 18px;
+
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 10px;
+}
+
+.total-card h4 {
+    margin-bottom: 12px;
+
+    color: #ffd66b;
+    font-size: 20px;
+}
+
+.total-card p {
+    margin-bottom: 8px;
+
+    color: #ead7b3;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.highlight-total {
+    border-color: rgba(245, 210, 122, 0.45);
+    box-shadow: 0 0 20px rgba(245, 210, 122, 0.08);
+}
+
+/* Hesaplayıcı */
+.calculator-info {
+    margin-bottom: 18px;
+
+    color: #ead7b3;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.calculator-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 14px;
+    align-items: end;
+}
+
+.calculator-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    color: #ffd66b;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.calculator-form input {
+    height: 44px;
+    padding: 0 12px;
+
+    color: #f5d27a;
+    background: rgba(0, 0, 0, 0.55);
+
+    border: 1px solid rgba(245, 210, 122, 0.35);
+    border-radius: 6px;
+
+    font-size: 18px;
+    outline: none;
+}
+
+.calculator-form input:focus {
+    border-color: #f5d27a;
+    box-shadow: 0 0 12px rgba(245, 210, 122, 0.18);
+}
+
+.calculator-form button {
+    height: 44px;
+    padding: 0 24px;
+
+    color: #250b05;
+    background:
+        linear-gradient(
+            to bottom,
+            #ffe18a,
+            #d79a28
+        );
+
+    border: 1px solid #ffe9a8;
+    border-radius: 6px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.calculator-form button:hover {
+    filter: brightness(1.12);
+}
+
+.calculator-result {
+    margin-top: 18px;
+    padding: 16px;
+
+    color: #ead7b3;
+    background: rgba(0, 0, 0, 0.28);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 8px;
+
+    font-size: 18px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.result-card {
+    padding: 14px;
+
+    text-align: center;
+
+    background: rgba(120, 0, 0, 0.28);
+    border: 1px solid rgba(245, 210, 122, 0.22);
+    border-radius: 8px;
+}
+
+.result-card span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #d6c4a3;
+    font-size: 15px;
+}
+
+.result-card strong {
+    display: block;
+
+    color: #ffd66b;
+    font-size: 26px;
+}
+
+/* NPC / karakter kartları */
+.npc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.npc-card {
+    padding: 16px;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 10px;
+}
+
+.npc-card img {
+    width: 100%;
+    max-height: 180px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+
+    border: 1px solid rgba(245, 210, 122, 0.24);
+    border-radius: 8px;
+}
+
+.npc-card h4 {
+    color: #ffd66b;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.npc-card p {
+    color: #ead7b3;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+/* Görev aşamaları */
+.quest-info {
+    margin-bottom: 20px;
+
+    color: #ead7b3;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.quest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.quest-step {
+    padding: 18px;
+
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(245, 210, 122, 0.2);
+    border-radius: 10px;
+}
+
+.quest-step h4 {
+    margin-bottom: 10px;
+
+    color: #ffd66b;
+    font-size: 22px;
+}
+
+.quest-step p {
+    color: #ead7b3;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.quest-step strong {
+    color: #ff7777;
+}
+
+.quest-items {
+    margin-top: 14px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}

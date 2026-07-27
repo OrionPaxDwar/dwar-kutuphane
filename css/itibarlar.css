@@ -1,0 +1,237 @@
+/* İtibarlar sayfası */
+.reputation-page {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reputation-header {
+    width: min(900px, 95%);
+    margin-bottom: 30px;
+    padding: 30px 25px;
+
+    text-align: center;
+
+    background: rgba(5, 5, 5, 0.72);
+    border: 1px solid rgba(245, 210, 122, 0.3);
+    border-radius: 14px;
+
+    backdrop-filter: blur(8px);
+}
+
+.reputation-header h1 {
+    color: #f5d27a;
+    font-size: 52px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 10px #000,
+        0 0 25px rgba(245, 210, 122, 0.35);
+}
+
+.reputation-header p {
+    margin-top: 15px;
+
+    color: #d6c4a3;
+    font-size: 20px;
+    line-height: 1.5;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 18px #000;
+}
+
+.reputation-card-list {
+    width: min(1250px, 96%);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.reputation-card {
+    position: relative;
+
+    min-height: 230px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 0;
+
+    color: #f5d27a;
+    background: rgba(5, 5, 5, 0.75);
+
+    border: 1px solid rgba(245, 210, 122, 0.35);
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 22px rgba(0, 0, 0, 0.75),
+        inset 0 0 20px rgba(245, 210, 122, 0.05);
+
+    transition: 0.3s;
+}
+
+.reputation-card img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.7;
+
+    transition: 0.3s;
+}
+
+.reputation-card-list {
+    width: min(1250px, 96%);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+
+    margin: 0 auto;
+}
+
+.reputation-card {
+    position: relative;
+
+    aspect-ratio: 3 / 4;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 0;
+
+    background: rgba(10, 8, 6, 0.85);
+
+    border: 1px solid rgba(245, 210, 122, 0.45);
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.75),
+        0 0 12px rgba(245, 210, 122, 0.10);
+
+    transition: 0.25s;
+}
+
+.reputation-card img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    opacity: 1;
+    filter: none;
+
+    transition: 0.25s;
+}
+
+.reputation-card span {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 10px;
+
+    color: #f5d27a;
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 1px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0)
+        );
+
+    text-shadow:
+        0 0 7px #000,
+        0 0 14px #000;
+}
+
+.reputation-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(255, 220, 130, 0.9);
+
+    box-shadow:
+        0 0 24px rgba(0, 0, 0, 0.9),
+        0 0 22px rgba(245, 210, 122, 0.20);
+}
+
+.reputation-card:hover img {
+    transform: scale(1.03);
+}
+
+.reputation-card span {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 18px 12px;
+
+    color: #f5d27a;
+
+    font-size: 21px;
+    font-weight: bold;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 1px;
+    text-align: center;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 18px #000;
+}
+
+.reputation-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(245, 210, 122, 0.78);
+
+    box-shadow:
+        0 0 35px rgba(0, 0, 0, 0.95),
+        0 0 25px rgba(245, 210, 122, 0.16);
+}
+
+.reputation-card:hover img {
+    opacity: 0.95;
+    transform: scale(1.06);
+}
+
+.rep-btn:hover {
+    color: #fff1a8;
+    filter: brightness(1.18);
+    transform: translateY(-1px);
+}
