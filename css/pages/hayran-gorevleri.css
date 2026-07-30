@@ -1,0 +1,393 @@
+.fan-quests-page {
+    gap: 28px;
+}
+
+.fan-quests-hero {
+    width: min(1250px, 96%);
+
+    padding: 34px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(55, 28, 10, 0.94),
+            rgba(8, 6, 4, 0.94)
+        );
+
+    border: 1px solid rgba(255, 225, 138, 0.52);
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.85),
+        0 0 28px rgba(245, 210, 122, 0.14);
+}
+
+.fan-quests-hero span {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 7px 14px;
+
+    color: #2a0d04;
+    background: linear-gradient(to bottom, #ffe18a, #d79a28);
+
+    border: 1px solid rgba(255, 236, 170, 0.85);
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fan-quests-hero h1 {
+    margin-bottom: 12px;
+
+    color: #ffe18a;
+
+    font-size: 58px;
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 10px #000,
+        0 0 24px rgba(245, 210, 122, 0.25);
+}
+
+.fan-quests-hero p {
+    max-width: 850px;
+    margin: 0 auto;
+
+    color: #ead7b3;
+
+    font-size: 19px;
+    line-height: 1.55;
+}
+
+.fan-filter-panel {
+    width: min(1250px, 96%);
+
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 180px 220px auto;
+    gap: 16px;
+    align-items: end;
+
+    background: rgba(8, 6, 4, 0.82);
+
+    border: 1px solid rgba(245, 210, 122, 0.28);
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 22px rgba(0, 0, 0, 0.72);
+}
+
+.fan-filter-panel label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: #f5d27a;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fan-filter-panel input,
+.fan-filter-panel select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    color: #ffe18a;
+    background: rgba(0, 0, 0, 0.48);
+
+    border: 1px solid rgba(245, 210, 122, 0.35);
+    border-radius: 9px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+.fan-filter-panel input:focus,
+.fan-filter-panel select:focus {
+    border-color: rgba(255, 225, 138, 0.9);
+
+    box-shadow:
+        0 0 12px rgba(245, 210, 122, 0.18);
+}
+
+.fan-level-summary {
+    width: min(1250px, 96%);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.fan-level-summary div {
+    padding: 18px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(37, 23, 12, 0.88),
+            rgba(8, 6, 4, 0.88)
+        );
+
+    border: 1px solid rgba(245, 210, 122, 0.26);
+    border-radius: 16px;
+}
+
+.fan-level-summary strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #ffe18a;
+
+    font-size: 26px;
+}
+
+.fan-level-summary span {
+    color: #ead7b3;
+
+    font-size: 15px;
+}
+
+.fan-quest-list {
+    width: min(1250px, 96%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fan-quest-item {
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(30, 18, 9, 0.88),
+            rgba(7, 6, 5, 0.88)
+        );
+
+    border: 1px solid rgba(245, 210, 122, 0.26);
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 22px rgba(0, 0, 0, 0.72);
+}
+
+.fan-quest-head {
+    width: 100%;
+
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    color: inherit;
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.fan-quest-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fan-level-badge {
+    min-width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2a0d04;
+    background: linear-gradient(to bottom, #ffe18a, #d79a28);
+
+    border: 1px solid rgba(255, 236, 170, 0.85);
+    border-radius: 50%;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 14px rgba(0, 0, 0, 0.72);
+}
+
+.fan-quest-main h2 {
+    margin-bottom: 6px;
+
+    color: #f5d27a;
+
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.fan-quest-main p {
+    color: #ead7b3;
+
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.fan-quest-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    white-space: nowrap;
+}
+
+.fan-quest-meta span {
+    padding: 7px 12px;
+
+    color: #f5d27a;
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(245, 210, 122, 0.22);
+    border-radius: 999px;
+
+    font-size: 14px;
+}
+
+.fan-quest-meta strong {
+    color: #ffe18a;
+
+    font-size: 15px;
+}
+
+.fan-quest-body {
+    display: none;
+
+    padding: 0 20px 22px;
+}
+
+.fan-quest-item.active .fan-quest-body {
+    display: block;
+}
+
+.fan-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    margin-bottom: 16px;
+}
+
+.fan-detail-box {
+    padding: 18px;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 14px;
+}
+
+.fan-detail-box h3 {
+    margin-bottom: 14px;
+
+    color: #f5d27a;
+
+    font-size: 24px;
+}
+
+.fan-detail-box p {
+    margin-bottom: 8px;
+
+    color: #ead7b3;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.fan-detail-box strong {
+    color: #ffe18a;
+}
+
+.fan-resource-list,
+.fan-creature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.fan-resource-item,
+.fan-creature-item {
+    padding: 12px;
+
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: rgba(8, 6, 4, 0.62);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 12px;
+}
+
+.fan-resource-item img,
+.fan-creature-item img {
+    width: 64px;
+    height: 64px;
+
+    object-fit: contain;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    border-radius: 10px;
+}
+
+.fan-resource-item strong,
+.fan-creature-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #f5d27a;
+
+    font-size: 16px;
+}
+
+.fan-resource-item span,
+.fan-creature-item span {
+    color: #ead7b3;
+
+    font-size: 14px;
+}
+
+.fan-note-list {
+    padding-left: 20px;
+
+    color: #ead7b3;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.fan-note-list li {
+    margin-bottom: 7px;
+}
+
+.empty-text,
+.fan-empty-result {
+    color: #c9b28a;
+
+    font-size: 17px;
+    line-height: 1.45;
+}

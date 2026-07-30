@@ -243,3 +243,43 @@
         margin: 0 auto;
     }
 }
+@media (max-width: 950px) {
+    .fan-quest-link {
+        grid-template-columns: 190px 1fr;
+    }
+
+    .fan-quest-action {
+        grid-column: 1 / -1;
+
+        width: fit-content;
+        margin-left: auto;
+    }
+
+    .fan-quest-content h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 650px) {
+    .fan-quest-link {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .fan-quest-image {
+        height: 240px;
+    }
+
+    .fan-quest-content h2 {
+        font-size: 30px;
+    }
+
+    .fan-quest-content p {
+        font-size: 16px;
+    }
+
+    .fan-quest-action {
+        width: 100%;
+        text-align: center;
+    }
+}

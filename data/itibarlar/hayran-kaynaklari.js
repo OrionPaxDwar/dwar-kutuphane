@@ -1,267 +1,162 @@
-window.reputationData = window.reputationData || {};
+const fanQuests = [
+    {
+        id: "kotuluk-hayrani",
+        reputation: "Kötülük Yapanlar",
+        questName: "Kötülük Yapanlar Hayran Görevi",
+        level: 5,
+        type: "kaynak",
+        typeLabel: "Kaynak Teslimi",
+        npc: "Sonradan eklenecek",
+        location: "Sonradan eklenecek",
+        shortInfo: "Kötülük itibarı için Hayran aşamasında istenen kaynak ve görevler.",
+        requirements: [
+            {
+                name: "Öfkeli Göz",
+                amount: "500",
+                image: "../../assents/images/kaynaklar/ofkeli-goz.png"
+            }
+        ],
+        creatures: [],
+        notes: [
+            "Bu görevde istenen kaynaklar netleştikçe buraya eklenecek.",
+            "Madalyon isimleri itibar özelinde sonradan düzenlenebilir."
+        ]
+    },
 
-window.reputationData["İyilik Yapanlar"] = `
-        <div class="rep-detail">
+    {
+        id: "iyilik-hayrani",
+        reputation: "İyilik Yapanlar",
+        questName: "İyilik Yapanlar Hayran Görevi",
+        level: 5,
+        type: "kaynak",
+        typeLabel: "Kaynak Teslimi",
+        npc: "Sonradan eklenecek",
+        location: "Sonradan eklenecek",
+        shortInfo: "İyilik itibarı için Emanasyon ağırlıklı Hayran görevi.",
+        requirements: [
+            {
+                name: "Emanasyon",
+                amount: "15000",
+                image: "../../assents/images/kaynaklar/emanasyon.jpg"
+            }
+        ],
+        creatures: [],
+        notes: [
+            "Emanasyon miktarı ve görev adımları sonradan kesinleştirilecek."
+        ]
+    },
 
-            <div class="important-box">
-                <h3>Önemli Notlar</h3>
+    {
+        id: "flaundin-hayrani",
+        reputation: "Flaundinler",
+        questName: "Flaundinler Hayran Görevi",
+        level: 6,
+        type: "karisik",
+        typeLabel: "Karışık Görev",
+        npc: "Akvarius",
+        location: "Flaungard Sarayı / Sualtı bağlantılı bölgeler",
+        shortInfo: "Flaundinler Hayran aşaması için su altı kaynakları ve görev zinciri.",
+        requirements: [
+            {
+                name: "Deniz Midyesi",
+                amount: "2000",
+                image: "../../assents/images/kaynaklar/deniz-midyesi.jpg"
+            },
+            {
+                name: "Golleyd İncileri",
+                amount: "Sonradan eklenecek",
+                image: "../../assents/images/kaynaklar/golleyd-incileri.jpg"
+            }
+        ],
+        creatures: [],
+        notes: [
+            "Flaundin görevlerinde su altı bölgesi ve günlük görevler önemli olabilir.",
+            "Görev zinciri netleşince adım adım yazılacak."
+        ]
+    },
 
-                <ul>
-                    <li>Bu itibara başlamak için karakterin <strong>5. seviyeye</strong> ulaşması gerekir.</li>
-                    <li>Karakterde <strong>Kötülük Yapanlar itibarı olmamalıdır.</strong></li>
-                    <li>Başlangıç şartı olarak <strong>Şifacı meslek tecrübesi 2</strong> veya <strong>Hırsızlık tecrübe puanı 30</strong> gerekir.</li>
-                    <li>İyilik Kardeşliği tarafında ilgili karakter <strong>Neark Derbog</strong> olarak geçer.</li>
-                    <li>Kötülük kaynakları yok edilerek <strong>İyilik Emanasyonu</strong> elde edilir.</li>
-                    <li>İyilik Emanasyonu, <strong>Hayırduası Tomarı</strong> imalatında kullanılır.</li>
-                    <li>Her Hayırduası Tomarı kullanımı <strong>+10 İyilik itibarı</strong> kazandırır.</li>
-                    <li>Hayran aşaması için ayrıca <strong>15000 İyilik Emanasyonu</strong> görevi vardır.</li>
-                </ul>
-            </div>
+    {
+        id: "yaratik-avcilari-hayrani",
+        reputation: "Yaratık Avcıları",
+        questName: "Yaratık Avcıları Hayran Görevi",
+        level: 7,
+        type: "yaratik",
+        typeLabel: "Yaratık Kesme",
+        npc: "Paladin Shimon",
+        location: "Sonradan eklenecek",
+        shortInfo: "Yaratık Avcıları Hayran aşamasında yaratık kesme ve ganimet teslimi olabilir.",
+        requirements: [
+            {
+                name: "Yaratık Ganimeti",
+                amount: "Sonradan eklenecek",
+                image: "../../assents/images/kaynaklar/yaratik-ganimeti.jpg"
+            }
+        ],
+        creatures: [
+            {
+                name: "Yaratık adı sonradan eklenecek",
+                amount: "Kesilecek adet sonradan eklenecek",
+                image: "../../assents/images/creatures/deli-kopek.jpg"
+            }
+        ],
+        notes: [
+            "Yaratık isimleri, kesilecek adetler ve düşen ganimetler kaynak geldikçe doldurulacak."
+        ]
+    },
 
-            <div class="craft-box">
-                <h3>Dönüştürme İşlemi</h3>
+    {
+        id: "eski-nesne-hayrani",
+        reputation: "Eski Nesne Arayıcıları",
+        questName: "Eski Nesne Arayıcıları Hayran Görevi",
+        level: 7,
+        type: "kaynak",
+        typeLabel: "Kaynak Teslimi",
+        npc: "Antikacı Manley / Setoni",
+        location: "Sonradan eklenecek",
+        shortInfo: "Eski nesne teslimleri ve özel kaynaklar üzerinden ilerleyen Hayran görevi.",
+        requirements: [
+            {
+                name: "Eski Nesne",
+                amount: "Sonradan eklenecek",
+                image: "../../assents/images/kaynaklar/eski-nesne.jpg"
+            },
+            {
+                name: "Bodur Kutusu",
+                amount: "Sonradan eklenecek",
+                image: "../../assents/images/kaynaklar/bodur-kutusu.jpg"
+            }
+        ],
+        creatures: [],
+        notes: [
+            "Görev kaynakları ve değerleri netleştikçe burası düzenlenecek."
+        ]
+    },
 
-                <div class="craft-table">
-                    <div class="craft-row craft-3col craft-head">
-                        <div>Kaynak</div>
-                        <div>Miktar</div>
-                        <div>Emanasyon</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">Göz</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/Öfkeli Göz.png" alt="Öfkeli Göz">
-                                <span>1 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">30</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">Göz</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/Öfkeli Göz.png" alt="Öfkeli Göz">
-                                <span>10 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">310</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">Kafatası</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/Ölü Savaşçının Kafatası.jpg" alt="Ölü Savaşçının Kafatası">
-                                <span>1 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">2</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">Kafatası</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/Ölü Savaşçının Kafatası.jpg" alt="Ölü Savaşçının Kafatası">
-                                <span>10 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">21</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">Kafatası</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/Ölü Savaşçının Kafatası.jpg" alt="Ölü Savaşçının Kafatası">
-                                <span>50 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">107</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="craft-box">
-                <h3>Tomar İmalatı</h3>
-
-                <div class="craft-table">
-                    <div class="craft-row craft-3col craft-head">
-                        <div>İtibar Aralığı</div>
-                        <div>Gereken Emanasyon</div>
-                        <div>Kazanç</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">0 - 1000</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/İyilik Emanasyonu.png" alt="İyilik Emanasyonu">
-                                <span>70 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">+10 İtibar</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">1000 - 2000</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/İyilik Emanasyonu.png" alt="İyilik Emanasyonu">
-                                <span>100 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">+10 İtibar</div>
-                    </div>
-
-                    <div class="craft-row craft-3col">
-                        <div class="craft-rank">2000 - 3000</div>
-                        <div class="craft-items">
-                            <div class="craft-item">
-                                <img src="../assents/images/İyilik Emanasyonu.png" alt="İyilik Emanasyonu">
-                                <span>130 adet</span>
-                            </div>
-                        </div>
-                        <div class="craft-score">+10 İtibar</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="calc-box">
-                <h3>İtibar Aralıklarına Göre Toplam Emanasyon</h3>
-
-                <div class="calc-table-wrap">
-                    <table class="calc-table">
-                        <thead>
-                            <tr>
-                                <th>İtibar Aralığı</th>
-                                <th>Tomar Sayısı</th>
-                                <th>Tomar Başına</th>
-                                <th>Toplam Emanasyon</th>
-                                <th>Kazanılan Madalyon</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>0 - 500</td>
-                                <td>50</td>
-                                <td>70</td>
-                                <td>3500</td>
-                                <td>Kabullenme Madalyonu</td>
-                            </tr>
-
-                            <tr>
-                                <td>500 - 1000</td>
-                                <td>50</td>
-                                <td>70</td>
-                                <td>3500</td>
-                                <td>Dostluk Madalyonu</td>
-                            </tr>
-
-                            <tr>
-                                <td>1000 - 2000</td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>10000</td>
-                                <td>Hürmet Madalyonu</td>
-                            </tr>
-
-                            <tr>
-                                <td>2000 - 3000</td>
-                                <td>100</td>
-                                <td>130</td>
-                                <td>13000</td>
-                                <td>Saygı Madalyonu</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="calculator-box">
-                <h3>İyilik İtibarı Hesaplayıcı</h3>
-
-                <p class="calculator-info">
-                    Mevcut itibarınızı ve hedef itibarınızı yazın.
-                    Sistem gereken toplam İyilik Emanasyonu ve tomar sayısını hesaplar.
-                </p>
-
-                <div class="calculator-form">
-                    <label>
-                        Mevcut İtibar
-                        <input type="number" id="currentGoodHonor" value="0" min="0" max="3000">
-                    </label>
-
-                    <label>
-                        Hedef İtibar
-                        <input type="number" id="targetGoodHonor" value="3000" min="0" max="3000">
-                    </label>
-
-                    <button type="button" id="calculateGoodHonorBtn">
-                        Hesapla
-                    </button>
-                </div>
-
-                <div class="calculator-result" id="goodCalculatorResult">
-                    Hesaplama sonucu burada görünecek.
-                </div>
-            </div>
-
-            <div class="calculator-box">
-                <h3>Emanasyon Dönüşüm Hesaplayıcı</h3>
-
-                <p class="calculator-info">
-                    Elinizdeki Öfkeli Göz ve Kafatası sayısını yazın.
-                    Sistem kaç İyilik Emanasyonu elde edeceğinizi hesaplar.
-                </p>
-
-                <div class="calculator-form">
-                    <label>
-                        Öfkeli Göz
-                        <input type="number" id="goodEyeAmount" value="0" min="0">
-                    </label>
-
-                    <label>
-                        Kafatası
-                        <input type="number" id="goodSkullAmount" value="0" min="0">
-                    </label>
-
-                    <button type="button" id="calculateEmanationBtn">
-                        Dönüştür
-                    </button>
-                </div>
-
-                <div class="calculator-result" id="emanationCalculatorResult">
-                    Dönüşüm sonucu burada görünecek.
-                </div>
-            </div>
-
-            <div class="total-box">
-                <h3>Genel Toplam</h3>
-
-                <div class="total-grid">
-                    <div class="total-card">
-                        <h4>0 → 3000 İtibar</h4>
-                        <p><strong>Toplam Tomar:</strong> 300</p>
-                        <p><strong>Toplam İyilik Emanasyonu:</strong> 30000</p>
-                    </div>
-
-                    <div class="total-card">
-                        <h4>Hayran Görevi</h4>
-                        <p><strong>Görev:</strong> 15000 İyilik Emanasyonu getiriniz</p>
-                        <p><strong>Madalyon:</strong> Hayran Madalyonu</p>
-                    </div>
-
-                    <div class="total-card highlight-total">
-                        <h4>3000 İtibar + Hayran Görevi</h4>
-                        <p><strong>Toplam İyilik Emanasyonu:</strong> 45000</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-`;
+    {
+        id: "kaos-hayrani",
+        reputation: "Kaos İle Savaşanlar",
+        questName: "Kaos İle Savaşanlar Hayran Görevi",
+        level: 6,
+        type: "karisik",
+        typeLabel: "Karışık Görev",
+        npc: "Kaptan Beckly / Nöbetçi Rutendam",
+        location: "Fey-Go bağlantılı bölgeler",
+        shortInfo: "Kaos yaratıkları, görevler ve özel kaynaklarla ilerleyen Hayran görevi.",
+        requirements: [
+            {
+                name: "Kaos Parçası",
+                amount: "Sonradan eklenecek",
+                image: "../../assents/images/kaynaklar/kaos-parcasi.jpg"
+            },
+            {
+                name: "Gungl",
+                amount: "Sonradan eklenecek",
+                image: "../../assents/images/kaynaklar/gungl.jpg"
+            }
+        ],
+        creatures: [],
+        notes: [
+            "Kaos Hayranı görev zinciri uzun olacağı için adım adım doldurulacak."
+        ]
+    }
+];
