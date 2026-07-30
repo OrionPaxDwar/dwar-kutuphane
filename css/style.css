@@ -186,8 +186,10 @@ body {
     height: 100%;
 
     object-fit: cover;
+    object-position: center top;
 
-    opacity: 0.72;
+    opacity: 1;
+    filter: none;
 
     transition: 0.3s;
 }
@@ -200,12 +202,11 @@ body {
     background:
         linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.92) 0%,
-            rgba(0, 0, 0, 0.55) 45%,
-            rgba(0, 0, 0, 0.12) 100%
+            rgba(0, 0, 0, 0.62) 0%,
+            rgba(0, 0, 0, 0.22) 34%,
+            rgba(0, 0, 0, 0) 68%
         );
 }
-
 .home-card-content {
     position: relative;
     z-index: 2;
@@ -239,13 +240,10 @@ body {
         0 0 14px #000;
 }
 
-.home-menu-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(245, 210, 122, 0.75);
-
-    box-shadow:
-        0 0 35px rgba(0, 0, 0, 0.95),
-        0 0 28px rgba(245, 210, 122, 0.18);
+.home-menu-card:hover img {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.04);
 }
 
 .home-menu-card:hover img {

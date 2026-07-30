@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dwar Kütüphane - Mağazalar</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/magazalar.css">
+    <link rel="stylesheet" href="../css/mobil.css">
+</head>
+
+<body>
+
+    <a href="../index.html" class="back-home-btn">
+        Ana Sayfaya Dön
+    </a>
+
+    <main class="shops-page">
+
+        <section class="shops-header">
+            <h1>Mağazalar</h1>
+
+            <p>
+                Sezonluk mağazalar, maraton mağazaları, etkinlik mağazaları ve özel satıcılar.
+            </p>
+        </section>
+
+        <section class="shop-breadcrumb">
+            <button id="backToShopHome" class="shop-back-btn hidden">
+                ← Mağaza Kategorilerine Dön
+            </button>
+        </section>
+
+        <section class="shop-grid" id="shopGrid"></section>
+
+    </main>
+
+    <div class="shop-popup" id="shopPopup">
+        <div class="shop-popup-box">
+
+            <button class="shop-popup-close" id="shopPopupClose">
+                ×
+            </button>
+
+            <h2 id="shopPopupTitle">Mağaza Detayı</h2>
+
+            <div class="shop-popup-content" id="shopPopupContent"></div>
+
+        </div>
+    </div>
+
+<script src="../js/magazalar-data/agustos-magazasi.js?v=2"></script>
+<script src="../js/magazalar.js?v=2"></script>
+<script src="../js/main.js?v=2"></script>
+</body>
+</html>

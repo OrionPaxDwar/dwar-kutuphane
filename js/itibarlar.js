@@ -26,21 +26,27 @@ repButtons.forEach(function (button) {
         repPopup.classList.add("active");
 
         if (typeof setupHonorCalculator === "function") {
-            setupHonorCalculator();
-        }
-
-        if (typeof setupGoodHonorCalculator === "function") {
-            setupGoodHonorCalculator();
-        }
-
-        if (typeof setupEmanationCalculator === "function") {
-            setupEmanationCalculator();
-        }
-        if (typeof setupOldRelicCalculator === "function") {
-    setupOldRelicCalculator();
+    setupHonorCalculator();
 }
+
+if (typeof setupGoodHonorCalculator === "function") {
+    setupGoodHonorCalculator();
+}
+
+if (typeof setupEmanationCalculator === "function") {
+    setupEmanationCalculator();
+}
+
 if (typeof setupOldRelicCalculator === "function") {
     setupOldRelicCalculator();
+}
+
+if (typeof setupCreatureHunterCalculator === "function") {
+    setupCreatureHunterCalculator();
+}
+
+if (typeof setupFlaundinCalculator === "function") {
+    setupFlaundinCalculator();
 }
     });
 });
