@@ -7,9 +7,19 @@
 
     <title>Dwar Kütüphane - Mağazalar</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/magazalar.css">
-    <link rel="stylesheet" href="../css/mobil.css">
+    <!-- TEMEL CSS -->
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/layout.css">
+    <link rel="stylesheet" href="../css/base/buttons.css">
+
+    <!-- BİLEŞEN CSS -->
+    <link rel="stylesheet" href="../css/components/cards.css">
+
+    <!-- SAYFA CSS -->
+    <link rel="stylesheet" href="../css/pages/magazalar.css">
+
+    <!-- MOBİL CSS -->
+    <link rel="stylesheet" href="../css/base/responsive.css">
 </head>
 
 <body>
@@ -18,9 +28,9 @@
         Ana Sayfaya Dön
     </a>
 
-    <main class="shops-page">
+    <main class="page-shell shops-page">
 
-        <section class="shops-header">
+        <section class="page-header shops-header">
             <h1>Mağazalar</h1>
 
             <p>
@@ -28,32 +38,68 @@
             </p>
         </section>
 
-        <section class="shop-breadcrumb">
-            <button id="backToShopHome" class="shop-back-btn hidden">
-                ← Mağaza Kategorilerine Dön
-            </button>
-        </section>
+        <section class="card-grid shop-category-grid">
 
-        <section class="shop-grid" id="shopGrid"></section>
+            <a href="magazalar/sezonluk-magazalar.html" class="shop-card">
+                <img src="../assents/images/magazalar/sezonluk-magazalar.jpg" alt="Sezonluk Mağazalar">
+
+                <div class="shop-card-content">
+                    <span class="shop-tag">12 Ay</span>
+
+                    <h2>Sezonluk Mağazalar</h2>
+
+                    <p>
+                        Ocak ayından Aralık ayına kadar dönemsel mağazalar.
+                    </p>
+                </div>
+            </a>
+
+            <a href="magazalar/maraton-magazalari.html" class="shop-card">
+                <img src="../assents/images/magazalar/maraton-magazalari.jpg" alt="Maraton Mağazaları">
+
+                <div class="shop-card-content">
+                    <span class="shop-tag">4 Mevsim</span>
+
+                    <h2>Maraton Mağazaları</h2>
+
+                    <p>
+                        İlkbahar, yaz, sonbahar ve kış maraton mağazaları.
+                    </p>
+                </div>
+            </a>
+
+            <a href="magazalar/etkinlik-magazalari.html" class="shop-card">
+                <img src="../assents/images/magazalar/etkinlik-magazalari.jpg" alt="Etkinlik Mağazaları">
+
+                <div class="shop-card-content">
+                    <span class="shop-tag">Etkinlik</span>
+
+                    <h2>Etkinlik Mağazaları</h2>
+
+                    <p>
+                        Belirli etkinliklere bağlı açılan özel mağazalar.
+                    </p>
+                </div>
+            </a>
+
+            <a href="magazalar/ozel-magazalar.html" class="shop-card">
+                <img src="../assents/images/magazalar/ozel-magazalar.jpg" alt="Özel Mağazalar">
+
+                <div class="shop-card-content">
+                    <span class="shop-tag">Özel</span>
+
+                    <h2>Özel Mağazalar</h2>
+
+                    <p>
+                        Görev, bölge veya özel şartlarla erişilen satıcılar.
+                    </p>
+                </div>
+            </a>
+
+        </section>
 
     </main>
 
-    <div class="shop-popup" id="shopPopup">
-        <div class="shop-popup-box">
-
-            <button class="shop-popup-close" id="shopPopupClose">
-                ×
-            </button>
-
-            <h2 id="shopPopupTitle">Mağaza Detayı</h2>
-
-            <div class="shop-popup-content" id="shopPopupContent"></div>
-
-        </div>
-    </div>
-
-<script src="../js/magazalar-data/agustos-magazasi.js?v=2"></script>
-<script src="../js/magazalar.js?v=2"></script>
-<script src="../js/main.js?v=2"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

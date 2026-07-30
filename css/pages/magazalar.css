@@ -1,0 +1,37 @@
+.shops-page {
+    padding-top: 95px;
+}
+
+.shop-category-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.shop-card-content {
+    min-height: 142px;
+}
+
+.shop-tag {
+    display: inline-block;
+
+    margin-bottom: 9px;
+    padding: 5px 11px;
+
+    color: #2a0d04;
+    background: linear-gradient(to bottom, #ffe18a, #d79a28);
+
+    border: 1px solid rgba(255, 236, 170, 0.85);
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.55);
+}
+.month-shop-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.month-shop-grid .shop-card-content {
+    min-height: 128px;
+}

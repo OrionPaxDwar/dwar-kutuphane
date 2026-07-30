@@ -1,0 +1,55 @@
+.home-page {
+    min-height: 100vh;
+    padding: 70px 20px 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    min-height: auto;
+    padding-top: 40px;
+    margin-bottom: 45px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    gap: 18px;
+}
+
+.hero-title h1 {
+    color: #f5d27a;
+
+    font-size: 72px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 10px #000,
+        0 0 25px #000,
+        0 0 35px rgba(245, 210, 122, 0.4);
+}
+
+.hero-title p {
+    color: #d6c4a3;
+
+    font-size: 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 18px #000;
+}
+
+.home-card-menu {
+    width: min(1250px, 96%);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}

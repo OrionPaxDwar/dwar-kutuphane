@@ -1,0 +1,245 @@
+@media (max-width: 1100px) {
+    .card-grid,
+    .home-card-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-header h1,
+    .hero-title h1 {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page-shell,
+    .home-page {
+        padding: 58px 14px 50px;
+    }
+
+    .page-header h1,
+    .hero-title h1 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+
+    .page-header p,
+    .hero-title p {
+        font-size: 17px;
+    }
+
+    .card-grid,
+    .home-card-menu {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .home-menu-card,
+    .menu-card,
+    .reputation-card,
+    .shop-card,
+    .event-card {
+        max-width: 340px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .home-card-content h2,
+    .card-content h2,
+    .reputation-card-content h2,
+    .shop-card-content h2,
+    .event-card-content h2 {
+        font-size: 24px;
+    }
+
+    .home-card-content p,
+    .card-content p,
+    .reputation-card-content p,
+    .shop-card-content p,
+    .event-card-content p {
+        font-size: 15px;
+    }
+
+    .back-home-btn,
+    .back-page-btn {
+        top: 12px;
+        right: 12px;
+
+        padding: 9px 13px;
+
+        font-size: 14px;
+    }
+}
+@media (max-width: 1100px) {
+    .month-shop-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .month-shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .back-section-btn {
+        top: 62px;
+        left: 12px;
+
+        padding: 9px 13px;
+
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    .month-shop-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1100px) {
+    .shop-detail-hero {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .reward-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .shop-detail-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-detail-cover {
+        min-height: 380px;
+    }
+
+    .shop-detail-intro h1 {
+        font-size: 42px;
+    }
+
+    .shop-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reward-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .reward-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-detail-cover {
+        min-height: 320px;
+    }
+
+    .shop-detail-intro {
+        padding: 22px;
+    }
+
+    .shop-detail-intro h1 {
+        font-size: 34px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+}
+@media (max-width: 1200px) {
+    .reputation-card-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .reputation-card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .reputation-card-list {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1100px) {
+    .reputation-detail-hero {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .medal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .result-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .reputation-detail-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .reputation-detail-cover {
+        min-height: 380px;
+    }
+
+    .reputation-detail-intro h1 {
+        font-size: 42px;
+    }
+
+    .detail-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-form {
+        grid-template-columns: 1fr;
+    }
+
+    .medal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .reputation-detail-cover {
+        min-height: 320px;
+    }
+
+    .reputation-detail-intro {
+        padding: 22px;
+    }
+
+    .reputation-detail-intro h1 {
+        font-size: 34px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .medal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .resource-image-wrap {
+        margin: 0 auto;
+    }
+}

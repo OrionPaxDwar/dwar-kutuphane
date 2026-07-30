@@ -1,0 +1,48 @@
+.dwar-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dwar-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: rgba(8, 6, 4, 0.72);
+
+    border: 1px solid rgba(245, 210, 122, 0.22);
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.dwar-table th,
+.dwar-table td {
+    padding: 14px 16px;
+
+    text-align: center;
+
+    border-bottom: 1px solid rgba(245, 210, 122, 0.14);
+}
+
+.dwar-table th {
+    color: #2a0d04;
+    background: linear-gradient(to bottom, #ffe18a, #d79a28);
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dwar-table td {
+    color: #ead7b3;
+
+    font-size: 17px;
+}
+
+.dwar-table tr:last-child td {
+    border-bottom: none;
+}
+
+.dwar-table td strong {
+    color: #ffe18a;
+}

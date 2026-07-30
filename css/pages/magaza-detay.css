@@ -1,0 +1,281 @@
+.shop-detail-page {
+    gap: 28px;
+}
+
+.shop-detail-hero {
+    width: min(1250px, 96%);
+
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+.shop-detail-cover {
+    overflow: hidden;
+
+    min-height: 480px;
+
+    background: rgba(10, 8, 6, 0.85);
+
+    border: 1px solid rgba(245, 210, 122, 0.42);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 24px rgba(0, 0, 0, 0.85),
+        0 0 18px rgba(245, 210, 122, 0.10);
+}
+
+.shop-detail-cover img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+}
+
+.shop-detail-intro {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(37, 23, 12, 0.92),
+            rgba(9, 7, 5, 0.92)
+        );
+
+    border: 1px solid rgba(245, 210, 122, 0.32);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 24px rgba(0, 0, 0, 0.78);
+}
+
+.shop-detail-tag {
+    width: fit-content;
+
+    margin-bottom: 14px;
+    padding: 6px 12px;
+
+    color: #2a0d04;
+    background: linear-gradient(to bottom, #ffe18a, #d79a28);
+
+    border: 1px solid rgba(255, 236, 170, 0.85);
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.shop-detail-intro h1 {
+    margin-bottom: 8px;
+
+    color: #f5d27a;
+
+    font-size: 56px;
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px #000,
+        0 0 22px rgba(245, 210, 122, 0.25);
+}
+
+.shop-detail-intro h2 {
+    margin-bottom: 18px;
+
+    color: #ffcf6d;
+
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.shop-detail-intro p {
+    color: #ead7b3;
+
+    font-size: 19px;
+    line-height: 1.55;
+
+    text-shadow:
+        0 0 8px #000;
+}
+
+.shop-detail-intro strong {
+    color: #ffe18a;
+}
+
+.shop-meta-grid {
+    margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.shop-meta-grid div {
+    padding: 15px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(245, 210, 122, 0.20);
+    border-radius: 12px;
+}
+
+.shop-meta-grid span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #bfa46e;
+    font-size: 14px;
+}
+
+.shop-meta-grid strong {
+    color: #f5d27a;
+    font-size: 17px;
+}
+
+.shop-rewards-section {
+    width: min(1250px, 96%);
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(30, 18, 9, 0.86),
+            rgba(7, 6, 5, 0.86)
+        );
+
+    border: 1px solid rgba(245, 210, 122, 0.26);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 24px rgba(0, 0, 0, 0.72);
+}
+
+.section-title {
+    margin-bottom: 22px;
+
+    text-align: center;
+}
+
+.section-title h2 {
+    margin-bottom: 8px;
+
+    color: #f5d27a;
+
+    font-size: 42px;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px #000;
+}
+
+.section-title p {
+    color: #ead7b3;
+
+    font-size: 18px;
+}
+
+.section-title strong {
+    color: #ffe18a;
+}
+
+.reward-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.reward-card {
+    overflow: hidden;
+
+    background: rgba(8, 6, 4, 0.78);
+
+    border: 1px solid rgba(245, 210, 122, 0.28);
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 16px rgba(0, 0, 0, 0.58);
+
+    transition: 0.25s;
+}
+
+.reward-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(245, 210, 122, 0.62);
+
+    box-shadow:
+        0 0 22px rgba(0, 0, 0, 0.85),
+        0 0 18px rgba(245, 210, 122, 0.14);
+}
+
+.reward-image-wrap {
+    height: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(245, 210, 122, 0.10),
+            rgba(0, 0, 0, 0.38)
+        );
+}
+
+.reward-image-wrap img {
+    max-width: 88px;
+    max-height: 88px;
+
+    object-fit: contain;
+}
+
+.reward-info {
+    padding: 13px;
+
+    text-align: center;
+}
+
+.reward-info h3 {
+    min-height: 42px;
+
+    margin-bottom: 10px;
+
+    color: #f5d27a;
+
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+.reward-cost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 10px;
+
+    background: rgba(0, 0, 0, 0.38);
+
+    border: 1px solid rgba(245, 210, 122, 0.14);
+    border-radius: 9px;
+}
+
+.reward-cost span {
+    color: #bfa46e;
+
+    font-size: 13px;
+}
+
+.reward-cost strong {
+    color: #ffe18a;
+
+    font-size: 18px;
+}

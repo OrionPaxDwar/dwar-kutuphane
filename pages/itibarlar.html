@@ -7,283 +7,377 @@
 
     <title>İtibarlar - Dwar Kütüphane</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/itibarlar.css">
-<link rel="stylesheet" href="../css/pop-up.css">
+    <!-- TEMEL CSS -->
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/layout.css">
+    <link rel="stylesheet" href="../css/base/buttons.css">
 
-<link rel="stylesheet" href="../css/itibarlar/kötülük-yapanlar.css">
-<link rel="stylesheet" href="../css/itibarlar/iyilik-yapanlar.css">
-<link rel="stylesheet" href="../css/itibarlar/kaos-ile-savaşanlar.css">
-<link rel="stylesheet" href="../css/itibarlar/eski-nesne-arayicilari.css">
-<link rel="stylesheet" href="../css/itibarlar/yaratik-avcilari.css">
-<link rel="stylesheet" href="../css/itibarlar/flaundinler.css">
+    <!-- BİLEŞEN CSS -->
+    <link rel="stylesheet" href="../css/components/cards.css">
 
-<link rel="stylesheet" href="../css/mobil.css">
+    <!-- SAYFA CSS -->
+    <link rel="stylesheet" href="../css/pages/itibarlar.css">
+
+    <!-- MOBİL CSS -->
+    <link rel="stylesheet" href="../css/base/responsive.css">
 </head>
 
-<a href="../index.html" class="back-home-btn">
-    Ana Sayfaya Dön
-</a>
+<body>
 
-    <main class="reputation-page">
+    <a href="../index.html" class="back-home-btn">
+        Ana Sayfaya Dön
+    </a>
 
-        <section class="reputation-header">
+    <main class="page-shell reputation-page">
+
+        <section class="page-header reputation-header">
             <h1>İTİBARLAR</h1>
 
             <p>
-                Dragons War dünyasındaki itibar gruplarını burada toplayacağız.
-                Bir itibara tıklayınca detay penceresi açılacak.
+                Dragons War dünyasındaki itibar grupları, kaynaklar, madalyonlar,
+                görevler ve hesaplayıcılar.
             </p>
         </section>
 
-       <section class="reputation-card-list">
-
-    <button class="rep-btn reputation-card" data-title="Kötülük Yapanlar">
-        <img src="../assents/images/itibar-kartlari/kotuluk-yapanlar.jpg" alt="Kötülük Yapanlar">
-
-        <span>Kötülük Yapanlar</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="İyilik Yapanlar">
-        <img src="../assents/images/itibar-kartlari/iyilik-yapanlar.jpg" alt="İyilik Yapanlar">
-
-        <span>İyilik Yapanlar</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Kaos İle Savaşanlar">
-        <img src="../assents/images/itibar-kartlari/kaos-ile-savasanlar.jpg" alt="Kaos İle Savaşanlar">
-
-        <span>Kaos İle Savaşanlar</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Konlegret Kartları">
-        <img src="../assents/images/itibar-kartlari/konlegret-kartlari.jpg" alt="Konlegret Kartları">
-
-        <span>Konlegret Kartları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Eski Nesne Arayıcıları">
-        <img src="../assents/images/itibar-kartlari/eski-nesne-arayicilari.jpg" alt="Eski Nesne Arayıcıları">
-
-        <span>Eski Nesne Arayıcıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Onur Oranı/Reyting Puanı">
-        <img src="../assents/images/itibar-kartlari/onur-orani.jpg" alt="Onur Oranı">
-
-        <span>Onur Oranı/Reyting Puanı</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Yaratık Avcıları">
-        <img src="../assents/images/itibar-kartlari/yaratik-avcilari.jpg" alt="Yaratık Avcıları">
-
-        <span>Yaratık Avcıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Yeraltı Şövalyeleri">
-        <img src="../assents/images/itibar-kartlari/yeralti-sovalyeleri.jpg" alt="Yeraltı Şövalyeleri">
-
-        <span>Yeraltı Şövalyeleri</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Djaggernaut">
-        <img src="../assents/images/itibar-kartlari/djaggernaut.jpg" alt="Djaggernaut">
-
-        <span>Djaggernaut</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Muazzam Dövüşler">
-        <img src="../assents/images/itibar-kartlari/muazzam-dovusler.jpg" alt="Muazzam Dövüşler">
-
-        <span>Muazzam Dövüşler</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Flaundinler">
-        <img src="../assents/images/itibar-kartlari/flaundinler.jpg" alt="Flaundinler">
-
-        <span>Flaundinler</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Eldivler">
-        <img src="../assents/images/itibar-kartlari/eldivler.jpg" alt="Eldivler">
-
-        <span>Eldivler</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Krofdorlar">
-        <img src="../assents/images/itibar-kartlari/krofdorlar.jpg" alt="Krofdorlar">
-
-        <span>Krofdorlar</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Tanrıça Aladeya">
-        <img src="../assents/images/itibar-kartlari/tanrica-aladeya.jpg" alt="Tanrıça Aladeya">
-
-        <span>Tanrıça Aladeya</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Ölülerin ve Lanetlilerin Tanrısı">
-        <img src="../assents/images/itibar-kartlari/olulerin-tanrisi.jpg" alt="Ölülerin ve Lanetlilerin Tanrısı">
-
-        <span>Ölülerin ve Lanetlilerin Tanrısı</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Ulu Ejderler">
-        <img src="../assents/images/itibar-kartlari/ulu-ejderler.jpg" alt="Ulu Ejderler">
-
-        <span>Ulu Ejderler</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Gölge Avcıları">
-        <img src="../assents/images/itibar-kartlari/golge-avcilari.jpg" alt="Gölge Avcıları">
-
-        <span>Gölge Avcıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Evcil Hayvan Koruyucuları">
-        <img src="../assents/images/itibar-kartlari/evcil-hayvan-koruyuculari.jpg" alt="Evcil Hayvan Koruyucuları">
-
-        <span>Evcil Hayvan Koruyucuları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Ganimet Avcıları">
-        <img src="../assents/images/itibar-kartlari/ganimet-avcilari.jpg" alt="Ganimet Avcıları">
-
-        <span>Ganimet Avcıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Şehir Onurları">
-        <img src="../assents/images/itibar-kartlari/sehir-onurlari.jpg" alt="Şehir Onurları">
-
-        <span>Şehir Onurları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Paralı Birlikler">
-        <img src="../assents/images/itibar-kartlari/parali-birlikler.jpg" alt="Paralı Birlikler">
-
-        <span>Paralı Birlikler</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Hava Tanrısı Sunağı">
-        <img src="../assents/images/itibar-kartlari/hava-tanrisi-sunagi.jpg" alt="Hava Tanrısı Sunağı">
-
-        <span>Hava Tanrısı Sunağı</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Su Tanrısı Sunağı">
-        <img src="../assents/images/itibar-kartlari/su-tanrisi-sunagi.jpg" alt="Su Tanrısı Sunağı">
-
-        <span>Su Tanrısı Sunağı</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Kıta Savunucuları">
-        <img src="../assents/images/itibar-kartlari/kita-savunuculari.jpg" alt="Kıta Savunucuları">
-
-        <span>Kıta Savunucuları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Hazine Avcıları">
-        <img src="../assents/images/itibar-kartlari/hazine-avcilari.jpg" alt="Hazine Avcıları">
-
-        <span>Hazine Avcıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Mistik İtibarı">
-        <img src="../assents/images/itibar-kartlari/mistik-itibari.jpg" alt="Mistik İtibarı">
-
-        <span>Mistik İtibarı</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Şans Avcıları">
-        <img src="../assents/images/itibar-kartlari/sans-avcilari.jpg" alt="Şans Avcıları">
-
-        <span>Şans Avcıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Büyü Koruyucuları">
-        <img src="../assents/images/itibar-kartlari/buyu-koruyuculari.jpg" alt="Büyü Koruyucuları">
-
-        <span>Büyü Koruyucuları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Astral Avcıları">
-        <img src="../assents/images/itibar-kartlari/astral-avcilari.jpg" alt="Astral Avcıları">
-
-        <span>Astral Avcıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Koruyucular">
-        <img src="../assents/images/itibar-kartlari/koruyucular.jpg" alt="Koruyucular">
-
-        <span>Koruyucular</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Mezar Baskıncıları">
-        <img src="../assents/images/itibar-kartlari/mezar-baskincilari.jpg" alt="Mezar Baskıncıları">
-
-        <span>Mezar Baskıncıları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Kaderin Hükümdarları">
-        <img src="../assents/images/itibar-kartlari/kaderin-hukumdarlari.jpg" alt="Kaderin Hükümdarları">
-
-        <span>Kaderin Hükümdarları</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Miuri Tao">
-        <img src="../assents/images/itibar-kartlari/miuri-tao.jpg" alt="Miuri Tao">
-
-        <span>Miuri Tao</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Zurhass">
-        <img src="../assents/images/itibar-kartlari/zurhass.jpg" alt="Zurhass">
-
-        <span>Zurhass</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Triad Madencileri">
-        <img src="../assents/images/itibar-kartlari/triad-madencileri.jpg" alt="Triad Madencileri">
-
-        <span>Triad Madencileri</span>
-    </button>
-
-    <button class="rep-btn reputation-card" data-title="Shiass İle Savaşanlar">
-        <img src="../assents/images/itibar-kartlari/shiass-ile-savasanlar.jpg" alt="Shiass İle Savaşanlar">
-
-        <span>Shiass İle Savaşanlar</span>
-    </button>
-
-</section>
+        <section class="card-grid reputation-card-list">
+
+            <a href="itibarlar/kotuluk-yapanlar.html" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/kotuluk-yapanlar.jpg" alt="Kötülük Yapanlar">
+
+                <div class="reputation-card-content">
+                    <h2>Kötülük Yapanlar</h2>
+                    <p>Öfkeli Göz, kafatası, şan hesabı ve hayran görevi.</p>
+                </div>
+            </a>
+
+            <a href="itibarlar/iyilik-yapanlar.html" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/iyilik-yapanlar.jpg" alt="İyilik Yapanlar">
+
+                <div class="reputation-card-content">
+                    <h2>İyilik Yapanlar</h2>
+                    <p>Emanasyon, iyilik itibarı, madalyon aşamaları ve görevler.</p>
+                </div>
+            </a>
+
+            <a href="itibarlar/kaos-ile-savasanlar.html" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/kaos-ile-savasanlar.jpg" alt="Kaos İle Savaşanlar">
+
+                <div class="reputation-card-content">
+                    <h2>Kaos İle Savaşanlar</h2>
+                    <p>Kaos yaratıkları, görevler, kaynaklar ve hayran yolu.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/konlegret-kartlari.jpg" alt="Konlegret Kartları">
+
+                <div class="reputation-card-content">
+                    <h2>Konlegret Kartları</h2>
+                    <p>Kart setleri, koleksiyon ve bağlantılı içerikler.</p>
+                </div>
+            </a>
+
+            <a href="itibarlar/eski-nesne-arayicilari.html" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/eski-nesne-arayicilari.jpg" alt="Eski Nesne Arayıcıları">
+
+                <div class="reputation-card-content">
+                    <h2>Eski Nesne Arayıcıları</h2>
+                    <p>Eski nesneler, kaynak değerleri, görevler ve hesaplayıcı.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/onur-orani.jpg" alt="Onur Oranı">
+
+                <div class="reputation-card-content">
+                    <h2>Onur Oranı / Reyting Puanı</h2>
+                    <p>Onur sistemi, reyting puanı ve gelişim notları.</p>
+                </div>
+            </a>
+
+            <a href="itibarlar/yaratik-avcilari.html" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/yaratik-avcilari.jpg" alt="Yaratık Avcıları">
+
+                <div class="reputation-card-content">
+                    <h2>Yaratık Avcıları</h2>
+                    <p>Yaratık ganimetleri, görev kaynakları ve avcı hesabı.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/yeralti-sovalyeleri.jpg" alt="Yeraltı Şövalyeleri">
+
+                <div class="reputation-card-content">
+                    <h2>Yeraltı Şövalyeleri</h2>
+                    <p>Yeraltı savaşları, görevler ve özel kaynaklar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/djaggernaut.jpg" alt="Djaggernaut">
+
+                <div class="reputation-card-content">
+                    <h2>Djaggernaut</h2>
+                    <p>Djaggernaut itibarı, savaşlar ve görev notları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/muazzam-dovusler.jpg" alt="Muazzam Dövüşler">
+
+                <div class="reputation-card-content">
+                    <h2>Muazzam Dövüşler</h2>
+                    <p>Özel dövüşler, etkinlikler ve ödül bağlantıları.</p>
+                </div>
+            </a>
+
+            <a href="itibarlar/flaundinler.html" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/flaundinler.jpg" alt="Flaundinler">
+
+                <div class="reputation-card-content">
+                    <h2>Flaundinler</h2>
+                    <p>Deniz Midyesi, Golleyd İncileri, görevler ve hesaplayıcı.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/eldivler.jpg" alt="Eldivler">
+
+                <div class="reputation-card-content">
+                    <h2>Eldivler</h2>
+                    <p>Eldiv itibarı, kaynaklar ve görev bağlantıları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/krofdorlar.jpg" alt="Krofdorlar">
+
+                <div class="reputation-card-content">
+                    <h2>Krofdorlar</h2>
+                    <p>Krofdor görevleri, kaynakları ve gelişim notları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/tanrica-aladeya.jpg" alt="Tanrıça Aladeya">
+
+                <div class="reputation-card-content">
+                    <h2>Tanrıça Aladeya</h2>
+                    <p>Aladeya itibarı, görev zincirleri ve kaynaklar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/olulerin-tanrisi.jpg" alt="Ölülerin ve Lanetlilerin Tanrısı">
+
+                <div class="reputation-card-content">
+                    <h2>Ölülerin ve Lanetlilerin Tanrısı</h2>
+                    <p>Lanetli görevler, özel kaynaklar ve itibar yolu.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/ulu-ejderler.jpg" alt="Ulu Ejderler">
+
+                <div class="reputation-card-content">
+                    <h2>Ulu Ejderler</h2>
+                    <p>Ejder görevleri, özel kaynaklar ve itibar bilgileri.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/golge-avcilari.jpg" alt="Gölge Avcıları">
+
+                <div class="reputation-card-content">
+                    <h2>Gölge Avcıları</h2>
+                    <p>Gölge avları, görevler ve kaynak toplama notları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/evcil-hayvan-koruyuculari.jpg" alt="Evcil Hayvan Koruyucuları">
+
+                <div class="reputation-card-content">
+                    <h2>Evcil Hayvan Koruyucuları</h2>
+                    <p>Evcil hayvan görevleri, koruyucu itibarı ve kaynaklar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/ganimet-avcilari.jpg" alt="Ganimet Avcıları">
+
+                <div class="reputation-card-content">
+                    <h2>Ganimet Avcıları</h2>
+                    <p>Ganimet toplama, görevler ve ödül bağlantıları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/sehir-onurlari.jpg" alt="Şehir Onurları">
+
+                <div class="reputation-card-content">
+                    <h2>Şehir Onurları</h2>
+                    <p>Şehir onurları, bölgesel görevler ve gelişim notları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/parali-birlikler.jpg" alt="Paralı Birlikler">
+
+                <div class="reputation-card-content">
+                    <h2>Paralı Birlikler</h2>
+                    <p>Paralı birlik sistemi, görevler ve ödül yolları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/hava-tanrisi-sunagi.jpg" alt="Hava Tanrısı Sunağı">
+
+                <div class="reputation-card-content">
+                    <h2>Hava Tanrısı Sunağı</h2>
+                    <p>Hava sunağı, ibadet kaynakları ve itibar notları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/su-tanrisi-sunagi.jpg" alt="Su Tanrısı Sunağı">
+
+                <div class="reputation-card-content">
+                    <h2>Su Tanrısı Sunağı</h2>
+                    <p>Su sunağı, kaynaklar, görevler ve gelişim bilgileri.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/kita-savunuculari.jpg" alt="Kıta Savunucuları">
+
+                <div class="reputation-card-content">
+                    <h2>Kıta Savunucuları</h2>
+                    <p>Kıta savunması, görevler ve savaş katkıları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/hazine-avcilari.jpg" alt="Hazine Avcıları">
+
+                <div class="reputation-card-content">
+                    <h2>Hazine Avcıları</h2>
+                    <p>Hazine avları, ganimetler ve kaynak bilgileri.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/mistik-itibari.jpg" alt="Mistik İtibarı">
+
+                <div class="reputation-card-content">
+                    <h2>Mistik İtibarı</h2>
+                    <p>Mistik kaynaklar, görevler ve özel bağlantılar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/sans-avcilari.jpg" alt="Şans Avcıları">
+
+                <div class="reputation-card-content">
+                    <h2>Şans Avcıları</h2>
+                    <p>Şans sistemi, ödüller, görevler ve kaynaklar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/buyu-koruyuculari.jpg" alt="Büyü Koruyucuları">
+
+                <div class="reputation-card-content">
+                    <h2>Büyü Koruyucuları</h2>
+                    <p>Büyü koruma görevleri, kaynaklar ve itibar yolu.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/astral-avcilari.jpg" alt="Astral Avcıları">
+
+                <div class="reputation-card-content">
+                    <h2>Astral Avcıları</h2>
+                    <p>Astral avlar, görevler ve nadir kaynaklar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/koruyucular.jpg" alt="Koruyucular">
+
+                <div class="reputation-card-content">
+                    <h2>Koruyucular</h2>
+                    <p>Koruyucu görevleri, savaş notları ve kaynaklar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/mezar-baskincilari.jpg" alt="Mezar Baskıncıları">
+
+                <div class="reputation-card-content">
+                    <h2>Mezar Baskıncıları</h2>
+                    <p>Mezar baskınları, görevler ve özel kaynaklar.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/kaderin-hukumdarlari.jpg" alt="Kaderin Hükümdarları">
+
+                <div class="reputation-card-content">
+                    <h2>Kaderin Hükümdarları</h2>
+                    <p>Kader sistemi, görevler ve özel itibar kaynakları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/miuri-tao.jpg" alt="Miuri Tao">
+
+                <div class="reputation-card-content">
+                    <h2>Miuri Tao</h2>
+                    <p>Miuri Tao itibarı, görevler ve gelişim yolu.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/zurhass.jpg" alt="Zurhass">
+
+                <div class="reputation-card-content">
+                    <h2>Zurhass</h2>
+                    <p>Zurhass itibarı, görevler ve kaynak bağlantıları.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/triad-madencileri.jpg" alt="Triad Madencileri">
+
+                <div class="reputation-card-content">
+                    <h2>Triad Madencileri</h2>
+                    <p>Madencilik görevleri, triad kaynakları ve bilgiler.</p>
+                </div>
+            </a>
+
+            <a href="#" class="reputation-card">
+                <img src="../assents/images/itibar-kartlari/shiass-ile-savasanlar.jpg" alt="Shiass İle Savaşanlar">
+
+                <div class="reputation-card-content">
+                    <h2>Shiass İle Savaşanlar</h2>
+                    <p>Shiass savaşları, görevler ve itibar kaynakları.</p>
+                </div>
+            </a>
+
+            <a href="itibarlar/hayran-kaynaklari.html" class="reputation-card fan-card">
+                <img src="../assents/images/itibar-kartlari/hayran-kaynaklari.jpg" alt="Hayran Kaynakları ve Görevleri">
+
+                <div class="reputation-card-content">
+                    <h2>Hayran Kaynakları ve Görevleri</h2>
+                    <p>Tüm hayran görevleri, istenen kaynaklar, NPC ve konum bilgileri.</p>
+                </div>
+            </a>
+
+        </section>
 
     </main>
 
-    <!-- Pop-up Alanı -->
-   <div class="popup-overlay" id="repPopup">
-    <div class="popup-box">
-        <button class="popup-close" id="popupClose">×</button>
-
-        <h2 id="popupTitle">İtibar Başlığı</h2>
-
-        <div class="popup-content" id="popupContent">
-            <p>
-                Bu itibarın detaylarını buraya sonradan ekleyeceğiz.
-            </p>
-        </div>
-    </div>
-</div>
-
-    <!-- İtibar içerikleri -->
-<script src="../js/itibarlar/kotuluk-yapanlar.js"></script>
-<script src="../js/itibarlar/iyilik-yapanlar.js"></script>
-<script src="../js/itibarlar/kaos-ile-savasanlar.js"></script>
-<script src="../js/itibarlar/eski-nesne-arayicilari.js"></script>
-<script src="../js/itibarlar/yaratik-avcilari.js"></script>
-<script src="../js/itibarlar/flaundinler.js"></script>
-
-<!-- Hesaplayıcılar ve popup sistemi -->
-<script src="../js/hesaplayicilar.js"></script>
-<script src="../js/itibarlar.js"></script>
-<script src="../js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

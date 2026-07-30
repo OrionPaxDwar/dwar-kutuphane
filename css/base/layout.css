@@ -1,0 +1,76 @@
+body {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.38)
+        ),
+        url("../../assents/images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(80, 40, 10, 0.12),
+            rgba(0, 0, 0, 0.42) 72%
+        );
+}
+
+.page-shell {
+    min-height: 100vh;
+    padding: 90px 20px 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header {
+    width: min(1100px, 96%);
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+.page-header h1 {
+    margin-bottom: 14px;
+
+    color: #f5d27a;
+
+    font-size: 64px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 10px #000,
+        0 0 24px rgba(245, 210, 122, 0.35);
+}
+
+.page-header p {
+    color: #e5d0aa;
+
+    font-size: 21px;
+    line-height: 1.5;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 14px #000;
+}
+
+.page-section {
+    width: min(1250px, 96%);
+}

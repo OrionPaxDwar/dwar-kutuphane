@@ -1,0 +1,102 @@
+.back-home-btn,
+.back-page-btn {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+
+    z-index: 200;
+
+    padding: 11px 18px;
+
+    color: #250b05;
+    background:
+        linear-gradient(
+            to bottom,
+            #ffe18a,
+            #d79a28
+        );
+
+    border: 1px solid #ffe9a8;
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow:
+        0 0 16px rgba(0, 0, 0, 0.8),
+        0 0 18px rgba(245, 210, 122, 0.18);
+
+    transition: 0.25s;
+}
+
+.back-home-btn:hover,
+.back-page-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+}
+
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    color: #250b05;
+    background: linear-gradient(to bottom, #ffe18a, #d79a28);
+
+    border: 1px solid #ffe9a8;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 14px rgba(0, 0, 0, 0.7),
+        0 0 16px rgba(245, 210, 122, 0.12);
+
+    transition: 0.25s;
+}
+
+.gold-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+}
+.back-section-btn {
+    position: fixed;
+    top: 20px;
+    left: 24px;
+
+    z-index: 200;
+
+    padding: 11px 18px;
+
+    color: #250b05;
+    background:
+        linear-gradient(
+            to bottom,
+            #ffe18a,
+            #d79a28
+        );
+
+    border: 1px solid #ffe9a8;
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow:
+        0 0 16px rgba(0, 0, 0, 0.8),
+        0 0 18px rgba(245, 210, 122, 0.18);
+
+    transition: 0.25s;
+}
+
+.back-section-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+}

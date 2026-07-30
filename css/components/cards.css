@@ -1,0 +1,147 @@
+.card-grid {
+    width: min(1250px, 96%);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.home-menu-card,
+.menu-card,
+.reputation-card,
+.shop-card,
+.event-card {
+    position: relative;
+
+    aspect-ratio: 3 / 4;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #f5d27a;
+    text-decoration: none;
+
+    background: rgba(10, 8, 6, 0.85);
+
+    border: 1px solid rgba(245, 210, 122, 0.42);
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 22px rgba(0, 0, 0, 0.78),
+        0 0 12px rgba(245, 210, 122, 0.08);
+
+    transition: 0.25s;
+}
+
+.home-menu-card img,
+.menu-card img,
+.reputation-card img,
+.shop-card img,
+.event-card img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    opacity: 1;
+    filter: none;
+
+    transition: 0.25s;
+}
+
+.home-menu-card::after,
+.menu-card::after,
+.reputation-card::after,
+.shop-card::after,
+.event-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.68) 0%,
+            rgba(0, 0, 0, 0.24) 36%,
+            rgba(0, 0, 0, 0) 68%
+        );
+}
+
+.home-card-content,
+.card-content,
+.reputation-card-content,
+.shop-card-content,
+.event-card-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 20px;
+
+    text-align: center;
+
+    pointer-events: none;
+}
+
+.home-card-content h2,
+.card-content h2,
+.reputation-card-content h2,
+.shop-card-content h2,
+.event-card-content h2 {
+    margin-bottom: 9px;
+
+    color: #f5d27a;
+
+    font-size: 27px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 16px #000;
+}
+
+.home-card-content p,
+.card-content p,
+.reputation-card-content p,
+.shop-card-content p,
+.event-card-content p {
+    color: #ead7b3;
+
+    font-size: 16px;
+    line-height: 1.35;
+
+    text-shadow:
+        0 0 8px #000,
+        0 0 14px #000;
+}
+
+.home-menu-card:hover,
+.menu-card:hover,
+.reputation-card:hover,
+.shop-card:hover,
+.event-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(255, 220, 130, 0.9);
+
+    box-shadow:
+        0 0 26px rgba(0, 0, 0, 0.95),
+        0 0 22px rgba(245, 210, 122, 0.18);
+}
+
+.home-menu-card:hover img,
+.menu-card:hover img,
+.reputation-card:hover img,
+.shop-card:hover img,
+.event-card:hover img {
+    transform: scale(1.035);
+}
