@@ -310,39 +310,3 @@
         grid-template-columns: 1fr;
     }
 }
-
-@media (max-width: 760px) {
-    .fan-quests-hero h1 {
-        font-size: 38px;
-    }
-
-    .fan-filter-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .fan-menu-list {
-        grid-template-columns: 1fr;
-    }
-
-    .fan-detail-header {
-        flex-direction: column;
-    }
-
-    .fan-detail-header h2 {
-        font-size: 30px;
-    }
-
-    .fan-resource-list {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 650px) {
-    .home-update-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .home-update-header .gold-btn {
-        width: 100%;
-    }
-}
