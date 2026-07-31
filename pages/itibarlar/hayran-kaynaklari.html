@@ -5,21 +5,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hayran Görevleri - Dwar Kütüphane</title>
+    <title>Hayran ve Yücelik Görevleri - Dwar Kütüphane</title>
 
-    <!-- TEMEL CSS -->
     <link rel="stylesheet" href="../../css/base/reset.css">
     <link rel="stylesheet" href="../../css/base/layout.css">
     <link rel="stylesheet" href="../../css/base/buttons.css">
 
-    <!-- BİLEŞEN CSS -->
     <link rel="stylesheet" href="../../css/components/info-boxes.css">
     <link rel="stylesheet" href="../../css/components/tables.css">
 
-    <!-- SAYFA CSS -->
     <link rel="stylesheet" href="../../css/pages/hayran-gorevleri.css">
 
-    <!-- MOBİL CSS -->
     <link rel="stylesheet" href="../../css/base/responsive.css">
 </head>
 
@@ -36,13 +32,13 @@
     <main class="page-shell fan-quests-page">
 
         <section class="fan-quests-hero">
-            <span>Özel Rehber</span>
+            <span>İtibar Rehberi</span>
 
-            <h1>Hayran Görevleri</h1>
+            <h1>Hayran ve Yücelik Görevleri</h1>
 
             <p>
-                İtibarların Hayran aşamasında istenen görevleri, NPC konumlarını,
-                kaynakları, yaratıkları ve seviye şartlarını burada toplayacağız.
+                İtibarların Hayran, Yücelik ve özel görev aşamalarında istediği kaynakları,
+                NPC konumlarını ve notları burada tek listede topluyoruz.
             </p>
         </section>
 
@@ -50,7 +46,7 @@
 
             <label>
                 İtibar / Görev Ara
-                <input type="text" id="fanSearchInput" placeholder="Örn: Kötülük, Flaundin, Yaratık...">
+                <input type="text" id="fanSearchInput" placeholder="Örn: Şans, Kötülük, Flaundin, Ejder...">
             </label>
 
             <label>
@@ -60,18 +56,20 @@
                     <option value="5">Sv5</option>
                     <option value="6">Sv6</option>
                     <option value="7">Sv7</option>
-                    <option value="8">Sv8+</option>
+                    <option value="11">Sv11</option>
+                    <option value="12">Sv12</option>
+                    <option value="15">Sv15</option>
+                    <option value="16">Sv16</option>
                 </select>
             </label>
 
             <label>
-                Görev Tipi
-                <select id="fanTypeFilter">
-                    <option value="all">Tüm Tipler</option>
-                    <option value="kaynak">Kaynak Teslimi</option>
-                    <option value="yaratik">Yaratık Kesme</option>
-                    <option value="npc">NPC / Konum</option>
-                    <option value="karisik">Karışık Görev</option>
+                Madalyon
+                <select id="fanMedalFilter">
+                    <option value="all">Tüm Görevler</option>
+                    <option value="hayran">Hayran Madalyonu</option>
+                    <option value="yucelik">Yücelik Madalyonu</option>
+                    <option value="ozel">Özel Görev</option>
                 </select>
             </label>
 
@@ -81,24 +79,23 @@
 
         </section>
 
-        <section class="fan-level-summary">
-            <div>
-                <strong>Sv5+</strong>
-                <span>Genel hayran görevleri</span>
-            </div>
+        <section class="fan-layout">
 
-            <div>
-                <strong>Sv6+</strong>
-                <span>Özel bölge ve NPC görevleri</span>
-            </div>
+            <aside class="fan-sidebar">
+                <div class="fan-sidebar-title">
+                    Görev Listesi
+                </div>
 
-            <div>
-                <strong>Sv7+</strong>
-                <span>İleri seviye hayran zincirleri</span>
-            </div>
+                <div class="fan-menu-list" id="fanMenuList"></div>
+            </aside>
+
+            <section class="fan-detail-area" id="fanDetailArea">
+                <div class="fan-detail-empty">
+                    Soldan bir görev seç.
+                </div>
+            </section>
+
         </section>
-
-        <section class="fan-quest-list" id="fanQuestList"></section>
 
     </main>
 

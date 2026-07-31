@@ -283,3 +283,56 @@
         text-align: center;
     }
 }
+@media (max-width: 1050px) {
+    .fan-filter-panel {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fan-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .fan-sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .fan-menu-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fan-resource-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fan-info-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .fan-quests-hero h1 {
+        font-size: 38px;
+    }
+
+    .fan-filter-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .fan-menu-list {
+        grid-template-columns: 1fr;
+    }
+
+    .fan-detail-header {
+        flex-direction: column;
+    }
+
+    .fan-detail-header h2 {
+        font-size: 30px;
+    }
+
+    .fan-resource-list {
+        grid-template-columns: 1fr;
+    }
+}

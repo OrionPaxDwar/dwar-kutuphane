@@ -1,24 +1,87 @@
-const fanQuestList = document.getElementById("fanQuestList");
+const fanMenuList = document.getElementById("fanMenuList");
+const fanDetailArea = document.getElementById("fanDetailArea");
 const fanSearchInput = document.getElementById("fanSearchInput");
 const fanLevelFilter = document.getElementById("fanLevelFilter");
-const fanTypeFilter = document.getElementById("fanTypeFilter");
+const fanMedalFilter = document.getElementById("fanMedalFilter");
 const fanResetBtn = document.getElementById("fanResetBtn");
+
+let activeQuestId = null;
+
+function normalizeText(text) {
+    return String(text || "")
+        .toLocaleLowerCase("tr-TR")
+        .replaceAll("ç", "c")
+        .replaceAll("ğ", "g")
+        .replaceAll("ı", "i")
+        .replaceAll("i̇", "i")
+        .replaceAll("ö", "o")
+        .replaceAll("ş", "s")
+        .replaceAll("ü", "u")
+        .replaceAll("â", "a")
+        .replaceAll("î", "i")
+        .replaceAll("û", "u")
+        .trim();
+}
+
+function getFilteredQuests() {
+    const searchValue = normalizeText(fanSearchInput.value);
+    const levelValue = fanLevelFilter.value;
+    const medalValue = fanMedalFilter.value;
+
+    return fanQuests.filter(function (quest) {
+        const searchableText = normalizeText(`
+            ${quest.reputation}
+            ${quest.questName}
+            ${quest.shortInfo}
+            ${quest.npc}
+            ${quest.location}
+            ${quest.medalLabel}
+        `);
+
+        const textMatch = searchableText.includes(searchValue);
+
+        const levelMatch =
+            levelValue === "all" ||
+            String(quest.level) === levelValue;
+
+        const medalMatch =
+            medalValue === "all" ||
+            quest.medal === medalValue;
+
+        return textMatch && levelMatch && medalMatch;
+    });
+}
+
+function createMenuItem(quest) {
+    const activeClass = quest.id === activeQuestId ? "active" : "";
+
+    return `
+        <button class="fan-menu-item ${activeClass}" data-id="${quest.id}" type="button">
+            <img src="${quest.icon}" alt="${quest.reputation}">
+
+            <div>
+                <strong>${quest.reputation}</strong>
+                <span>${quest.medalLabel} · Sv${quest.level}+</span>
+            </div>
+        </button>
+    `;
+}
 
 function createRequirementList(requirements) {
     if (!requirements || requirements.length === 0) {
-        return `<p class="empty-text">Kaynak bilgisi sonradan eklenecek.</p>`;
+        return `<p class="empty-text">Kaynak bilgisi güncellenecek.</p>`;
     }
 
     return `
         <div class="fan-resource-list">
-            ${requirements.map(function (item) {
+            ${requirements.map(function (resource) {
                 return `
                     <div class="fan-resource-item">
-                        <img src="${item.image}" alt="${item.name}">
+                        <img src="${resource.image}" alt="${resource.name}">
 
                         <div>
-                            <strong>${item.name}</strong>
-                            <span>${item.amount}</span>
+                            <strong>${resource.name}</strong>
+                            <span>${resource.amount}</span>
                         </div>
                     </div>
                 `;
@@ -27,32 +90,35 @@ function createRequirementList(requirements) {
     `;
 }
 
-function createCreatureList(creatures) {
-    if (!creatures || creatures.length === 0) {
-        return `<p class="empty-text">Yaratık kesme bilgisi yok veya sonradan eklenecek.</p>`;
+function createSectionList(sections) {
+    if (!sections || sections.length === 0) {
+        return "";
     }
 
     return `
-        <div class="fan-creature-list">
-            ${creatures.map(function (creature) {
-                return `
-                    <div class="fan-creature-item">
-                        <img src="${creature.image}" alt="${creature.name}">
+        <section class="fan-detail-section">
+            <h3>Teslim Noktaları</h3>
 
-                        <div>
-                            <strong>${creature.name}</strong>
-                            <span>${creature.amount}</span>
+            <div class="fan-section-list">
+                ${sections.map(function (section) {
+                    return `
+                        <div class="fan-section-card">
+                            <h4>${section.title}</h4>
+
+                            <p>${section.location}</p>
+
+                            ${createRequirementList(section.items)}
                         </div>
-                    </div>
-                `;
-            }).join("")}
-        </div>
+                    `;
+                }).join("")}
+            </div>
+        </section>
     `;
 }
 
 function createNotes(notes) {
     if (!notes || notes.length === 0) {
-        return `<p class="empty-text">Not bilgisi yok.</p>`;
+        return `<p class="empty-text">Ek not yok.</p>`;
     }
 
     return `
@@ -64,147 +130,115 @@ function createNotes(notes) {
     `;
 }
 
-function createFanQuestItem(quest) {
-    return `
-        <article class="fan-quest-item" data-id="${quest.id}">
-            <button class="fan-quest-head" type="button">
-                <div class="fan-quest-main">
-                    <span class="fan-level-badge">Sv${quest.level}+</span>
-
-                    <div>
-                        <h2>${quest.reputation} Görevi</h2>
-                        <p>${quest.shortInfo}</p>
-                    </div>
-                </div>
-
-                <div class="fan-quest-meta">
-                    <span>${quest.typeLabel}</span>
-                    <strong>Detay Aç</strong>
-                </div>
-            </button>
-
-            <div class="fan-quest-body">
-                <div class="fan-detail-grid">
-
-                    <div class="fan-detail-box">
-                        <h3>Görev Bilgisi</h3>
-
-                        <p>
-                            <strong>Görev:</strong> ${quest.questName}
-                        </p>
-
-                        <p>
-                            <strong>İtibar:</strong> ${quest.reputation}
-                        </p>
-
-                        <p>
-                            <strong>Seviye:</strong> Sv${quest.level}+
-                        </p>
-
-                        <p>
-                            <strong>Tip:</strong> ${quest.typeLabel}
-                        </p>
-                    </div>
-
-                    <div class="fan-detail-box">
-                        <h3>NPC ve Konum</h3>
-
-                        <p>
-                            <strong>NPC:</strong> ${quest.npc}
-                        </p>
-
-                        <p>
-                            <strong>Konum:</strong> ${quest.location}
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="fan-detail-box">
-                    <h3>İstenen Kaynaklar</h3>
-                    ${createRequirementList(quest.requirements)}
-                </div>
-
-                <div class="fan-detail-box">
-                    <h3>Kesilecek Yaratıklar</h3>
-                    ${createCreatureList(quest.creatures)}
-                </div>
-
-                <div class="fan-detail-box">
-                    <h3>Notlar</h3>
-                    ${createNotes(quest.notes)}
-                </div>
-            </div>
-        </article>
-    `;
-}
-
-function renderFanQuests() {
-    const searchValue = fanSearchInput.value.toLowerCase().trim();
-    const levelValue = fanLevelFilter.value;
-    const typeValue = fanTypeFilter.value;
-
-    const filteredQuests = fanQuests.filter(function (quest) {
-        const textMatch =
-            quest.reputation.toLowerCase().includes(searchValue) ||
-            quest.questName.toLowerCase().includes(searchValue) ||
-            quest.shortInfo.toLowerCase().includes(searchValue);
-
-        const levelMatch =
-            levelValue === "all" ||
-            String(quest.level) === levelValue;
-
-        const typeMatch =
-            typeValue === "all" ||
-            quest.type === typeValue;
-
-        return textMatch && levelMatch && typeMatch;
-    });
-
-    if (filteredQuests.length === 0) {
-        fanQuestList.innerHTML = `
-            <div class="fan-empty-result">
-                Aramana uygun hayran görevi bulunamadı.
+function renderQuestDetail(quest) {
+    if (!quest) {
+        fanDetailArea.innerHTML = `
+            <div class="fan-detail-empty">
+                Soldan bir görev seç.
             </div>
         `;
         return;
     }
 
-    fanQuestList.innerHTML = filteredQuests.map(createFanQuestItem).join("");
+    fanDetailArea.innerHTML = `
+        <article class="fan-detail-card">
 
-    bindFanQuestItems();
+            <div class="fan-detail-header">
+                <div>
+                    <span class="fan-detail-badge">${quest.medalLabel}</span>
+
+                    <h2>${quest.questName}</h2>
+
+                    <p>${quest.shortInfo}</p>
+                </div>
+
+                <div class="fan-detail-level">
+                    Sv${quest.level}+
+                </div>
+            </div>
+
+            <div class="fan-info-strip">
+                <div>
+                    <span>İtibar</span>
+                    <strong>${quest.reputation}</strong>
+                </div>
+
+                <div>
+                    <span>NPC</span>
+                    <strong>${quest.npc}</strong>
+                </div>
+
+                <div>
+                    <span>Konum</span>
+                    <strong>${quest.location}</strong>
+                </div>
+            </div>
+
+            <section class="fan-detail-section">
+                <h3>İstenen Kaynaklar</h3>
+                ${createRequirementList(quest.requirements)}
+            </section>
+
+            ${createSectionList(quest.sections)}
+
+            <section class="fan-detail-section">
+                <h3>Notlar</h3>
+                ${createNotes(quest.notes)}
+            </section>
+
+        </article>
+    `;
 }
 
-function bindFanQuestItems() {
-    const questItems = document.querySelectorAll(".fan-quest-item");
+function renderFanPage() {
+    const filteredQuests = getFilteredQuests();
 
-    questItems.forEach(function (item) {
-        const head = item.querySelector(".fan-quest-head");
+    if (filteredQuests.length === 0) {
+        fanMenuList.innerHTML = `
+            <div class="fan-empty-result">
+                Aramana uygun görev bulunamadı.
+            </div>
+        `;
 
-        head.addEventListener("click", function () {
-            item.classList.toggle("active");
+        renderQuestDetail(null);
+        return;
+    }
 
-            const actionText = item.querySelector(".fan-quest-meta strong");
+    const activeQuestExists = filteredQuests.some(function (quest) {
+        return quest.id === activeQuestId;
+    });
 
-            if (item.classList.contains("active")) {
-                actionText.textContent = "Detay Kapat";
-            } else {
-                actionText.textContent = "Detay Aç";
-            }
+    if (!activeQuestId || !activeQuestExists) {
+        activeQuestId = filteredQuests[0].id;
+    }
+
+    fanMenuList.innerHTML = filteredQuests.map(createMenuItem).join("");
+
+    const activeQuest = filteredQuests.find(function (quest) {
+        return quest.id === activeQuestId;
+    });
+
+    renderQuestDetail(activeQuest);
+
+    document.querySelectorAll(".fan-menu-item").forEach(function (button) {
+        button.addEventListener("click", function () {
+            activeQuestId = button.getAttribute("data-id");
+            renderFanPage();
         });
     });
 }
 
-fanSearchInput.addEventListener("input", renderFanQuests);
-fanLevelFilter.addEventListener("change", renderFanQuests);
-fanTypeFilter.addEventListener("change", renderFanQuests);
+fanSearchInput.addEventListener("input", renderFanPage);
+fanLevelFilter.addEventListener("change", renderFanPage);
+fanMedalFilter.addEventListener("change", renderFanPage);
 
 fanResetBtn.addEventListener("click", function () {
     fanSearchInput.value = "";
     fanLevelFilter.value = "all";
-    fanTypeFilter.value = "all";
+    fanMedalFilter.value = "all";
+    activeQuestId = null;
 
-    renderFanQuests();
+    renderFanPage();
 });
 
-renderFanQuests();
+renderFanPage();
