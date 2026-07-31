@@ -336,3 +336,13 @@
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 650px) {
+    .home-update-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-update-header .gold-btn {
+        width: 100%;
+    }
+}

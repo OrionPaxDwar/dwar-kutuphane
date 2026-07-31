@@ -23,7 +23,9 @@
 </head>
 
 <body>
-
+<button class="legal-top-btn" id="openLegalModal">
+    KVKK / Yasal Bilgilendirme
+</button>
     <main class="home-page">
 
         <section class="hero-title">
@@ -91,9 +93,107 @@
             </a>
 
         </section>
+<div class="legal-modal" id="legalModal">
+    <div class="legal-modal-overlay" id="closeLegalOverlay"></div>
 
+    <div class="legal-modal-content">
+
+        <button class="legal-modal-close" id="closeLegalModal">
+            ×
+        </button>
+
+        <h2>KVKK ve Yasal Bilgilendirme</h2>
+
+        <div class="legal-modal-text">
+
+            <h3>1. Genel Bilgilendirme</h3>
+
+            <p>
+                Bu site, oyuncular için hazırlanmış bağımsız bir Dwar Kütüphane rehber arşividir.
+                Site resmi oyun sitesi değildir.
+            </p>
+
+            <p>
+                Oyun içi isimler, görseller, ikonlar, görev bilgileri, kaynak adları ve benzeri içerikler
+                ilgili hak sahiplerine ve <strong>dwar.gen.tr</strong> adresine aittir.
+            </p>
+
+            <h3>2. İçerik Kullanımı</h3>
+
+            <p>
+                Bu sitede yer alan bilgiler oyunculara rehberlik etmek amacıyla düzenlenmiştir.
+                İçerikler ticari amaçla değil, bilgilendirme ve arşivleme amacıyla sunulmaktadır.
+            </p>
+
+            <p>
+                Hak sahibi olduğunuz bir içeriğin kaldırılması, düzeltilmesi veya kaynak gösterimiyle ilgili
+                bir talebiniz varsa site yöneticisiyle iletişime geçebilirsiniz.
+            </p>
+
+            <h3>3. Kişisel Veriler Hakkında Bilgilendirme</h3>
+
+            <p>
+                Bu sitede üyelik sistemi, giriş paneli, yorum alanı, iletişim formu, e-posta toplama alanı
+                veya ziyaretçilere ait kişisel veri toplayan herhangi bir sistem bulunmamaktadır.
+            </p>
+
+            <p>
+                Ziyaretçilerden ad, soyad, e-posta, telefon numarası, oyuncu hesabı bilgisi veya benzeri
+                kişisel veri talep edilmez ve saklanmaz.
+            </p>
+
+            <h3>4. Çerez ve Takip Sistemleri</h3>
+
+            <p>
+                Bu sitede kullanıcı davranışlarını takip eden özel bir çerez, analiz sistemi veya reklam takip
+                sistemi kullanılmamaktadır.
+            </p>
+
+            <h3>5. Değişiklik Hakkı</h3>
+
+            <p>
+                İleride siteye üyelik, yorum, iletişim formu, çekiliş katılım alanı veya benzeri veri toplayan
+                bir sistem eklenirse KVKK Aydınlatma Metni ayrıca güncellenecektir.
+            </p>
+
+        </div>
+
+    </div>
+</div>
+<section class="home-update-panel">
+    <div class="home-update-header">
+        <div>
+            <span>Site Takibi</span>
+            <h2>Güncelleme Notları</h2>
+        </div>
+
+        <button class="gold-btn" id="openUpdatesModal">
+            Tümünü Gör
+        </button>
+    </div>
+
+    <div class="latest-update-box" id="latestUpdateBox">
+        Güncelleme notları yükleniyor...
+    </div>
+</section>
     </main>
+    <div class="updates-modal" id="updatesModal">
+    <div class="updates-modal-overlay" id="closeUpdatesOverlay"></div>
 
+    <div class="updates-modal-content">
+
+        <button class="updates-modal-close" id="closeUpdatesModal">
+            ×
+        </button>
+
+        <h2>Güncelleme Geçmişi</h2>
+
+        <div class="updates-list" id="updatesList"></div>
+
+    </div>
+</div>
+
+    <script src="data/site-updates.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
