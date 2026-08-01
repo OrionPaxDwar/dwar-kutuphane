@@ -744,7 +744,7 @@ notes: [
             item("Ragtihron'un Derisi", "30", "ragtihronun-derisi.png"),
             item("Kabarcıklı Metal", "30", "kabarcikli-metal.png"),
             item("Öfkeli Göz", "100", "ofkeli-goz.png"),
-            item("Ölü Savaşçının Kafatası", "300", "olu-savascinin-kafatasi.jpg")
+            item("Ölü Savaşçının Kafatası", "300", "olu-savascinin-kafatasi.png")
         ],
         notes: [
             "1000 zafer veya 100 Muazzam Liderlik yeterlidir."
@@ -920,7 +920,7 @@ notes: [
         shortInfo: "Forumda güncellenecek olarak bırakılmış.",
         requirements: [],
         notes: [
-            "Kaynakta bu görev henüz güncellenecek olarak görünüyor."
+            "Hayran Görevi Geldiğinde Güncellenecektir."
         ]
     },
 {
@@ -936,7 +936,7 @@ notes: [
         shortInfo: "Forumda güncellenecek olarak bırakılmış.",
         requirements: [],
         notes: [
-            "Kaynakta bu görev henüz güncellenecek olarak görünüyor."
+            "Hayran Görevi Geldiğinde Güncellenecektir."
         ]
     },
 
@@ -1051,9 +1051,11 @@ notes: [
         location: "Tempeler / Flezendal",
         shortInfo: "Miuri Tao sunağına kaynak bağışı.",
         requirements: [
-            item("Zarlog Madeni Parası", "333", "zarlog-madeni-parasi.png"),
-            item("Şafak Öncesi Çiy", "333", "safak-oncesi-ciy.png"),
-            item("Ritüel Mum", "3", "rituel-mum.png")
+            item("Krofdor'ların El Yazıları", "40", "krofdorlarin-el-yazilari.png"),
+            item("Eldiv'lerin El Yazıları", "30", "eldivlerin-el-yazilari.png"),
+            item("Elf'lerin El Yazıları", "20", "elflerin-el-yazilari.png"),
+            item("Dağ Sakinleri El Yazıları", "10", "dag-sakinleri-el-yazilari.png")
+        
         ],
         notes: [
             "Ritüel Mum, Tüccar Tao Mun mağazasından alınabilir."
