@@ -69,7 +69,7 @@ function createMenuItem(quest) {
 
 function createRequirementList(requirements) {
     if (!requirements || requirements.length === 0) {
-        return `<p class="empty-text">Kaynak bilgisi güncellenecek.</p>`;
+        return "";
     }
 
     return `
@@ -90,6 +90,19 @@ function createRequirementList(requirements) {
     `;
 }
 
+function createMainRequirementsSection(quest) {
+    if (!quest.requirements || quest.requirements.length === 0) {
+        return "";
+    }
+
+    return `
+        <section class="fan-detail-section">
+            <h3>${quest.requirementsTitle || "İstenen Kaynaklar"}</h3>
+            ${createRequirementList(quest.requirements)}
+        </section>
+    `;
+}
+
 function createSectionList(sections) {
     if (!sections || sections.length === 0) {
         return "";
@@ -105,7 +118,13 @@ function createSectionList(sections) {
                         <div class="fan-section-card">
                             <h4>${section.title}</h4>
 
-                            <p>${section.location}</p>
+                            ${section.location ? `<p>${section.location}</p>` : ""}
+
+                            ${
+                                section.description
+                                    ? `<p>${section.description}</p>`
+                                    : ""
+                            }
 
                             ${createRequirementList(section.items)}
                         </div>
@@ -116,17 +135,34 @@ function createSectionList(sections) {
     `;
 }
 
-function createNotes(notes) {
-    if (!notes || notes.length === 0) {
-        return `<p class="empty-text">Ek not yok.</p>`;
+function createNotesSection(quest) {
+    if (!quest.notes || quest.notes.length === 0) {
+        return "";
     }
 
     return `
-        <ul class="fan-note-list">
-            ${notes.map(function (note) {
-                return `<li>${note}</li>`;
-            }).join("")}
-        </ul>
+        <section class="fan-detail-section">
+            <h3>${quest.notesTitle || "Notlar"}</h3>
+
+            <div class="fan-note-list">
+                ${quest.notes.map(function (note) {
+                    if (typeof note === "string") {
+                        return `
+                            <div class="fan-note-card">
+                                <p>${note}</p>
+                            </div>
+                        `;
+                    }
+
+                    return `
+                        <div class="fan-note-card">
+                            ${note.title ? `<h4>${note.title}</h4>` : ""}
+                            ${note.text ? `<p>${note.text}</p>` : ""}
+                        </div>
+                    `;
+                }).join("")}
+            </div>
+        </section>
     `;
 }
 
@@ -174,17 +210,11 @@ function renderQuestDetail(quest) {
                 </div>
             </div>
 
-            <section class="fan-detail-section">
-                <h3>İstenen Kaynaklar</h3>
-                ${createRequirementList(quest.requirements)}
-            </section>
+            ${createMainRequirementsSection(quest)}
 
             ${createSectionList(quest.sections)}
 
-            <section class="fan-detail-section">
-                <h3>Notlar</h3>
-                ${createNotes(quest.notes)}
-            </section>
+            ${createNotesSection(quest)}
 
         </article>
     `;

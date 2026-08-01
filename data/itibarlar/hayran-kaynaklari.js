@@ -195,7 +195,7 @@ const fanQuests = [
         reputation: "İyilik Kardeşliği Birliği",
         questName: "İyilik Yapanlar Hayran Görevi",
         level: 5,
-        icon: madalyonPath + "iyilikhayran.png",
+        icon: madalyonPath + "iyilik-hayran.png",
         npc: "Nearak Derbog",
         location: "Vukrimah Malikanesi / Airgond Malikanesi",
         shortInfo: "İyilik Emanasyonu teslimi.",
@@ -226,37 +226,124 @@ const fanQuests = [
         notes: []
     },
 
+  {
+    id: "kaosla-savasanlar-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Kaosla Savaşanlar Birliği",
+    questName: "Kaosla Savaşanlar Hayran Görevi",
+    level: 5,
+    icon: madalyonPath + "kaos-hayran.gif",
+    npc: "Nöbetçi Rutendam / Kaptan Beckly",
+    location: "Kuzey Karakolu / Güney Karakolu",
+shortInfo: "Kaos madalyonları, iksirler, UyarrMO parçaları ve zorlu aşamalı dövüşler.",
+
+requirements: [],
+
+sections: [
     {
-        id: "kaosla-savasanlar-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Kaosla Savaşanlar Birliği",
-        questName: "Kaosla Savaşanlar Hayran Görevi",
-        level: 5,
-        icon: kaynakPath + "kaos-emlidir-madalyonu.png",
-        npc: "Nöbetçi Rutendam / Kaptan Beckly",
-        location: "Kuzey Karakolu / Güney Karakolu",
-        shortInfo: "Kaos madalyonları, iksirler, UyarrMO parçaları ve zorlu dövüşler.",
-        requirements: [
+        title: "1. Aşama",
+        type: "step",
+        items: [
             item("Kaos Emlidir Madalyonu", "20", "kaos-emlidir-madalyonu.png"),
-            item("Kaos Emşeliyi Madalyonu", "10", "kaos-emseliyi-madalyonu.png"),
-            item("Kaos Çüg İksiri", "400", "kaos-cug-iksiri.png"),
-            item("Kaos Ripmav İksiri", "300", "kaos-ripmav-iksiri.png"),
-            item("Kaos Nak İksiri", "100", "kaos-nak-iksiri.png"),
-            item("Kaos Tayah İksiri", "300", "kaos-tayah-iksiri.png"),
-            item("Kaos Ved İksiri", "150", "kaos-ved-iksiri.png"),
-            item("Kaos Dokart İksiri", "25", "kaos-dokart-iksiri.png"),
-            item("UyarrMO Kılıcı", "1", "uyarrmo-kilici.png"),
-            item("UyarrMO Kalkanı", "1", "uyarrmo-kalkani.png"),
-            item("UyarrMO Miğferi", "1", "uyarrmo-migferi.png"),
-            item("UyarrMO Omuzlukları", "1", "uyarrmo-omuzluklari.png")
-        ],
-        notes: [
-            "Dövüşler zorlu olabilir.",
-            "Ölürsen dövüş sona erebilir.",
-            "Tekrar başlamak için parşömen kullanılır; ikinci kez kaynak teslimi gerekmez."
+            item("Kaos Emşeliyi Madalyonu", "10", "kaos-emseliyi-madalyonu.png")
         ]
     },
+
+    {
+        title: "2. Aşama",
+        type: "step",
+        items: [
+            item("Kaos Çüg İksiri", "400", "kaos-cug-iksiri.png"),
+            item("Kaos Ripmav İksiri", "300", "kaos-ripmav-iksiri.png"),
+            item("Kaos Nak İksiri", "100", "kaos-nak-iksiri.png")
+        ]
+    },
+
+    {
+        title: "3. Aşama",
+        type: "step",
+        items: [
+            item("Kaos Tayah İksiri", "300", "kaos-tayah-iksiri.png")
+        ]
+    },
+
+    {
+        title: "4. Aşama",
+        type: "step",
+        items: [
+            item("Kaos Ved İksiri", "150", "kaos-ved-iksiri.png")
+        ]
+    },
+
+    {
+        title: "5. Aşama",
+        type: "step",
+        items: [
+            item("Kaos Dokart İksiri", "25", "kaos-dokart-iksiri.png")
+        ]
+    },
+
+    {
+        title: "6. Aşama",
+        type: "step",
+        items: [
+            item("UyarrMO Kılıcı", "1", "uyarrmo-kilici.png"),
+            item("UyarrMO Kalkanı", "1", "uyarrmo-kalkani.png")
+        ]
+    },
+
+    {
+        title: "7. Aşama",
+        type: "step",
+        items: [
+            item("UyarrMO Miğferi", "1", "uyarrmo-migferi.png"),
+            item("UyarrMO Omuzlukları", "1", "uyarrmo-omuzluklari.png")
+        ]
+    }
+],
+
+notesTitle: "Aşama Notları",
+
+notes: [
+    {
+        title: "Genel Uyarı",
+        text: "Dövüşler oldukça zor olabilir. Özellikle son dövüşlerde birçok karakter size yardım edecek olsa bile, iyi hazırlanmış olmanız daha güvenlidir."
+    },
+    {
+        title: "Ölürsen Ne Olur?",
+        text: "Dövüşlerden birinde ölürseniz dövüş sona erer. Tekrar başlamak için verilen Işınlanma Parşömenini kullanmanız gerekir. İkinci kez kaynak teslim etmeniz gerekmez."
+    },
+    {
+        title: "1. Aşama",
+        text: "20 Kaos Emlidir Madalyonu ve 10 Kaos Emşeliyi Madalyonu teslim edilir. Ardından verilen Işınlanma Parşömeni kullanılır ve Koruyucu GunglHO [9] öldürülür."
+    },
+    {
+        title: "2. Aşama",
+        text: "400 Kaos Çüg İksiri, 300 Kaos Ripmav İksiri ve 100 Kaos Nak İksiri teslim edilir. Ardından verilen Işınlanma Parşömeni kullanılır ve 5 adet zayıflatılmış Koruyucu KarartıcıDO [10] öldürülür. Rukham / Bakhasha savaşta yardım eder."
+    },
+    {
+        title: "3. Aşama",
+        text: "300 Kaos Tayah İksiri teslim edilir. Ardından verilen Işınlanma Parşömeni kullanılır ve 4 adet zayıflatılmış Koruyucu KarartıcıHO [12] öldürülür. Rukham / Bakhasha savaşta yardım eder."
+    },
+    {
+        title: "4. Aşama",
+        text: "150 Kaos Ved İksiri teslim edilir. Ardından verilen Işınlanma Parşömeni kullanılır ve 3 adet zayıflatılmış Koruyucu General UyarrMO [12] öldürülür. Şifacı, savaşçı ve Rukham / Bakhasha savaşta yardım eder."
+    },
+    {
+        title: "5. Aşama",
+        text: "25 Kaos Dokart İksiri teslim edilir. Ardından verilen Işınlanma Parşömeni kullanılır ve zayıflatılmış Koruyucu Büyük Egnu [16] öldürülür. Egnu savaşta 4 KarartıcıDO, 4 KarartıcıHO ve 4 GunglHO çağırır. Çağrılan yaratıklar önceki dövüşlerde olduğu gibi zayıflatılmış olur. Şifacı, savaşçı, Rukham / Bakhasha ve Sheara yardım eder."
+    },
+    {
+        title: "6. Aşama",
+        text: "1 UyarrMO Kılıcı ve 1 UyarrMO Kalkanı teslim edilir. Ardından verilen Işınlanma Parşömeni kullanılır. 1 zayıflatılmış Koruyucu Lord Egnu [18], 1 Büyük Egnu, 3 KarartıcıHO ve 5 KarartıcıDO öldürülür. Hepsi önceki dövüşlerde olduğu gibi zayıflatılmış olur. 2 savaşçı, 2 şifacı, Rukham / Bakhasha ve Sheara yardım eder."
+    },
+    {
+        title: "7. Aşama",
+        text: "1 UyarrMO Miğferi ve 1 UyarrMO Omuzlukları teslim edilir. Ardından verilen Işınlanma Parşömeni kullanılır. 10’ar tane Lord Egnu, Büyük Egnu, General UyarrMO, KarartıcıHO, KarartıcıDO ve GunglHO öldürülür. Hepsi önceki dövüşlerde olduğu gibi zayıflatılmış olur. Şifacı, savaşçı, Rukham / Bakhasha ve Sheara yardım eder."
+    }
+]
+},
 
     {
         id: "geceleyin-sizanlar-hayran",
@@ -265,7 +352,7 @@ const fanQuests = [
         reputation: "Geceleyin Sızanlar Birliği",
         questName: "Geceleyin Sızanlar Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "seytani-kombo-kubu.png",
+        icon: madalyonPath + "geceleyin-hayran.gif",
         npc: "Pleanko / Korkusuz Kaleo",
         location: "Yabancılaşma Çölü / Bozkır Tarafı",
         shortInfo: "Kombo küplerinin dönüşüm kaynakları.",
@@ -318,13 +405,13 @@ const fanQuests = [
     },
 
     {
-        id: "kirmizi-baltalar-tas-lotosu-hayran",
+        id: "tas-lotosu-hayran",
         medal: "hayran",
         medalLabel: "Hayran Madalyonu",
-        reputation: "Kırmızı Baltalar & Taş Lotosu",
-        questName: "Kırmızı Baltalar / Taş Lotosu Hayran Görevi",
+        reputation: "Taş Lotosu",
+        questName: "Taş Lotosu Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "iblis-kombo-kubu.png",
+        icon: madalyonPath + "taş-lotus-hayran.gif",
         npc: "Kana Susamış Herb / Korkunç Lothar",
         location: "Karanlık Tepeler / Aldatış Yamacı",
         shortInfo: "Kombo küplerinin toplam dönüşüm kaynakları.",
@@ -374,7 +461,63 @@ const fanQuests = [
             "Görevi bitirmek için 3000 itibara sahip olmak gerekir."
         ]
     },
-
+    {
+        id: "kirmizi-baltalar-hayran",
+        medal: "hayran",
+        medalLabel: "Hayran Madalyonu",
+        reputation: "Kırmızı Baltalar",
+        questName: "Kırmızı Baltalar",
+        level: 5,
+        icon: madalyonPath + "kırmızı-baltalar-hayran.gif",
+        npc: "Kana Susamış Herb / Korkunç Lothar",
+        location: "Karanlık Tepeler / Aldatış Yamacı",
+        shortInfo: "Kombo küplerinin toplam dönüşüm kaynakları.",
+        requirements: [
+            item("Şeytani Kombo-Kübü", "13", "seytani-kombo-kubu.png"),
+            item("İblis Kombo-Kübü", "13", "iblis-kombo-kubu.png"),
+            item("Mührik İblis Kombo-Kübü", "13", "muhrik-iblis-kombo-kubu.png")
+        ],
+        sections: [
+            {
+                title: "13 Şeytani Kombo-Kübü İçin",
+                location: "Toplam dönüşüm kaynakları",
+                items: [
+                    item("Deve Dikeni Karışımı", "1300", "deve-dikeni-karisimi.png"),
+                    item("Ökse Otu Karışımı", "1300", "okse-otu-karisimi.png"),
+                    item("Yonca Karışımı", "1300", "yonca-karisimi.png"),
+                    item("Akik Taşı Tozu", "13000", "akik-tasi-tozu.png"),
+                    item("Akuamarin Taşı Tozu", "13000", "akuamarin-tasi-tozu.png"),
+                    item("Firuze Taşı Tozu", "13000", "firuze-tasi-tozu.png"),
+                    item("Küçük Işıldayan Kristal", "130", "kucuk-isildayan-kristal.png")
+                ]
+            },
+            {
+                title: "13 İblis Kombo-Kübü İçin",
+                location: "Toplam dönüşüm kaynakları",
+                items: [
+                    item("Sihirli Kırmızı Mürekkep", "3900", "sihirli-kirmizi-murekkep.png"),
+                    item("Sihirli Yeşil Mürekkep", "3900", "sihirli-yesil-murekkep.png"),
+                    item("Binbiryaprak Otu Karışımı", "1300", "binbiryaprak-otu-karisimi.png"),
+                    item("Ametist Taşı Tozu", "13000", "ametist-tasi-tozu.png"),
+                    item("Işıldayan Kristal", "130", "isildayan-kristal.png")
+                ]
+            },
+            {
+                title: "13 Mührik İblis Kombo-Kübü İçin",
+                location: "Toplam dönüşüm kaynakları",
+                items: [
+                    item("Sihirli Mavi Mürekkep", "2600", "sihirli-mavi-murekkep.png"),
+                    item("Zümrüt Tozu", "13000", "zumrut-tozu.png"),
+                    item("Topaz Tozu", "13000", "topaz-tozu.png"),
+                    item("Anemon Çiçeği Karışımı", "130", "anemon-cicegi-karisimi.png"),
+                    item("Adamotu Karışımı", "130", "adamotu-karisimi.png")
+                ]
+            }
+        ],
+        notes: [
+            "Görevi bitirmek için 3000 itibara sahip olmak gerekir."
+        ]
+    },
     {
         id: "yeralti-sovalyeleri-hayran",
         medal: "hayran",
@@ -382,7 +525,7 @@ const fanQuests = [
         reputation: "Yeraltı Şövalyeleri",
         questName: "Yeraltı Şövalyeleri Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "kristal-komuru.png",
+        icon: madalyonPath + "yeraltı-hayran.gif",
         npc: "Bekçi Valderei / Koruyucu Sangred",
         location: "Cehennem Geçidi / Dağ Kenarı",
         shortInfo: "Üç sertifika üzerinden ilerler.",
@@ -407,7 +550,7 @@ const fanQuests = [
         reputation: "Kaderin Hükümdarları",
         questName: "Kaderin Hükümdarları Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "guncellenecek.png",
+        icon: madalyonPath + "kaderin-hükümdarları-hayran.gif",
         npc: "Güncellenecek",
         location: "Güncellenecek",
         shortInfo: "Forumda güncellenecek olarak bırakılmış.",
@@ -424,7 +567,7 @@ const fanQuests = [
         reputation: "Flaudin Sualtı",
         questName: "Flaudin Sualtı Hayran Görevi",
         level: 6,
-        icon: kaynakPath + "deniz-midyesi.png",
+        icon: madalyonPath + "flaudin-hayran.gif",
         npc: "Akvarius",
         location: "Flaungard Sarayı",
         shortInfo: "Deniz Midyesi ve Boş Efril Çoğaltıcı teslimi.",
@@ -445,7 +588,7 @@ const fanQuests = [
         reputation: "Yaratık Avcıları",
         questName: "Yaratık Avcıları Hayran Görevi",
         level: 7,
-        icon: kaynakPath + "kara-cin.png",
+        icon: madalyonPath + "yaratık-avcıları-hayran.gif",
         npc: "Paladin Shimon",
         location: "Hükümdarlar Mezarlığı / Kraliçe Mezarlığı",
         shortInfo: "Kara Cin, Meşale ve Öfkeli Ejderha dövüşü.",
@@ -471,7 +614,7 @@ const fanQuests = [
         reputation: "Aladeya Tanrıçası",
         questName: "Aladeya Tanrıçası Hayran Görevi",
         level: 7,
-        icon: kaynakPath + "sumbul-cicegi.png",
+        icon: madalyonPath + "aledeya-hayran.gif",
         npc: "Aladeya bağlantılı karakter",
         location: "Ölüm Kanyonu / Beron Bozkırları",
         shortInfo: "Bitki ve taş kaynakları teslimi.",
@@ -490,7 +633,7 @@ const fanQuests = [
         reputation: "Ölülerin ve Lanetlilerin Tanrısı",
         questName: "Ölülerin ve Lanetlilerin Tanrısı Hayran Görevi",
         level: 7,
-        icon: kaynakPath + "billur-mersini-baligi.png",
+        icon: madalyonPath + "ölülerin-lanetlerin-hayran.gif",
         npc: "Ölülerin Tanrısı bağlantılı karakter",
         location: "Terk Edilmiş Mezarlık / Karanlık Türbe",
         shortInfo: "Balık, karışım ve yaprak teslimi.",
@@ -509,7 +652,7 @@ const fanQuests = [
         reputation: "Ulu Ejder",
         questName: "Ulu Ejder Hayran Görevi",
         level: 7,
-        icon: kaynakPath + "ejderha-kani.png",
+        icon: madalyonPath + "ulu-ejder-hayran.gif",
         npc: "Ulu Ejder bağlantılı karakter",
         location: "Cehennem Geçidi / Dağ Kenarı",
         shortInfo: "Ejderha Kanı, mürekkep ve Sıvı Sedef teslimi.",
@@ -528,7 +671,7 @@ const fanQuests = [
         reputation: "Muazzam Dövüş",
         questName: "Muazzam Dövüş Hayran Görevi",
         level: 7,
-        icon: kaynakPath + "muazzam-dovus-zaferi.png",
+        icon: madalyonPath + "muazzam-hayran.gif",
         npc: "Kumandan Gadrivei / Kumandan Darofei",
         location: "Sartnog Arenası / O'Delvays Arenası",
         shortInfo: "Zafer/liderlik, kombo küpleri ve savaş kaynakları.",
@@ -557,7 +700,7 @@ const fanQuests = [
         reputation: "Jaggernaut",
         questName: "Jaggernaut Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "jaggernaut.png",
+        icon: madalyonPath + "jaggernaut.gif",
         npc: "de'Barguil / Büyücü Grumil",
         location: "Meantro Köyü / Vahşet Ormanı",
         shortInfo: "Kaynakta detaylı bilgi için ayrı bağlantı verilmiş.",
@@ -575,7 +718,7 @@ const fanQuests = [
         reputation: "Eldivler",
         questName: "Eldivler Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "sentrio.png",
+        icon: madalyonPath + "eldiv-hayran.gif",
         npc: "Feeri-a-Maya / Çuli-a-Veyna",
         location: "Eldivlerin Kulesi / Öfke Toprakları",
         shortInfo: "Sentrio ve Işıkdar teslimi.",
@@ -593,7 +736,7 @@ const fanQuests = [
         reputation: "Kroffdorlar",
         questName: "Kroffdorlar Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "inkarnum.png",
+        icon: madalyonPath + "kroffdor-hayran.gif",
         npc: "Reodora / Dimedora",
         location: "Tremor Kasabası / Krofdorların Askeri Kampı",
         shortInfo: "İnkarnum ve Alevgir teslimi.",
@@ -611,7 +754,7 @@ const fanQuests = [
         reputation: "Evcil Hayvan Koruyucuları",
         questName: "Evcil Hayvan Koruyucuları Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "elt-giambir-tohumlari.png",
+        icon: madalyonPath + "evcil-hayvan-hayran.gif",
         npc: "Tatlı Boniya / Tatlı Mily",
         location: "Ankrivar Köyü / Kimzala Köyü",
         shortInfo: "Evcil hayvan kaynakları ve son aşamada Ölü Su iksiri.",
@@ -639,7 +782,7 @@ const fanQuests = [
         reputation: "Gölge Avcıları",
         questName: "Gölge Avcıları Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "kara-golge.png",
+        icon: madalyonPath + "gölge-hayran.gif",
         npc: "Akselyan",
         location: "Beyaz Kale",
         shortInfo: "Gölge kaynakları, Maltız ve Halifron Ruhu görevi.",
@@ -665,7 +808,7 @@ const fanQuests = [
         reputation: "Su Tanrısı",
         questName: "Su Tanrısı Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "su-kuresi.png",
+        icon: madalyonPath + "su-tanrisi-hayran.gif",
         npc: "Nimfiyus",
         location: "Denizanası Vadisi",
         shortInfo: "Karışım, toz, mürekkep, esans ve Su Küresi teslimi.",
@@ -689,7 +832,7 @@ const fanQuests = [
         reputation: "Hava Tanrısı",
         questName: "Hava Tanrısı Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "hava-kuresi.png",
+        icon: madalyonPath + "hava-tanrisi-hayran.gif",
         npc: "Sulfiyus",
         location: "Beyaz Kayalıklar",
         shortInfo: "Karışım, toz, mürekkep, esans ve Hava Küresi teslimi.",
@@ -713,7 +856,23 @@ const fanQuests = [
         reputation: "Hair Koruyucuları",
         questName: "Hair Koruyucuları Hayran Görevi",
         level: 11,
-        icon: kaynakPath + "guncellenecek.png",
+        icon: madalyonPath + "hair-koruyuculari-hayran.gif",
+        npc: "Güncellenecek",
+        location: "Güncellenecek",
+        shortInfo: "Forumda güncellenecek olarak bırakılmış.",
+        requirements: [],
+        notes: [
+            "Kaynakta bu görev henüz güncellenecek olarak görünüyor."
+        ]
+    },
+{
+        id: "ogriy-koruyuculari-hayran",
+        medal: "hayran",
+        medalLabel: "Hayran Madalyonu",
+        reputation: "Hair Koruyucuları",
+        questName: "Hair Koruyucuları Hayran Görevi",
+        level: 11,
+        icon: madalyonPath + "ogriy-koruyuculari-hayran.gif",
         npc: "Güncellenecek",
         location: "Güncellenecek",
         shortInfo: "Forumda güncellenecek olarak bırakılmış.",
@@ -730,7 +889,7 @@ const fanQuests = [
         reputation: "Mistik",
         questName: "Mistik Görevi",
         level: 12,
-        icon: kaynakPath + "kabarcikli-metal.png",
+        icon: madalyonPath + "mistik-hayran.gif",
         npc: "Kari",
         location: "Avgrelon Kasabası / Yabani Otlar Toprakları",
         shortInfo: "Mistik görevi çoklu kaynak teslimlerinden oluşur.",
@@ -763,7 +922,7 @@ const fanQuests = [
         reputation: "Korucu",
         questName: "Korucu Görevi",
         level: 15,
-        icon: kaynakPath + "avci-ustalik-simgesi.png",
+        icon: madalyonPath + "korucu-hayran.gif",
         npc: "Ormancı Haryen / Ormancı Vaslav",
         location: "Zyigolt Ormanı / Işıldayan Orman Kenarı",
         shortInfo: "Avcı Ustalık Simgesi ve evcil hayvan temsilcilerine kaynak teslimi.",
@@ -788,7 +947,7 @@ const fanQuests = [
         reputation: "Zurhass'ın Takipçileri",
         questName: "Zurhass'ın Takipçileri Görevi",
         level: 16,
-        icon: kaynakPath + "maurin-madeni-parasi.png",
+        icon: madalyonPath + "zurhass-hayran.gif",
         npc: "Tüccar Zarrukhs",
         location: "Uzborg / Bazgaryo",
         shortInfo: "Zurhass sunağına kaynak bağışı.",
@@ -809,7 +968,27 @@ const fanQuests = [
         reputation: "Miuri Tao",
         questName: "Miuri Tao Görevi",
         level: 16,
-        icon: kaynakPath + "zarlog-madeni-parasi.png",
+        icon: madalyonPath + "miuri-hayran.gif",
+        npc: "Maurin İdölü",
+        location: "Tempeler / Flezendal",
+        shortInfo: "Miuri Tao sunağına kaynak bağışı.",
+        requirements: [
+            item("Zarlog Madeni Parası", "333", "zarlog-madeni-parasi.png"),
+            item("Şafak Öncesi Çiy", "333", "safak-oncesi-ciy.png"),
+            item("Ritüel Mum", "3", "rituel-mum.png")
+        ],
+        notes: [
+            "Ritüel Mum, Tüccar Tao Mun mağazasından alınabilir."
+        ]
+    },
+    {
+        id: "büyü-koruyucu-hayran",
+        medal: "hayran",
+        medalLabel: "Özel Görev",
+        reputation: "Büyü Koruyucuları",
+        questName: "Büyü Koruyucuları Hayran",
+        level: 16,
+        icon: madalyonPath + "büyü-koruyucu-hayran.gif",
         npc: "Maurin İdölü",
         location: "Tempeler / Flezendal",
         shortInfo: "Miuri Tao sunağına kaynak bağışı.",
