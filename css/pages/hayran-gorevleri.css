@@ -388,7 +388,7 @@
 
     background: rgba(8, 6, 4, 0.62);
 
-    border: 1px solid rgba(245, 210, 122, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 12px;
 }
 
@@ -405,18 +405,18 @@
 
 .fan-resource-item strong {
     display: block;
-
-    margin-bottom: 5px;
-
-    color: #f5d27a;
-
-    font-size: 16px;
+    line-height: 1.2;
+    font-size: 17px;
 }
 
-.fan-resource-item span {
-    color: #ead7b3;
 
-    font-size: 25px;
+.fan-resource-item span {
+    display: block;
+    white-space: nowrap;
+    color: azure;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .fan-step-list,
@@ -505,4 +505,63 @@
 
     font-size: 16px;
     line-height: 1.55;
+}
+.fan-section-info {
+    margin-bottom: 14px;
+
+    color: #ead7b3;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.fan-combo-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 14px;
+
+    margin-bottom: 16px;
+}
+
+.fan-combo-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 12px 14px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 14px;
+}
+
+.fan-combo-summary-card img {
+    width: 68px;
+    height: 68px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.fan-combo-summary-card strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.fan-combo-summary-card span {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.15;
+    white-space: nowrap;
 }

@@ -7,7 +7,93 @@ function item(name, amount, image) {
         image: kaynakPath + image
     };
 }
+function comboResource(name, oneAmount, totalAmount, image) {
+    return {
+        name: name,
+        amount: oneAmount + " / " + totalAmount,
+        image: kaynakPath + image
+    };
+}
 
+function comboSection(title, comboName, comboImage, cubeName, cubeImage, info, resources) {
+    return {
+        title: title,
+        comboItem: {
+            name: comboName,
+            image: kaynakPath + comboImage,
+            amount: "1 / 13"
+        },
+        cubeItem: {
+            name: cubeName,
+            image: kaynakPath + cubeImage,
+            amount: "4 / 52"
+        },
+        info: info,
+        items: resources
+    };
+}
+
+function getComboCubeSections() {
+    return [
+        comboSection(
+            "Şeytani Kombo-Kübü",
+            "Şeytani Kombo-Kübü",
+            "seytani-kombo-kubu.png",
+            "Şeytani Cin Küpü",
+            "seytani-cin-kupu.png",
+            "1 kombo küpü 4 cin küpü verir. 13 kombo küpü 52 cin küpü verir.",
+            [
+                comboResource("Deve Dikeni Karışımı", "100", "1300", "deve-dikeni-karisimi.png"),
+                comboResource("Ökse Otu Karışımı", "100", "1300", "okse-otu-karisimi.png"),
+                comboResource("Yonca Karışımı", "100", "1300", "yonca-karisimi.png"),
+                comboResource("Akik Taşı Tozu", "1000", "13000", "akik-tasi-tozu.png"),
+                comboResource("Akuamarin Taşı Tozu", "1000", "13000", "akuamarin-tasi-tozu.png"),
+                comboResource("Firuze Taşı Tozu", "1000", "13000", "firuze-tasi-tozu.png"),
+                comboResource("Küçük Işıldayan Kristal", "10", "130", "kucuk-isildayan-kristal.png")
+            ]
+        ),
+
+        comboSection(
+            "İblis Kombo-Kübü",
+            "İblis Kombo-Kübü",
+            "iblis-kombo-kubu.png",
+            "İblis Cin Küpü",
+            "iblis-cin-kupu.png",
+            "1 kombo küpü 4 cin küpü verir. 13 kombo küpü 52 cin küpü verir.",
+            [
+                comboResource("Sihirli Kırmızı Mürekkep", "300", "3900", "sihirli-kirmizi-murekkep.png"),
+                comboResource("Sihirli Yeşil Mürekkep", "300", "3900", "sihirli-yesil-murekkep.png"),
+                comboResource("Binbiryaprak Otu Karışımı", "100", "1300", "binbiryaprak-otu-karisimi.png"),
+                comboResource("Ametist Taşı Tozu", "1000", "13000", "ametist-tasi-tozu.png"),
+                comboResource("Işıldayan Kristal", "10", "130", "isildayan-kristal.png")
+            ]
+        ),
+
+        comboSection(
+            "Mührik İblis Kombo-Kübü",
+            "Mührik İblis Kombo-Kübü",
+            "muhrik-iblis-kombo-kubu.png",
+            "Mührik İblis Cin Küpü",
+            "muhrik-iblis-cin-kupu.png",
+            "1 kombo küpü 4 cin küpü verir. 13 kombo küpü 52 cin küpü verir.",
+            [
+                comboResource("Sihirli Mavi Mürekkep", "200", "2600", "sihirli-mavi-murekkep.png"),
+                comboResource("Zümrüt Tozu", "1000", "13000", "zumrut-tozu.png"),
+                comboResource("Topaz Tozu", "1000", "13000", "topaz-tozu.png"),
+                comboResource("Anemon Çiçeği Karışımı", "10", "130", "anemon-cicegi-karisimi.png"),
+                comboResource("Adamotu Karışımı", "10", "130", "adamotu-karisimi.png")
+            ]
+        )
+    ];
+}
+
+function getMercenaryRequirements() {
+    return [
+        item("Şeytani Cin Küpü", "50", "seytani-cin-kupu.png"),
+        item("İblis Cin Küpü", "50", "iblis-cin-kupu.png"),
+        item("Mührik İblis Cin Küpü", "50", "muhrik-iblis-cin-kupu.png")
+    ];
+}
 const fanQuests = [
     {
         id: "sans-avcilari-hayran",
@@ -345,203 +431,175 @@ notes: [
 ]
 },
 
-    {
-        id: "geceleyin-sizanlar-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Geceleyin Sızanlar Birliği",
-        questName: "Geceleyin Sızanlar Hayran Görevi",
-        level: 5,
-        icon: madalyonPath + "geceleyin-hayran.gif",
-        npc: "Pleanko / Korkusuz Kaleo",
-        location: "Yabancılaşma Çölü / Bozkır Tarafı",
-        shortInfo: "Kombo küplerinin dönüşüm kaynakları.",
-        requirements: [
-            item("Şeytani Kombo-Kübü", "13", "seytani-kombo-kubu.png"),
-            item("İblis Kombo-Kübü", "13", "iblis-kombo-kubu.png"),
-            item("Mührik İblis Kombo-Kübü", "13", "muhrik-iblis-kombo-kubu.png")
-        ],
-        sections: [
-            {
-                title: "13 Şeytani Kombo-Kübü İçin",
-                location: "Dönüşüm kaynakları",
-                items: [
-                    item("Deve Dikeni Karışımı", "1300", "deve-dikeni-karisimi.png"),
-                    item("Ökse Otu Karışımı", "1300", "okse-otu-karisimi.png"),
-                    item("Yonca Karışımı", "1300", "yonca-karisimi.png"),
-                    item("Akik Taşı Tozu", "13000", "akik-tasi-tozu.png"),
-                    item("Akuamarin Taşı Tozu", "13000", "akuamarin-tasi-tozu.png"),
-                    item("Firuze Taşı Tozu", "13000", "firuze-tasi-tozu.png"),
-                    item("Küçük Işıldayan Kristal", "130", "kucuk-isildayan-kristal.png")
-                ]
-            },
-            {
-                title: "13 İblis Kombo-Kübü İçin",
-                location: "Dönüşüm kaynakları",
-                items: [
-                    item("Sihirli Kırmızı Mürekkep", "3900", "sihirli-kirmizi-murekkep.png"),
-                    item("Sihirli Yeşil Mürekkep", "3900", "sihirli-yesil-murekkep.png"),
-                    item("Binbiryaprak Otu Karışımı", "1300", "binbiryaprak-otu-karisimi.png"),
-                    item("Ametist Taşı Tozu", "13000", "ametist-tasi-tozu.png"),
-                    item("Işıldayan Kristal", "130", "isildayan-kristal.png")
-                ]
-            },
-            {
-                title: "13 Mührik İblis Kombo-Kübü İçin",
-                location: "Dönüşüm kaynakları",
-                items: [
-                    item("Sihirli Mavi Mürekkep", "2600", "sihirli-mavi-murekkep.png"),
-                    item("Zümrüt Tozu", "13000", "zumrut-tozu.png"),
-                    item("Topaz Tozu", "13000", "topaz-tozu.png"),
-                    item("Anemon Çiçeği Karışımı", "130", "anemon-cicegi-karisimi.png"),
-                    item("Adamotu Karışımı", "130", "adamotu-karisimi.png")
-                ]
-            }
-        ],
-        notes: [
-            "Görevi bitirmek için 3000 itibara sahip olmak gerekir.",
-            "Diğer paralı birlik itibarına geçildiyse tekrar 3000 itibara ulaşmak gerekebilir."
-        ]
-    },
+  {
+    id: "geceleyin-sizanlar-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Geceleyin Sızanlar Birliği",
+    questName: "Geceleyin Sızanlar Hayran Görevi",
+    level: 5,
+    icon: madalyonPath + "geceleyin-hayran.gif",
+    npc: "Pleanko / Korkusuz Kaleo",
+    location: "Yabancılaşma Çölü / Bozkır Tarafı",
+    shortInfo: "Cin küpleri ve kombo küp dönüşüm kaynakları.",
+    requirementsTitle: "İstenen Cin Küpleri",
+    requirements: getMercenaryRequirements(),
+    sectionsTitle: "Kombo Küp Hesapları",
+    sections: getComboCubeSections(),
+    notesTitle: "Görev İpuçları",
+    notes: [
+        {
+            title: "Cin Küpü Mantığı",
+            text: "Görevde 50’şer adet cin küpü istenir. Her 1 Kombo-Kübü 4 adet cin küpü verdiği için 13 Kombo-Kübü 52 adet cin küpü verir."
+        },
+        {
+            title: "İki Hayran İçin İpucu",
+            text: "İki hayran görevi yapılacaksa her cin küpü türünden toplam 100 adet gerekir. 25’er Kombo-Kübü açmak iki hayran için yeterlidir."
+        },
+        {
+            title: "Paralı Birlik Geçişi",
+            text: "Geceleyin Sızanlar hayran görevi yapıldıktan sonra diğer paralı birlik tarafına geçmek mümkündür. Aksi halde tekrar mevcut paralı itibarı 3000 yapmak gerekmektedir. "
+        },
+        {
+            title: "Paralı Not İpucu",
+            text: "Paralı Birlik Olayında Paralı Asekerleri Keserek Düşüen Notları Biriktirerek Diğer paralı birlik itibarı 60 adet Paralı Not ile doğrudan 3000 itibara getirilebilir."
+        }
+    ]
+},
 
-    {
-        id: "tas-lotosu-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Taş Lotosu",
-        questName: "Taş Lotosu Hayran Görevi",
-        level: 5,
-        icon: madalyonPath + "taş-lotus-hayran.gif",
-        npc: "Kana Susamış Herb / Korkunç Lothar",
-        location: "Karanlık Tepeler / Aldatış Yamacı",
-        shortInfo: "Kombo küplerinin toplam dönüşüm kaynakları.",
-        requirements: [
-            item("Şeytani Kombo-Kübü", "13", "seytani-kombo-kubu.png"),
-            item("İblis Kombo-Kübü", "13", "iblis-kombo-kubu.png"),
-            item("Mührik İblis Kombo-Kübü", "13", "muhrik-iblis-kombo-kubu.png")
-        ],
-        sections: [
-            {
-                title: "13 Şeytani Kombo-Kübü İçin",
-                location: "Toplam dönüşüm kaynakları",
-                items: [
-                    item("Deve Dikeni Karışımı", "1300", "deve-dikeni-karisimi.png"),
-                    item("Ökse Otu Karışımı", "1300", "okse-otu-karisimi.png"),
-                    item("Yonca Karışımı", "1300", "yonca-karisimi.png"),
-                    item("Akik Taşı Tozu", "13000", "akik-tasi-tozu.png"),
-                    item("Akuamarin Taşı Tozu", "13000", "akuamarin-tasi-tozu.png"),
-                    item("Firuze Taşı Tozu", "13000", "firuze-tasi-tozu.png"),
-                    item("Küçük Işıldayan Kristal", "130", "kucuk-isildayan-kristal.png")
-                ]
-            },
-            {
-                title: "13 İblis Kombo-Kübü İçin",
-                location: "Toplam dönüşüm kaynakları",
-                items: [
-                    item("Sihirli Kırmızı Mürekkep", "3900", "sihirli-kirmizi-murekkep.png"),
-                    item("Sihirli Yeşil Mürekkep", "3900", "sihirli-yesil-murekkep.png"),
-                    item("Binbiryaprak Otu Karışımı", "1300", "binbiryaprak-otu-karisimi.png"),
-                    item("Ametist Taşı Tozu", "13000", "ametist-tasi-tozu.png"),
-                    item("Işıldayan Kristal", "130", "isildayan-kristal.png")
-                ]
-            },
-            {
-                title: "13 Mührik İblis Kombo-Kübü İçin",
-                location: "Toplam dönüşüm kaynakları",
-                items: [
-                    item("Sihirli Mavi Mürekkep", "2600", "sihirli-mavi-murekkep.png"),
-                    item("Zümrüt Tozu", "13000", "zumrut-tozu.png"),
-                    item("Topaz Tozu", "13000", "topaz-tozu.png"),
-                    item("Anemon Çiçeği Karışımı", "130", "anemon-cicegi-karisimi.png"),
-                    item("Adamotu Karışımı", "130", "adamotu-karisimi.png")
-                ]
-            }
-        ],
-        notes: [
-            "Görevi bitirmek için 3000 itibara sahip olmak gerekir."
-        ]
-    },
-    {
-        id: "kirmizi-baltalar-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Kırmızı Baltalar",
-        questName: "Kırmızı Baltalar",
-        level: 5,
-        icon: madalyonPath + "kırmızı-baltalar-hayran.gif",
-        npc: "Kana Susamış Herb / Korkunç Lothar",
-        location: "Karanlık Tepeler / Aldatış Yamacı",
-        shortInfo: "Kombo küplerinin toplam dönüşüm kaynakları.",
-        requirements: [
-            item("Şeytani Kombo-Kübü", "13", "seytani-kombo-kubu.png"),
-            item("İblis Kombo-Kübü", "13", "iblis-kombo-kubu.png"),
-            item("Mührik İblis Kombo-Kübü", "13", "muhrik-iblis-kombo-kubu.png")
-        ],
-        sections: [
-            {
-                title: "13 Şeytani Kombo-Kübü İçin",
-                location: "Toplam dönüşüm kaynakları",
-                items: [
-                    item("Deve Dikeni Karışımı", "1300", "deve-dikeni-karisimi.png"),
-                    item("Ökse Otu Karışımı", "1300", "okse-otu-karisimi.png"),
-                    item("Yonca Karışımı", "1300", "yonca-karisimi.png"),
-                    item("Akik Taşı Tozu", "13000", "akik-tasi-tozu.png"),
-                    item("Akuamarin Taşı Tozu", "13000", "akuamarin-tasi-tozu.png"),
-                    item("Firuze Taşı Tozu", "13000", "firuze-tasi-tozu.png"),
-                    item("Küçük Işıldayan Kristal", "130", "kucuk-isildayan-kristal.png")
-                ]
-            },
-            {
-                title: "13 İblis Kombo-Kübü İçin",
-                location: "Toplam dönüşüm kaynakları",
-                items: [
-                    item("Sihirli Kırmızı Mürekkep", "3900", "sihirli-kirmizi-murekkep.png"),
-                    item("Sihirli Yeşil Mürekkep", "3900", "sihirli-yesil-murekkep.png"),
-                    item("Binbiryaprak Otu Karışımı", "1300", "binbiryaprak-otu-karisimi.png"),
-                    item("Ametist Taşı Tozu", "13000", "ametist-tasi-tozu.png"),
-                    item("Işıldayan Kristal", "130", "isildayan-kristal.png")
-                ]
-            },
-            {
-                title: "13 Mührik İblis Kombo-Kübü İçin",
-                location: "Toplam dönüşüm kaynakları",
-                items: [
-                    item("Sihirli Mavi Mürekkep", "2600", "sihirli-mavi-murekkep.png"),
-                    item("Zümrüt Tozu", "13000", "zumrut-tozu.png"),
-                    item("Topaz Tozu", "13000", "topaz-tozu.png"),
-                    item("Anemon Çiçeği Karışımı", "130", "anemon-cicegi-karisimi.png"),
-                    item("Adamotu Karışımı", "130", "adamotu-karisimi.png")
-                ]
-            }
-        ],
-        notes: [
-            "Görevi bitirmek için 3000 itibara sahip olmak gerekir."
-        ]
-    },
-    {
-        id: "yeralti-sovalyeleri-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Yeraltı Şövalyeleri",
-        questName: "Yeraltı Şövalyeleri Hayran Görevi",
-        level: 5,
-        icon: madalyonPath + "yeraltı-hayran.gif",
-        npc: "Bekçi Valderei / Koruyucu Sangred",
-        location: "Cehennem Geçidi / Dağ Kenarı",
-        shortInfo: "Üç sertifika üzerinden ilerler.",
-        requirements: [
-            item("Kristal Kömürü", "250", "kristal-komuru.png"),
-            item("Geçmiş Kristal Mağarası Zaferi", "10", "gecmis-kristal-magarasi-zaferi.png"),
-            item("Göksel Alev Kıvılcımı", "100", "goksel-alev-kivilcimi.png"),
-            item("Savaş Sertifikası", "50", "savas-sertifikasi.png"),
-            item("Kafa Derisi", "500", "kafa-derisi.png")
-        ],
-        notes: [
-            "10 Göksel Alev Kıvılcımı 1 zafer ilerletir.",
-            "10 Kafa Derisi 1 Savaş Sertifikası verir.",
-            "Savaş Sertifikası diğer oyunculardan satın alınabilir."
-        ]
-    },
+{
+    id: "tas-lotosu-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Taş Lotosu",
+    questName: "Taş Lotosu Hayran Görevi",
+    level: 5,
+    icon: madalyonPath + "tas-lotosu-hayran.gif",
+    npc: "Korkunç Lothar",
+    location: "Aldatış Yamacı",
+    shortInfo: "Cin küpleri ve kombo küp dönüşüm kaynakları.",
+    requirementsTitle: "İstenen Cin Küpleri",
+    requirements: getMercenaryRequirements(),
+    sectionsTitle: "Kombo Küp Hesapları",
+    sections: getComboCubeSections(),
+    notesTitle: "Görev İpuçları",
+    notes: [
+        {
+            title: "Irk Bilgisi",
+            text: "Taş Lotosu insan tarafındaki paralı birliktir. Magmar tarafındaki karşılığı Kırmızı Baltalar olarak düşünülür."
+        },
+        {
+            title: "Cin Küpü Mantığı",
+            text: "Görevde 50’şer adet cin küpü istenir. Her 1 Kombo-Kübü 4 adet cin küpü verdiği için 13 Kombo-Kübü 52 adet cin küpü verir."
+        },
+        {
+            title: "İki Hayran İçin İpucu",
+            text: "Diğer paralı birlik hayranı da yapılacaksa 25’er Kombo-Kübü hazırlamak yeterlidir. Böylece ikinci görev için fazladan kaynak takaslamaya gerek kalmaz."
+        },
+        {
+            title: "Paralı Not İpucu",
+            text: "Diğer paralı birlik itibarı 60 adet Paralı Not ile doğrudan 3000 itibara getirilebilir."
+        }
+    ]
+},
+
+{
+    id: "kirmizi-baltalar-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Kırmızı Baltalar",
+    questName: "Kırmızı Baltalar Hayran Görevi",
+    level: 5,
+    icon: madalyonPath + "kirmizi-baltalar-hayran.gif",
+    npc: "Kana Susamış Herb",
+    location: "Karanlık Tepeler",
+    shortInfo: "Cin küpleri ve kombo küp dönüşüm kaynakları.",
+    requirementsTitle: "İstenen Cin Küpleri",
+    requirements: getMercenaryRequirements(),
+    sectionsTitle: "Kombo Küp Hesapları",
+    sections: getComboCubeSections(),
+    notesTitle: "Görev İpuçları",
+    notes: [
+        {
+            title: "Irk Bilgisi",
+            text: "Kırmızı Baltalar Magmar tarafındaki paralı birliktir. İnsan tarafındaki karşılığı Taş Lotosu olarak düşünülür."
+        },
+        {
+            title: "Cin Küpü Mantığı",
+            text: "Görevde 50’şer adet cin küpü istenir. Her 1 Kombo-Kübü 4 adet cin küpü verdiği için 13 Kombo-Kübü 52 adet cin küpü verir."
+        },
+        {
+            title: "İki Hayran İçin İpucu",
+            text: "Diğer paralı birlik hayranı da yapılacaksa 25’er Kombo-Kübü hazırlamak yeterlidir. Böylece ikinci görev için fazladan kaynak takaslamaya gerek kalmaz."
+        },
+        {
+            title: "Paralı Not İpucu",
+            text: "Diğer paralı birlik itibarı 60 adet Paralı Not ile doğrudan 3000 itibara getirilebilir."
+        }
+    ]
+},
+{
+    id: "yeralti-sovalyeleri-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Yeraltı Şövalyeleri",
+    questName: "Yeraltı Şövalyeleri Hayran Görevi",
+    level: 5,
+    icon: madalyonPath + "yeralti-hayran.gif",
+    npc: "Bekçi Valderei / Koruyucu Sangred",
+    location: "Cehennem Geçidi / Dağ Kenarı",
+    shortInfo: "Görev 3 sertifika aşamasından oluşur.",
+
+    requirements: [],
+    sectionsTitle: "Görev Aşamaları",
+
+    sections: [
+        {
+            title: "1. Aşama",
+            location: "Yeraltı Şövalyeleri'nin İlk Sertifikası için 250 adet Kristal Kömürü teslim edilir.",
+            items: [
+                item("Yeraltı Şövalyeleri'nin İlk Sertifikası","" ,"yeralti-sertifikasi.png"),
+                item("Kristal Kömürü", "250", "kristal-komuru.png")
+            ]
+        },
+
+        {
+            title: "2. Aşama",
+            location: "Yeraltı Şövalyeleri'nin İkinci Sertifikası için 10 adet Geçmiş Kristal Mağarası Zaferi gerekir. Alternatif olarak 100 adet Göksel Alev Kıvılcımı kullanılabilir.",
+            items: [
+                item("Yeraltı Şövalyeleri'nin İkinci Sertifikası","" , "yeralti-sertifikasi.png"),
+                item("10 Geçmiş Kristal Mağarası Zaferi", "", "gecmis-kristal-magarasi-zaferi.png"),
+                item("Göksel Alev Kıvılcımı", "100", "goksel-alev-kivilcimi.png")
+            ]
+        },
+
+        {
+            title: "3. Aşama",
+            location: "Yeraltı Şövalyeleri'nin Üçüncü Sertifikası için 50 adet Savaş Sertifikası teslim edilir.",
+            items: [
+                item("Yeraltı Şövalyeleri'nin Üçüncü Sertifikası", "", "yeralti-sertifikasi.png"),
+                item("Savaş Sertifikası", "50", "savas-sertifikasi.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Görev Notları",
+
+    notes: [
+        {
+            title: "2. Aşama Alternatifi",
+            text: "Her 10 adet Göksel Alev Kıvılcımı, 1 adet Geçmiş Kristal Mağarası Zaferi ilerletir. Bu nedenle 10 zafer yerine toplam 100 adet Göksel Alev Kıvılcımı teslim edilebilir."
+        },
+        {
+            title: "3. Aşama Hesabı",
+            text: "Her 1 adet Savaş Sertifikası için 10 adet Kafa Derisi teslim edilir. Bu yüzden 50 adet Savaş Sertifikası için toplam 500 adet Kafa Derisi gerekir."
+        },
+        {
+            title: "Savaş Sertifikası",
+            text: "Savaş Sertifikası, hayran olmadan önce diğer oyuncularla alınıp satılabilir. Hayran olduktan sonra ticareti kapanır."
+        }
+    ]
+},
 
     {
         id: "kaderin-hukumdarlari-hayran",
@@ -556,7 +614,7 @@ notes: [
         shortInfo: "Forumda güncellenecek olarak bırakılmış.",
         requirements: [],
         notes: [
-            "Kaynakta bu görev henüz güncellenecek olarak görünüyor."
+            "Kaderin Hükümdarları Hayran görevi geldiğinde daha sonra güncellenecektir."
         ]
     },
 
@@ -573,7 +631,7 @@ notes: [
         shortInfo: "Deniz Midyesi ve Boş Efril Çoğaltıcı teslimi.",
         requirements: [
             item("Deniz Midyesi", "550", "deniz-midyesi.png"),
-            item("Boş Efril Çoğaltıcı", "1", "bos-efril-cogaltici.png")
+            item("Boş Efril Çoğaltıcı", "", "bos-efril-cogaltici.png")
         ],
         notes: [
             "Boş Efril Makinesi Eski Nesne Arayıcıları mağazasından alınabilir.",

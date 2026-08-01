@@ -103,14 +103,16 @@ function createMainRequirementsSection(quest) {
     `;
 }
 
-function createSectionList(sections) {
+function createSectionList(quest) {
+    const sections = quest.sections;
+
     if (!sections || sections.length === 0) {
         return "";
     }
 
     return `
         <section class="fan-detail-section">
-            <h3>Teslim Noktaları</h3>
+            <h3>${quest.sectionsTitle || "Teslim Noktaları"}</h3>
 
             <div class="fan-section-list">
                 ${sections.map(function (section) {
@@ -118,11 +120,45 @@ function createSectionList(sections) {
                         <div class="fan-section-card">
                             <h4>${section.title}</h4>
 
-                            ${section.location ? `<p>${section.location}</p>` : ""}
+                            ${
+                                section.info
+                                    ? `<p class="fan-section-info">${section.info}</p>`
+                                    : ""
+                            }
 
                             ${
-                                section.description
-                                    ? `<p>${section.description}</p>`
+                                section.comboItem || section.cubeItem
+                                    ? `
+                                        <div class="fan-combo-summary">
+                                            ${
+                                                section.comboItem
+                                                    ? `
+                                                        <div class="fan-combo-summary-card">
+                                                            <img src="${section.comboItem.image}" alt="${section.comboItem.name}">
+                                                            <div>
+                                                                <strong>${section.comboItem.name}</strong>
+                                                                <span>${section.comboItem.amount}</span>
+                                                            </div>
+                                                        </div>
+                                                    `
+                                                    : ""
+                                            }
+
+                                            ${
+                                                section.cubeItem
+                                                    ? `
+                                                        <div class="fan-combo-summary-card">
+                                                            <img src="${section.cubeItem.image}" alt="${section.cubeItem.name}">
+                                                            <div>
+                                                                <strong>${section.cubeItem.name}</strong>
+                                                                <span>${section.cubeItem.amount}</span>
+                                                            </div>
+                                                        </div>
+                                                    `
+                                                    : ""
+                                            }
+                                        </div>
+                                    `
                                     : ""
                             }
 
@@ -212,7 +248,7 @@ function renderQuestDetail(quest) {
 
             ${createMainRequirementsSection(quest)}
 
-            ${createSectionList(quest.sections)}
+            ${createSectionList(quest)}
 
             ${createNotesSection(quest)}
 
