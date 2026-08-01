@@ -1,5 +1,5 @@
 const kaynakPath = "../../assents/images/kaynaklar/";
-
+const madalyonPath = "../../assents/images/madalyonlar/"
 function item(name, amount, image) {
     return {
         name: name,
@@ -16,7 +16,7 @@ const fanQuests = [
         reputation: "Şans Avcıları",
         questName: "Şans Avcıları Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "sanshayran.gif",
+        icon: madalyonPath + "sanshayran.gif",
         npc: "Poker / Cathala",
         location: "Taverna / Maria'nın Yeri",
         shortInfo: "Olağanüstü Kum Tanesi teslimi.",
@@ -38,7 +38,7 @@ const fanQuests = [
         reputation: "Şans Avcıları",
         questName: "Şans Avcıları Yücelik Görevi",
         level: 5,
-        icon: kaynakPath + "sansyücelik.gif",
+        icon: madalyonPath+ "sansyücelik.gif",
         npc: "Birden fazla NPC",
         location: "Farklı bölgeler",
         shortInfo: "15 ayrı NPC/kaynak tesliminden oluşan Yücelik görevi.",
@@ -178,7 +178,7 @@ const fanQuests = [
         reputation: "Kötülük Yapanlar Birliği",
         questName: "Kötülük Yapanlar Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "kötülükhayran.png",
+        icon: madalyonPath + "kötülükhayran.png",
         npc: "Yobaz Vilmos",
         location: "Tutulma Koruluğu / Kafatası Çölü",
         shortInfo: "Öfkeli Göz teslimi.",
@@ -195,7 +195,7 @@ const fanQuests = [
         reputation: "İyilik Kardeşliği Birliği",
         questName: "İyilik Yapanlar Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "iyilikhayran.png",
+        icon: madalyonPath + "iyilikhayran.png",
         npc: "Nearak Derbog",
         location: "Vukrimah Malikanesi / Airgond Malikanesi",
         shortInfo: "İyilik Emanasyonu teslimi.",
@@ -212,7 +212,7 @@ const fanQuests = [
         reputation: "Eski Nesne Arayıcıları",
         questName: "Eski Nesne Arayıcıları Hayran Görevi",
         level: 5,
-        icon: kaynakPath + "ates-cicegi.png",
+        icon: madalyonPath + "eskinesne-hayran.png",
         npc: "Antikacı Manley / Antikacı Setoni",
         location: "Alevli Vadi / Klerve Kasabası Civarı",
         shortInfo: "Antikacıya özel kaynak teslimleri.",

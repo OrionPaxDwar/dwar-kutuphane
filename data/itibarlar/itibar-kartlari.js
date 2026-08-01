@@ -22,7 +22,7 @@ window.reputationData["Eski Nesne Arayıcıları"] = `
             <div class="medal-grid">
 
                 <div class="medal-card">
-                    <img src="../assents/images/Madalyonlar/Kabullenme Madalyonu.gif" alt="Kabullenme Madalyonu">
+                    <img src="../assents/images/madalyonlar/Kabullenme Madalyonu.gif" alt="Kabullenme Madalyonu">
                     <h4>Kabullenme Madalyonu</h4>
                     <p>500 Onur</p>
                 </div>

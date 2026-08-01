@@ -279,3 +279,195 @@
 
     font-size: 18px;
 }
+
+.armor-shop-hero {
+    border-color: rgba(255, 225, 138, 0.34);
+}
+
+.armor-shop-section {
+    width: min(1250px, 96%);
+}
+
+.armor-shop-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.armor-shop-group {
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(34, 21, 10, 0.90),
+            rgba(9, 7, 5, 0.92)
+        );
+
+    border: 1px solid rgba(245, 210, 122, 0.24);
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 24px rgba(0, 0, 0, 0.72);
+}
+
+.armor-shop-group-header {
+    padding: 20px 24px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(92, 43, 12, 0.78),
+            rgba(12, 9, 6, 0.72)
+        );
+
+    border-bottom: 1px solid rgba(245, 210, 122, 0.22);
+}
+
+.armor-shop-group-header h2 {
+    margin-bottom: 6px;
+
+    color: #ffe18a;
+
+    font-size: 34px;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px #000;
+}
+
+.armor-shop-group-header p {
+    color: #ead7b3;
+
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.armor-shop-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+    padding: 18px;
+}
+
+.armor-shop-item {
+    min-height: 126px;
+
+    display: grid;
+    grid-template-columns: 92px 1fr auto;
+    gap: 14px;
+    align-items: center;
+
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 229, 168, 0.08),
+            rgba(0, 0, 0, 0.34)
+        );
+
+    border: 1px solid rgba(245, 210, 122, 0.20);
+    border-radius: 14px;
+
+    transition: 0.22s;
+}
+
+.armor-shop-item:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(255, 225, 138, 0.62);
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.72),
+        0 0 16px rgba(245, 210, 122, 0.12);
+}
+
+.armor-shop-image {
+    width: 86px;
+    height: 86px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(245, 210, 122, 0.12),
+            rgba(0, 0, 0, 0.46) 70%
+        );
+
+    border: 1px solid rgba(245, 210, 122, 0.22);
+    border-radius: 12px;
+}
+
+.armor-shop-image img {
+    width: 76px;
+    height: 76px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
+}
+
+.armor-shop-info h3 {
+    margin-bottom: 6px;
+
+    color: #f5d27a;
+
+    font-size: 20px;
+    line-height: 1.22;
+
+    text-shadow:
+        0 0 8px #000;
+}
+
+.armor-shop-info p {
+    color: #ead7b3;
+
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.armor-shop-cost {
+    min-width: 106px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    background: rgba(0, 0, 0, 0.38);
+
+    border: 1px solid rgba(245, 210, 122, 0.20);
+    border-radius: 12px;
+}
+
+.armor-shop-cost img {
+    width: 34px;
+    height: 34px;
+
+    margin-bottom: 5px;
+
+    object-fit: contain;
+}
+
+.armor-shop-cost strong {
+    color: #ffdf6a;
+
+    font-size: 23px;
+    line-height: 1;
+}
+
+.armor-shop-cost span {
+    margin-top: 3px;
+
+    color: #d9c49c;
+
+    font-size: 13px;
+}

@@ -2,8 +2,10 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şubat Mağazası - Dwar Kütüphane</title>
+
+    <title>Zırh Mağazası - Dwar Kütüphane</title>
 
     <link rel="stylesheet" href="../../../css/base/reset.css">
     <link rel="stylesheet" href="../../../css/base/layout.css">
@@ -14,21 +16,28 @@
     <link rel="stylesheet" href="../../../css/components/cards.css">
 
     <link rel="stylesheet" href="../../../css/pages/magaza-detay.css">
+
     <link rel="stylesheet" href="../../../css/base/responsive.css">
 </head>
 
 <body>
 
-    <a href="../../../index.html" class="back-home-btn">Ana Sayfaya Dön</a>
-    <a href="../sezonluk-magazalar.html" class="back-section-btn">Sezonluk Mağazalara Dön</a>
+    <a href="../../../index.html" class="back-home-btn">
+        Ana Sayfaya Dön
+    </a>
 
-    <main class="page-shell shop-detail-page" id="monthlyShopRoot"></main>
+    <a href="../ozel-magazalar.html" class="back-section-btn">
+        Özel Mağazalara Dön
+    </a>
+
+    <main class="page-shell shop-detail-page" id="specialShopRoot"></main>
 
     <script>
-        const currentShopId = "subat";
+        const currentSpecialShopId = "zirh-magazasi";
     </script>
-    <script src="../../../data/magazalar/aylik-magazalar.js"></script>
-    <script src="../../../js/pages/aylik-magaza-detay.js"></script>
+
+    <script src="../../../data/magazalar/ozel-magazalar.js"></script>
+    <script src="../../../js/pages/ozel-magaza-detay.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
 </html>

@@ -310,3 +310,107 @@
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 850px) {
+    .reward-modal-main {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+
+    .reward-modal-image {
+        min-height: 220px;
+    }
+
+    .reward-modal-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .reward-modal-content-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .reward-modal-box {
+        padding: 22px;
+    }
+
+    .reward-modal-info h2 {
+        font-size: 30px;
+    }
+
+    .reward-modal-content-list {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 850px) {
+    .reward-modal-main {
+        grid-template-columns: 1fr;
+        padding-right: 0;
+    }
+
+    .reward-modal-image {
+        min-height: 220px;
+    }
+
+    .reward-modal-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .reward-modal-content-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .reward-modal-box {
+        padding: 22px;
+    }
+
+    .reward-modal-info h2 {
+        font-size: 30px;
+    }
+
+    .reward-modal-content-list {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1050px) {
+    .armor-shop-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .armor-shop-item {
+        grid-template-columns: 76px 1fr;
+    }
+
+    .armor-shop-image {
+        width: 72px;
+        height: 72px;
+    }
+
+    .armor-shop-image img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .armor-shop-cost {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .armor-shop-cost img {
+        margin-bottom: 0;
+    }
+
+    .armor-shop-group-header h2 {
+        font-size: 28px;
+    }
+}
