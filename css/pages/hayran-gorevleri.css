@@ -565,3 +565,21 @@
     line-height: 1.15;
     white-space: nowrap;
 }
+.fan-section-location {
+    margin: 8px 0 14px;
+
+    color: #fdfdfc;
+
+    font-size: 15px;
+    line-height: 1.45;
+    
+}
+
+.fan-section-location::before {
+    content: "Konum: ";
+
+    color: #fefefe;
+
+    font-weight: 700;
+    font-style: normal;
+}

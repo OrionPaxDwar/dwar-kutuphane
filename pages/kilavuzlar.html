@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kılavuzlar - Dwar Kütüphane</title>
+
+    <link rel="stylesheet" href="../css/base/reset.css">
+    <link rel="stylesheet" href="../css/base/layout.css">
+    <link rel="stylesheet" href="../css/base/buttons.css">
+    <link rel="stylesheet" href="../css/components/cards.css">
+    <link rel="stylesheet" href="../css/pages/kilavuzlar.css">
+    <link rel="stylesheet" href="../css/base/responsive.css">
+</head>
+
+<body>
+
+    <a href="../index.html" class="back-home-btn">Ana Sayfa</a>
+
+    <main class="page-shell guide-page">
+
+        <section class="guide-hero">
+            <span class="guide-eyebrow">DWAR KÜTÜPHANE</span>
+
+            <h1>Kılavuzlar</h1>
+
+            <p>
+                Oyun sistemleri, geçiş rehberleri, pratik bilgiler ve sıkça karıştırılan konular burada toplanır.
+            </p>
+
+            <div class="guide-search-box">
+                <input 
+                    type="text" 
+                    id="guideSearchInput" 
+                    placeholder="Kılavuz ara..."
+                >
+            </div>
+        </section>
+
+        <section class="guide-grid" id="guideGrid">
+
+            <a 
+                href="kilavuzlar/iyilik-kotuluk-gecis.html" 
+                class="guide-card" 
+                data-title="iyilik kötülük geçiş sistemi hayran yarım öfkeli göz çok yönlülük cazibesi ayırma tomarı"
+            >
+                <div class="guide-card-image">
+                    <img src="../assents/images/kilavuzlar/iyilik-kotuluk-gecis.jpg" alt="İyilik Kötülük Geçiş Sistemi">
+                </div>
+
+                <div class="guide-card-content">
+                    <span>İtibar Rehberi</span>
+
+                    <h2>İyilik ↔ Kötülük Geçiş Sistemi</h2>
+
+                    <p>
+                        Hayran olduktan sonra İyilik ve Kötülük tarafları arasında geçiş yapma sistemi.
+                    </p>
+                </div>
+            </a>
+
+        </section>
+
+        <div class="guide-empty-message" id="guideEmptyMessage">
+            Aramana uygun kılavuz bulunamadı.
+        </div>
+
+    </main>
+
+    <script src="../js/pages/kilavuzlar.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

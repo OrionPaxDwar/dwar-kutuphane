@@ -121,6 +121,12 @@ function createSectionList(quest) {
                             <h4>${section.title}</h4>
 
                             ${
+                                section.location
+                                    ? `<p class="fan-section-location">${section.location}</p>`
+                                    : ""
+                            }
+
+                            ${
                                 section.info
                                     ? `<p class="fan-section-info">${section.info}</p>`
                                     : ""
@@ -170,7 +176,6 @@ function createSectionList(quest) {
         </section>
     `;
 }
-
 function createNotesSection(quest) {
     if (!quest.notes || quest.notes.length === 0) {
         return "";

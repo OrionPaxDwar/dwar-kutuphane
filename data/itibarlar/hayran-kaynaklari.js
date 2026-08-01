@@ -95,27 +95,83 @@ function getMercenaryRequirements() {
     ];
 }
 const fanQuests = [
-    {
-        id: "sans-avcilari-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Şans Avcıları",
-        questName: "Şans Avcıları Hayran Görevi",
-        level: 5,
-        icon: madalyonPath + "sanshayran.gif",
-        npc: "Poker / Cathala",
-        location: "Taverna / Maria'nın Yeri",
-        shortInfo: "Olağanüstü Kum Tanesi teslimi.",
-        requirements: [
-            item("Olağanüstü Kum Tanesi", "1000", "olaganustu-kum-tanesi.png"),
-            item("Harika Cam", "8350 - 25000", "harika-cam.png"),
-            item("Ufalama Tomarı", "334 - 1000", "ufalama-tomari.png")
-        ],
-        notes: [
-            "Olağanüstü Kum Tanesi elde etmek için Harika Cam ve Ufalama Tomarı gerekir.",
-            "Miktarlar en iyi ve en kötü ihtimale göre değişebilir."
-        ]
-    },
+   {
+    id: "sans-avcilari-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Şans Avcıları",
+    questName: "Şans Avcıları Hayran Görevi",
+    level: 5,
+    icon: madalyonPath + "sanshayran.gif",
+    npc: "Poker / Cathala",
+    location: "Taverna / Maria'nın Yeri",
+    shortInfo: "Hayran görevi için 1000 adet Olağanüstü Kum Tanesi teslim edilir.",
+
+    requirementsTitle: "İstenen Kaynak",
+
+    requirements: [
+        item("Olağanüstü Kum Tanesi", "1000", "olaganustu-kum-tanesi.png")
+    ],
+
+    sectionsTitle: "Kum Tanesi Üretim Hesabı",
+
+    sections: [
+        {
+            title: "1 Ufalama İşlemi",
+            location: "25 Harika Cam + 1 Ufalama Tomarı kullanılır. Sonuç olarak 1 - 3 adet Olağanüstü Kum Tanesi elde edilir.",
+            items: [
+                item("Harika Cam", "25", "harika-cam.png"),
+                item("Ufalama Tomarı", "1", "ufalama-tomari.png"),
+                item("Olağanüstü Kum Tanesi", "1 - 3", "olaganustu-kum-tanesi.png")
+            ]
+        },
+
+        {
+            title: "1000 Kum Tanesi İçin En İyi İhtimal",
+            location: "Her işlemde 3 adet kum tanesi gelirse yaklaşık 334 Ufalama Tomarı ve 8350 Harika Cam gerekir.",
+            items: [
+                item("Harika Cam", "8350", "harika-cam.png"),
+                item("Ufalama Tomarı", "334", "ufalama-tomari.png"),
+                item("Olağanüstü Kum Tanesi", "1000", "olaganustu-kum-tanesi.png")
+            ]
+        },
+
+        {
+            title: "1000 Kum Tanesi İçin En Kötü İhtimal",
+            location: "Her işlemde 1 adet kum tanesi gelirse 1000 Ufalama Tomarı ve 25000 Harika Cam gerekir.",
+            items: [
+                item("Harika Cam", "25000", "harika-cam.png"),
+                item("Ufalama Tomarı", "1000", "ufalama-tomari.png"),
+                item("Olağanüstü Kum Tanesi", "1000", "olaganustu-kum-tanesi.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Üretim Notları",
+
+    notes: [
+        {
+            title: "Görevde İstenen Asıl Kaynak",
+            text: "Şans Avcıları hayran görevi için teslim edilmesi gereken asıl kaynak sadece 1000 adet Olağanüstü Kum Tanesi'dir."
+        },
+        {
+            title: "Kum Tanesi Üretimi",
+            text: "25 Harika Cam ve 1 Ufalama Tomarı kullanıldığında 1 - 3 adet Olağanüstü Kum Tanesi elde edilir."
+        },
+        {
+            title: "Ufalama Tomarı Maliyeti",
+            text: "Her Ufalama Tomarı 75 gümüştür."
+        },
+        {
+            title: "Altın Maliyeti",
+            text: "1000 kum tanesi için en iyi ihtimalde yaklaşık 334 tomar gerekir ve bu yaklaşık 250 altın eder. En kötü ihtimalde 1000 tomar gerekir ve bu 750 altın eder."
+        },
+        {
+            title: "Harika Cam Aralığı",
+            text: "1000 kum tanesi için en iyi ihtimalde 8350 Harika Cam, en kötü ihtimalde 25000 Harika Cam gerekir."
+        }
+    ]
+},
 
     {
         id: "sans-avcilari-yucelik",
@@ -1054,7 +1110,7 @@ notes: [
             item("Krofdor'ların El Yazıları", "40", "krofdorlarin-el-yazilari.png"),
             item("Eldiv'lerin El Yazıları", "30", "eldivlerin-el-yazilari.png"),
             item("Elf'lerin El Yazıları", "20", "elflerin-el-yazilari.png"),
-            item("Dağ Sakinleri El Yazıları", "10", "dag-sakinleri-el-yazilari.png")
+            item("Dağ Sakinleri El Yazıları", "10", "assents/images/kaynaklar/dag-sakinleri-el-yazilari.png")
         
         ],
         notes: [
