@@ -606,3 +606,25 @@
         0 0 20px rgba(0, 0, 0, 0.65),
         0 0 14px rgba(245, 210, 122, 0.10);
 }
+.fan-resource-separator {
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffe18a;
+
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #000;
+}
+@media (max-width: 620px) {
+    .fan-resource-separator {
+        min-height: 32px;
+        font-size: 18px;
+    }
+}

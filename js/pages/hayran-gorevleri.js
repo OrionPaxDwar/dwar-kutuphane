@@ -75,6 +75,14 @@ function createRequirementList(requirements) {
     return `
         <div class="fan-resource-list">
             ${requirements.map(function (resource) {
+                if (resource.type === "separator") {
+                    return `
+                        <div class="fan-resource-separator">
+                            ${resource.text || "veya"}
+                        </div>
+                    `;
+                }
+
                 return `
                     <div class="fan-resource-item">
                         <img src="${resource.image}" alt="${resource.name}">

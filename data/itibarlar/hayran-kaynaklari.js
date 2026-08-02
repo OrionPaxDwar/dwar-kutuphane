@@ -615,8 +615,12 @@ notes: [
             title: "1. Aşama",
             location: "Yeraltı Şövalyeleri'nin İlk Sertifikası için 250 adet Kristal Kömürü teslim edilir.",
             items: [
-                item("Yeraltı Şövalyeleri'nin İlk Sertifikası","" ,"yeralti-sertifikasi.png"),
-                item("Kristal Kömürü", "250", "kristal-komuru.png")
+                item("Kristal Kömürü", "250", "kristal-komuru.png"),
+                {
+        type: "separator",
+        text: "➡️"
+    },
+                item("Yeraltı Şövalyeleri'nin İlk Sertifikası","" ,"yeralti-sertifikasi.png")
             ]
         },
 
@@ -624,9 +628,19 @@ notes: [
             title: "2. Aşama",
             location: "Yeraltı Şövalyeleri'nin İkinci Sertifikası için 10 adet Geçmiş Kristal Mağarası Zaferi gerekir. Alternatif olarak 100 adet Göksel Alev Kıvılcımı kullanılabilir.",
             items: [
-                item("Yeraltı Şövalyeleri'nin İkinci Sertifikası","" , "yeralti-sertifikasi.png"),
-                item("10 Geçmiş Kristal Mağarası Zaferi", "", "gecmis-kristal-magarasi-zaferi.png"),
-                item("Göksel Alev Kıvılcımı", "100", "goksel-alev-kivilcimi.png")
+                
+                      
+                item("10 Geçmiş Kristal Mağarası Zaferi", "", "gecmis-kristal-magarasi-zaferi.png"), 
+                  {
+        type: "separator",
+        text: "veya",
+    },
+                item("Göksel Alev Kıvılcımı", "100", "goksel-alev-kivilcimi.png"),
+                   {
+        type: "separator",
+        text: " "
+    },
+                item("Yeraltı Şövalyeleri'nin İkinci Sertifikası","" , "yeralti-sertifikasi.png")
             ]
         },
 
@@ -634,8 +648,11 @@ notes: [
             title: "3. Aşama",
             location: "Yeraltı Şövalyeleri'nin Üçüncü Sertifikası için 50 adet Savaş Sertifikası teslim edilir.",
             items: [
-                item("Yeraltı Şövalyeleri'nin Üçüncü Sertifikası", "", "yeralti-sertifikasi.png"),
-                item("Savaş Sertifikası", "50", "savas-sertifikasi.png")
+                item("Savaş Sertifikası", "50", "savas-sertifikasi.png"),{
+        type: "separator",
+        text: "➡️"
+    },
+                item("Yeraltı Şövalyeleri'nin Üçüncü Sertifikası", "", "yeralti-sertifikasi.png")
             ]
         }
     ],
@@ -1004,59 +1021,178 @@ notes: [
         notes: []
     },
 
-    {
-        id: "evcil-hayvan-koruyuculari-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Evcil Hayvan Koruyucuları",
-        questName: "Evcil Hayvan Koruyucuları Hayran Görevi",
-        level: 11,
-        icon: madalyonPath + "evcil-hayvan-hayran.gif",
-        npc: "Tatlı Boniya / Tatlı Mily",
-        location: "Ankrivar Köyü / Kimzala Köyü",
-        shortInfo: "Evcil hayvan kaynakları ve son aşamada Ölü Su iksiri.",
-        requirements: [
-            item("Elt Giambir Tohumları", "100", "elt-giambir-tohumlari.png"),
-            item("Yavru Habus Havyarı", "100", "yavru-habus-havyari.png"),
-            item("Eldoril'in Saf Kristalleri", "100", "eldorilin-saf-kristalleri.png"),
-            item("Ludiyal Zincir Halkası", "50", "ludiyal-zincir-halkasi.png"),
-            item("Mührik İblis Kombo-Kübü", "10", "muhrik-iblis-kombo-kubu.png"),
-            item("Kristal Kömürü", "190", "kristal-komuru.png"),
-            item("Hayat Cevheri", "500", "hayat-cevheri.png"),
-            item("Ölümsüz Öldürücü İksir", "5", "olumsuz-oldurucu-iksir.png"),
-            item("Ölü Su", "1", "olu-su.png")
-        ],
-        notes: [
-            "10 Mührik İblis Kombo-Kübü veya 190 Kristal Kömürü alternatif olarak kullanılabilir.",
-            "Ölü Su iksiri Büyücü Belinda dövüşü için kullanılır."
-        ]
+{
+    id: "evcil-hayvan-koruyuculari-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Evcil Hayvan Koruyucuları",
+    questName: "Evcil Hayvan Koruyucuları Hayran Görevi",
+    level: 11,
+    icon: madalyonPath + "evcil-hayvan-hayran.gif",
+    npc: "Tatlı Boniya / Tatlı Mily",
+    location: "Ankrivar Köyü / Kimzala Köyü",
+    shortInfo: "Evcil Hayvan Koruyucuları hayran görevi 5 aşamalı kaynak ve dövüş sistemiyle ilerler.",
+
+    requirements: [],
+
+    sectionsTitle: "Görev Aşamaları",
+
+    sections: [
+        {
+            title: "1. Aşama: Evcil Hayvan Kaynakları",
+            location: "Tatlı Boniya / Tatlı Mily",
+            info: "İlk aşamada evcil hayvan kaynakları teslim edilir.",
+            items: [
+                item("Elt Giambir Tohumları", "100", "elt-giambir-tohumlari.png"),
+                item("Yavru Habus Havyarı", "100", "yavru-habus-havyari.png"),
+                item("Eldoril'in Saf Kristalleri", "100", "eldorilin-saf-kristalleri.png")
+            ]
+        },
+
+        {
+            title: "2. Aşama: Ludiyal Zincir Halkası",
+            location: "Tatlı Boniya / Tatlı Mily",
+            info: "İkinci aşamada Ludiyal Zincir Halkası teslim edilir.",
+            items: [
+                item("Ludiyal Zincir Halkası", "50", "ludiyal-zincir-halkasi.png")
+            ]
+        },
+
+        {
+    title: "3. Aşama: Alternatif Teslim",
+    location: "Tatlı Boniya / Tatlı Mily",
+    info: "Bu aşamada 10 adet Mührik İblis Kombo-Kübü veya alternatif olarak 190 adet Kristal Kömürü teslim edilebilir.",
+    items: [
+        item("Mührik İblis Kombo-Kübü", "10", "muhrik-iblis-kombo-kubu.png"),
+        {
+            type: "separator",
+            text: "veya"
+        },
+        item("Kristal Kömürü", "190", "kristal-komuru.png")
+    ]
+},
+
+        {
+            title: "4. Aşama: Hayat Cevheri",
+            location: "Tatlı Boniya / Tatlı Mily",
+            info: "Dördüncü aşamada Hayat Cevheri teslim edilir.",
+            items: [
+                item("Hayat Cevheri", "500", "hayat-cevheri.png")
+            ]
+        },
+
+        {
+            title: "5. Aşama: Ölü Su ve Büyücü Belinda",
+            location: "Sınır Bölgesi(Bayan Günevra) /Rüzgar Toprakları (Bayan Kordalya) ve Laboratuvar",
+            info: "Son aşamada 5 adet Ölümsüz Öldürücü İksir karşılığında Ölü Su alınır. Ölü Su, Laboratuvar'a girildikten sonra ceplere eklenir ve Büyücü Belinda dövüşünde kullanılır.",
+            items: [
+                item("Ölümsüz Öldürücü İksir", "5", "olumsuz-oldurucu-iksir.png"),
+                {
+        type: "separator",
+        text: "➡️"
     },
+                item("Ölü Su", "1", "olu-su.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Görev Notları",
+
+    notes: [
+        {
+            title: "Alternatif Teslim",
+            text: "Üçüncü aşamada 10 adet Mührik İblis Kombo-Kübü yerine 190 adet Kristal Kömürü teslim edilebilir."
+        },
+        {
+            title: "Ölü Su Aşaması",
+            text: "Bayan Günevra / Bayan Kordalya, Büyücü Belinda'yı kesebilmek için gerekli olan Ölü Su iksirini 5 adet Ölümsüz Öldürücü İksir karşılığında verir."
+        },
+        {
+            title: "Laboratuvar Kullanımı",
+            text: "Ölü Su alındıktan sonra Laboratuvar'a girilir. Ölü Su ceplere eklenerek Büyücü Belinda dövüşünde kullanılır."
+        },
+        {
+            title: "Görev Tamamlama",
+            text: "Büyücü Belinda aşaması tamamlandıktan sonra Evcil Hayvan Koruyucuları hayran görevi tamamlanır."
+        }
+    ]
+},
 
     {
-        id: "golge-avcilari-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Gölge Avcıları",
-        questName: "Gölge Avcıları Hayran Görevi",
-        level: 11,
-        icon: madalyonPath + "gölge-hayran.gif",
-        npc: "Akselyan",
-        location: "Beyaz Kale",
-        shortInfo: "Gölge kaynakları, Maltız ve Halifron Ruhu görevi.",
-        requirements: [
-            item("Kara Gölge", "100", "kara-golge.png"),
-            item("Tehditkar Gölge", "30", "tehditkar-golge.png"),
-            item("Ölümcül Gölge", "5", "olumcul-golge.png"),
-            item("Ölü Kalp", "3", "olu-kalp.png"),
-            item("Edera Çelengi", "1", "edera-celengi.png"),
-            item("Maltız", "1", "maltiz.png"),
-            item("Mutlak Zayıflık Tozu", "1", "mutlak-zayiflik-tozu.png")
-        ],
-        notes: [
-            "Maltız Sisli Adalar’daki uygun bölgelerde kullanılabilir.",
-            "Beyaz Kayalıklar’da Halifron Ruhu çağrılır."
-        ]
-    },
+    id: "golge-avcilari-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Gölge Avcıları",
+    questName: "Gölge Avcıları Hayran Görevi",
+    level: 11,
+    icon: madalyonPath + "golge-hayran.gif",
+    npc: "Akselyan",
+    location: "Beyaz Kale",
+    shortInfo: "Gölge kaynakları toplanır, Maltız kullanılır ve son aşamada Halifron Ruhu yenilir.",
+
+    requirements: [],
+
+    sectionsTitle: "Görev Aşamaları",
+
+    sections: [
+        {
+            title: "1. Aşama: Gölge Kaynakları",
+            location: "Akselyan / Beyaz Kale",
+            info: "İlk aşamada gerekli gölge kaynakları teslim edilir.",
+            items: [
+                item("Kara Gölge", "100", "kara-golge.png"),
+                item("Tehditkar Gölge", "30", "tehditkar-golge.png"),
+                item("Ölümcül Gölge", "5", "olumcul-golge.png"),
+                item("Ölü Kalp", "3", "olu-kalp.png"),
+                item("Edera Çelengi", "1", "edera-celengi.png")
+            ]
+        },
+
+        {
+            title: "2. Aşama: Maltız Kullanımı",
+            location: "Sisli Adalar",
+            info: "Maltız, Sisli Adalar’daki uygun bölgelerde kullanılır. Oradaki yaratıkları yendikten sonra tekrar Akselyan’a dönülür.(Denizanası Vadisi, Daykonların Adası, Gök Mavisi Göl, Dev Kırkayak Sahilleri, Sessizlik Boğazı'nda kullanılabilir!)",
+            items: [
+                item("Maltız", "1", "maltiz.png")
+            ]
+        },
+
+        {
+            title: "3. Aşama: Halifron Ruhu",
+            location: "Beyaz Kayalıklar",
+            info: "Beyaz Kayalıklar’da Maltız kullanılarak Halifron Ruhu [21] çağrılır ve yenilir. Ardından tekrar Akselyan’a dönülür.(Savaşta yaratığı kolay kesebilmeniz için Gölge Avcılarının Hediyesi efekti verilecek. Savaşta kullanmak için cebinize 1 adet Mutlak Zayıflık Tozu koyabilirsiniz.)",
+            items: [
+                item("Maltız", "", "maltiz.png"),
+                item("Mutlak Zayıflık Tozu", "1 Cep", "mutlak-zayiflik-tozu.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Görev Notları",
+
+    notes: [
+        {
+            title: "Maltız'ın Kullanılabildiği Bölgeler",
+            text: "Maltız; Denizanası Vadisi, Daykonların Adası, Gök Mavisi Göl, Dev Kırkayak Sahilleri ve Sessizlik Boğazı bölgelerinde kullanılabilir."
+        },
+        {
+            title: "Halifron Ruhu Aşaması",
+            text: "Beyaz Kayalıklar’da Maltız kullanılarak Halifron Ruhu [21] çağrılır ve yenilir."
+        },
+        {
+            title: "Savaş Yardımı",
+            text: "Halifron Ruhu savaşında yaratığı daha kolay kesebilmeniz için Gölge Avcılarının Hediyesi etkisi verilir."
+        },
+        {
+            title: "Ek Yardımcı Eşya",
+            text: "Savaşta kullanmak için çantanıza 1 adet Mutlak Zayıflık Tozu koyabilirsiniz."
+        },
+        {
+            title: "Görev Tamamlama",
+            text: "Halifron Ruhu yenildikten sonra Akselyan’a geri dönülür ve hayran görevi tamamlanır."
+        }
+    ]
+},
 
     {
         id: "su-tanrisi-hayran",
@@ -1139,64 +1275,173 @@ notes: [
         ]
     },
 
-    {
-        id: "mistik-gorev",
-        medal: "ozel",
-        medalLabel: "Özel Görev",
-        reputation: "Mistik",
-        questName: "Mistik Görevi",
-        level: 12,
-        icon: madalyonPath + "mistik-hayran.gif",
-        npc: "Kari",
-        location: "Avgrelon Kasabası / Yabani Otlar Toprakları",
-        shortInfo: "Mistik görevi çoklu kaynak teslimlerinden oluşur.",
-        requirements: [
-            item("Kabarcıklı Metal", "500", "kabarcikli-metal.png"),
-            item("Ragtihron'un Derisi", "500", "ragtihronun-derisi.png"),
-            item("Uyits Tesbih Böceği", "15", "uyits-tesbih-bocegi.png"),
-            item("Korganit", "3000", "korganit.png"),
-            item("Armediyant", "3000", "armediyant.png"),
-            item("Zümrütüs", "3000", "zumrutus.png"),
-            item("Sersemletici Arakşa", "3000", "sersemletici-araksa.png"),
-            item("Kır Çiçeği", "3000", "kir-cicegi.png"),
-            item("Gül Pembesi İrvis", "3000", "gul-pembesi-irvis.png"),
-            item("Zebra Balığı", "3000", "zebra-baligi.png"),
-            item("Çizgili Melek Balığı", "3000", "cizgili-melek-baligi.png"),
-            item("Çizgili Japon Balığı", "3000", "cizgili-japon-baligi.png"),
-            item("Bodurların Sikkesi", "5000", "bodurlarin-sikkesi.png"),
-            item("Şeytani Kombo-Kübü", "250", "seytani-kombo-kubu.png"),
-            item("İblis Kombo-Kübü", "250", "iblis-kombo-kubu.png"),
-            item("Mührik İblis Kombo-Kübü", "250", "muhrik-iblis-kombo-kubu.png"),
-            item("Eski Kemik", "3000", "eski-kemik.png")
-        ],
-        notes: []
-    },
+ {
+    id: "mistik-gorev",
+    medal: "ozel",
+    medalLabel: "Özel Görev",
+    reputation: "Mistik",
+    questName: "Mistik Görevi",
+    level: 12,
+    icon: madalyonPath + "mistik-hayran.gif",
+    npc: "Kari",
+    location: "Avgrelon Kasabası / Yabani Otlar Toprakları",
+    shortInfo: "Mistik görevi aşama aşama çoklu kaynak teslimlerinden oluşur.",
+
+    requirements: [],
+
+    sectionsTitle: "Görev Aşamaları",
+
+    sections: [
+        {
+            title: "1. Aşama: Metal ve Deri Teslimi",
+            location: "Kari",
+            info: "İlk aşamada Kabarcıklı Metal ve Ragtihron'un Derisi teslim edilir.",
+            items: [
+                item("Kabarcıklı Metal", "500", "kabarcikli-metal.png"),
+                item("Ragtihron'un Derisi", "500", "ragtihronun-derisi.png")
+            ]
+        },
+
+        {
+            title: "2. Aşama: Uyits Tesbih Böceği",
+            location: "Kari",
+            info: "İkinci aşamada Uyits Tesbih Böceği teslim edilir.",
+            items: [
+                item("Uyits Tesbih Böceği", "15", "uyits-tesbih-bocegi.png")
+            ]
+        },
+
+        {
+            title: "3. Aşama: 3000'erlik Toplama Aşaması",
+            location: "Kari",
+            info: "Bu aşamada aşağıdaki kaynakların her birinden 3000 adet teslim edilir.",
+            items: [
+                item("Korganit", "3000", "korganit.png"),
+                item("Armediyant", "3000", "armediyant.png"),
+                item("Zümrütüs", "3000", "zumrutus.png"),
+                item("Sersemletici Arakşa", "3000", "sersemletici-araksa.png"),
+                item("Kır Çiçeği", "3000", "kir-cicegi.png"),
+                item("Gül Pembesi İrvis", "3000", "gul-pembesi-irvis.png"),
+                item("Zebra Balığı", "3000", "zebra-baligi.png"),
+                item("Çizgili Melek Balığı", "3000", "cizgili-melek-baligi.png"),
+                item("Çizgili Japon Balığı", "3000", "cizgili-japon-baligi.png")
+            ]
+        },
+
+        {
+            title: "4. Aşama: Bodurların Sikkesi",
+            location: "Kari",
+            info: "Dördüncü aşamada Bodurların Sikkesi teslim edilir.",
+            items: [
+                item("Bodurların Sikkesi", "5000", "bodurlarin-sikkesi.png")
+            ]
+        },
+
+        {
+            title: "5. Aşama: Kombo-Küpleri",
+            location: "Kari",
+            info: "Beşinci aşamada her kombo-kübü türünden 250 adet teslim edilir.",
+            items: [
+                item("Şeytani Kombo-Kübü", "250", "seytani-kombo-kubu.png"),
+                item("İblis Kombo-Kübü", "250", "iblis-kombo-kubu.png"),
+                item("Mührik İblis Kombo-Kübü", "250", "muhrik-iblis-kombo-kubu.png")
+            ]
+        },
+
+        {
+            title: "6. Aşama: Eski Kemik",
+            location: "Kari",
+            info: "Son aşamada Eski Kemik teslim edilir.",
+            items: [
+                item("Eski Kemik", "3000", "eski-kemik.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Görev Notları",
+
+    notes: [
+        {
+            title: "Aşamalı Görev Yapısı",
+            text: "Mistik görevi tek seferde verilen düz bir kaynak listesi değildir; adım adım ilerleyen bir özel görev yapısına sahiptir."
+        },
+        {
+            title: "3000'lik Kaynak Aşaması",
+            text: "Üçüncü aşamada listelenen tüm kaynakların her birinden ayrı ayrı 3000 adet teslim edilmesi gerekir."
+        },
+        {
+            title: "Kombo-Küpü Aşaması",
+            text: "Beşinci aşamada Şeytani, İblis ve Mührik İblis Kombo-Küplerinin her birinden 250 adet istenir."
+        },
+        {
+            title: "Görev Tamamlama",
+            text: "Son aşamada 3000 adet Eski Kemik teslim edildikten sonra görev tamamlanır."
+        }
+    ]
+},
 
     {
-        id: "korucu-gorev",
-        medal: "ozel",
-        medalLabel: "Özel Görev",
-        reputation: "Korucu",
-        questName: "Korucu Görevi",
-        level: 15,
-        icon: madalyonPath + "korucu-hayran.gif",
-        npc: "Ormancı Haryen / Ormancı Vaslav",
-        location: "Zyigolt Ormanı / Işıldayan Orman Kenarı",
-        shortInfo: "Avcı Ustalık Simgesi ve evcil hayvan temsilcilerine kaynak teslimi.",
-        requirements: [
-            item("Avcı Ustalık Simgesi", "100", "avci-ustalik-simgesi.png"),
-            item("Baharatlı Hibiskus Kökü", "12", "baharatli-hibiskus-koku.png"),
-            item("Edal", "140", "edal.png"),
-            item("Kalitesiz Efril", "2760", "kalitesiz-efril.png"),
-            item("Öfkeli Göz", "433", "ofkeli-goz.png"),
-            item("Keder Çiçeği", "4600", "keder-cicegi.png"),
-            item("Ateş Çiçeği", "4650", "ates-cicegi.png")
-        ],
-        notes: [
-            "Görevin görünmesi için çantada 12 Baharatlı Hibiskus Kökü bulunmalıdır."
-        ]
-    },
+    id: "korucu-gorev",
+    medal: "ozel",
+    medalLabel: "Özel Görev",
+    reputation: "Korucu",
+    questName: "Korucu Görevi",
+    level: 15,
+    icon: madalyonPath + "korucu-hayran.gif",
+    npc: "Ormancı Haryen / Ormancı Vaslav",
+    location: "Zyigolt Ormanı / Işıldayan Orman Kenarı",
+    shortInfo: "Korucu görevi Avcı Ustalık Simgesi ve evcil hayvan temsilcilerine yapılan aşamalı teslimlerden oluşur.",
 
+    requirements: [],
+
+    sectionsTitle: "Görev Aşamaları",
+
+    sections: [
+        {
+            title: "1. Aşama: Avcı Ustalık Simgesi",
+            location: "Ormancı Haryen / Ormancı Vaslav",
+            info: "İlk aşamada Korucuya 100 adet Avcı Ustalık Simgesi getirilir. Tamamlandıktan sonra tekrar korucuya dönülür.",
+            items: [
+                item("Avcı Ustalık Simgesi", "100", "avci-ustalik-simgesi.png")
+            ]
+        },
+
+        {
+            title: "2. Aşama: Evcil Hayvan Temsilcilerine Teslim",
+            location: "Tatlı Boniya / Tatlı Mily",
+            info: "İkinci aşamada ırkınızın evcil hayvan temsilcisine gerekli kaynaklar teslim edilir.",
+            items: [
+                item("Baharatlı Hibiskus Kökü", "12", "baharatli-hibiskus-koku.png"),
+                item("Edal", "140", "edal.png"),
+                item("Kalitesiz Efril", "2760", "kalitesiz-efril.png"),
+                item("Öfkeli Göz", "433", "ofkeli-goz.png"),
+                item("Keder Çiçeği", "4600", "keder-cicegi.png"),
+                item("Ateş Çiçeği", "4650", "ates-cicegi.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Görev Notları",
+
+    notes: [
+        {
+            title: "Görevin Görünmesi",
+            text: "Görevin görünmesi için çantanızda 12 adet Baharatlı Hibiskus Kökü bulunması gerekir."
+        },
+        {
+            title: "İlk Aşama",
+            text: "İlk aşamada 100 adet Avcı Ustalık Simgesi korucuya teslim edilir ve ardından tekrar görev veren NPC'ye dönülür."
+        },
+        {
+            title: "İkinci Aşama",
+            text: "İkinci aşamada ırkınızın evcil hayvan temsilcisine gerekli kaynaklar teslim edilir."
+        },
+        {
+            title: "Teslim NPC'leri",
+            text: "Magmar için Tatlı Boniya, insan ırkı için Tatlı Mily teslim noktasıdır."
+        }
+    ]
+},
     {
         id: "zurhass-gorev",
         medal: "ozel",
