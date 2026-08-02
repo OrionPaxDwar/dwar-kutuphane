@@ -131,7 +131,15 @@ function createSectionList(quest) {
                                     ? `<p class="fan-section-info">${section.info}</p>`
                                     : ""
                             }
-
+${
+    section.previewImage
+        ? `
+            <div class="fan-section-preview">
+                <img src="${section.previewImage}" alt="${section.previewAlt || section.title}">
+            </div>
+        `
+        : ""
+}
                             ${
                                 section.comboItem || section.cubeItem
                                     ? `

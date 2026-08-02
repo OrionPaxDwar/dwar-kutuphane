@@ -118,7 +118,7 @@ const fanQuests = [
     sections: [
         {
             title: "1 Ufalama İşlemi",
-            location: "25 Harika Cam + 1 Ufalama Tomarı kullanılır. Sonuç olarak 1 - 3 adet Olağanüstü Kum Tanesi elde edilir.",
+            info: "25 Harika Cam + 1 Ufalama Tomarı kullanılır. Sonuç olarak 1 - 3 adet Olağanüstü Kum Tanesi elde edilir.",
             items: [
                 item("Harika Cam", "25", "harika-cam.png"),
                 item("Ufalama Tomarı", "1", "ufalama-tomari.png"),
@@ -128,7 +128,7 @@ const fanQuests = [
 
         {
             title: "1000 Kum Tanesi İçin En İyi İhtimal",
-            location: "Her işlemde 3 adet kum tanesi gelirse yaklaşık 334 Ufalama Tomarı ve 8350 Harika Cam gerekir.",
+            info: "Her işlemde 3 adet kum tanesi gelirse yaklaşık 334 Ufalama Tomarı ve 8350 Harika Cam gerekir.",
             items: [
                 item("Harika Cam", "8350", "harika-cam.png"),
                 item("Ufalama Tomarı", "334", "ufalama-tomari.png"),
@@ -138,7 +138,7 @@ const fanQuests = [
 
         {
             title: "1000 Kum Tanesi İçin En Kötü İhtimal",
-            location: "Her işlemde 1 adet kum tanesi gelirse 1000 Ufalama Tomarı ve 25000 Harika Cam gerekir.",
+            info: "Her işlemde 1 adet kum tanesi gelirse 1000 Ufalama Tomarı ve 25000 Harika Cam gerekir.",
             items: [
                 item("Harika Cam", "25000", "harika-cam.png"),
                 item("Ufalama Tomarı", "1000", "ufalama-tomari.png"),
@@ -324,7 +324,8 @@ const fanQuests = [
         npc: "Yobaz Vilmos",
         location: "Tutulma Koruluğu / Kafatası Çölü",
         shortInfo: "Öfkeli Göz teslimi.",
-        requirements: [
+        requirements: [ 
+            
             item("Öfkeli Göz", "500", "ofkeli-goz.png")
         ],
         notes: []
@@ -695,32 +696,122 @@ notes: [
         ]
     },
 
-    {
-        id: "yaratik-avcilari-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Yaratık Avcıları",
-        questName: "Yaratık Avcıları Hayran Görevi",
-        level: 7,
-        icon: madalyonPath + "yaratık-avcıları-hayran.gif",
-        npc: "Paladin Shimon",
-        location: "Hükümdarlar Mezarlığı / Kraliçe Mezarlığı",
-        shortInfo: "Kara Cin, Meşale ve Öfkeli Ejderha dövüşü.",
-        requirements: [
-            item("Kara Cin", "1", "kara-cin.png"),
-            item("Meşale", "1", "mesale.png"),
-            item("Ölü Savaşçının Kafatası", "100", "olu-savascinin-kafatasi.jpg"),
-            item("Korkusuzluk İksiri", "1 cep", "korkusuzluk-iksiri.png"),
-            item("Kara Büyüleri İndiren Tomar", "1 cep", "kara-buyuleri-indiren-tomar.png"),
-            item("Kara Tutulma Tomarı", "1 cep", "kara-tutulma-tomari.png")
-        ],
-        notes: [
-            "Kara Cin en çok hasar veren oyuncuya düşer; nesne devirlidir.",
-            "Dövüş kaybedilirse Öfkeli Ejderha'yı tekrar çağırmak için 100 kafatası gerekir.",
-            "Yeraltı Mezarlığı'na girmek için Meşale gerekir."
-        ]
-    },
+{
+    id: "yaratik-avcilari-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Yaratık Avcıları",
+    questName: "Yaratık Avcıları Hayran Görevi",
+    level: 7,
+    icon: madalyonPath + "yaratik-avcilari-hayran.gif",
+    npc: "Paladin Shimon",
+    location: "Hükümdarlar Mezarlığı / Kraliçe Mezarlığı",
+    shortInfo: "Kara Cin elde edilip Paladin Shimon'a teslim edilir.",
 
+    requirementsTitle: "Görev Hedefi",
+
+    requirements: [
+        item("Kara Cin", "1", "kara-cin.png")
+    ],
+
+    sectionsTitle: "Görev Akışı",
+
+    sections: [
+        {
+            title: "1. Görevi Al",
+            location: "Paladin Shimon",
+            info: "Görev Paladin Shimon'dan alınır. Amaç Kara Cin'i bulup ona teslim etmektir.",
+            items: [
+                item("Kara Cin", "1", "kara-cin.png")
+            ]
+        },
+        {
+            title: "2. Giriş İçin Meşale Al",
+            location: "Yeraltı İni / Yeraltı Mezarlığı girişi",
+            info: "Yeraltı İni'ne girebilmek için Meşale gerekir. Meşaleyi sadece en az 500 Paralı Birlik Onuru olan oyuncular alabilir.",
+            items: [
+                item("Meşale", "1", "mesale.png")
+            ]
+        },
+        {
+            title: "3. Kadehe Tıklamadan Önce Ölümileri Temizle",
+            location: "Yeraltı İni içi",
+            info: "Kadehe tıklamadan önce konumdaki Ölümileri kesmek işi kolaylaştırır. Eğer Ölümileri önceden kesmediyseniz Kara Tutulma Tomarı ile rahatça temizleyebilirsiniz.",
+            items: [
+                item("Kara Tutulma Tomarı", "1 cep", "kara-tutulma-tomari.png")
+            ]
+        },
+        {
+    title: "4. Kadehe Tıkla ve Dövüşü Başlat",
+    location: "Yeraltı İni'ndeki kadeh",
+    info: "Ölümiler temizlendikten sonra kadehe tıklanır ve Öfkeli Ejderha dövüşü başlatılır.",
+    previewImage: kaynakPath + "kadeh.png",
+    previewAlt: "Yeraltı İni Kadehi",
+    
+},
+        {
+    title: "5. Öfkeli Ejderha'yı Kes",
+    location: "Dövüş alanı",
+    info: "Öfkeli Ejderha'yı rahat kesmek için 1 cep Korkusuzluk İksiri ve 1 cep Kara Büyüleri İndiren Tomar önerilir. Eğer avlandaki Ölümiler kesilmediyse Kara Tutulma Tomarı da yardımcı olur.",
+    previewImage: kaynakPath + "ofkeli-ejderha.png",
+    previewAlt: "Öfkeli Ejderha",
+    items: [
+        item("Korkusuzluk İksiri", "1 cep", "korkusuzluk-iksiri.png"),
+        item("Kara Büyüleri İndiren Tomar", "1 cep", "kara-buyuleri-indiren-tomar.png"),
+        item("Kara Tutulma Tomarı", "1 cep", "kara-tutulma-tomari.png")
+    ]
+},
+        {
+            title: "6. Kara Cin'i Elde Et",
+            location: "Dövüş sonu",
+            info: "Öfkeli Ejderha kesildikten sonra Kara Cin düşer. Kara Cin görevin teslim nesnesidir.",
+            items: [
+                item("Kara Cin", "1", "kara-cin.png")
+            ]
+        },
+        {
+            title: "7. Gerekirse Tekrar Çağırma",
+            location: "Yeraltı İni",
+            info: "Öfkeli Ejderha 30 dakika sonra yeniden doğar. Dövüş kaybedilirse tekrar çağırmak için Ölü Savaşçının Kafatası gerekir.",
+            items: [
+                item("Ölü Savaşçının Kafatası", "100", "olu-savascinin-kafatasi.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Önemli Notlar",
+
+    notes: [
+        {
+            title: "Görevin Asıl Amacı",
+            text: "Amaç Öfkeli Ejderha dövüşünden Kara Cin'i elde edip Paladin Shimon'a teslim etmektir."
+        },
+        {
+            title: "Meşale Şartı",
+            text: "Yeraltı İni'ne / Yeraltı Mezarlığı'na giriş için Meşale gerekir. Meşale, en az 500 Paralı Birlik Onuru olan oyuncular tarafından alınabilir."
+        },
+        {
+            title: "Ölümileri Önceden Kesmek",
+            text: "Kadehe tıklamadan önce konumdaki Ölümiler kesilirse dövüş daha rahat olur. Ölümiler kesilmediyse Kara Tutulma Tomarı ile daha kolay temizlenebilir."
+        },
+        {
+            title: "Öfkeli Ejderha",
+            text: "Öfkeli Ejderha'yı rahat kesmek için 1 cep Korkusuzluk İksiri ve 1 cep Kara Büyüleri İndiren Tomar önerilir."
+        },
+        {
+            title: "Kara Cin Dağılımı",
+            text: "Kara Cin en çok hasar veren oyuncuya düşer. Bu yüzden görev yardımla yapılabilir ama nesne en çok hasarı vurana gider."
+        },
+        {
+            title: "Yeniden Doğma",
+            text: "Öfkeli Ejderha 30 dakika sonra yeniden doğar."
+        },
+        {
+            title: "Tekrar Çağırma Maliyeti",
+            text: "Dövüş kaybedilirse Öfkeli Ejderha'yı tekrar çağırmak için 100 adet Ölü Savaşçının Kafatası gerekir."
+        }
+    ]
+},
     {
         id: "aladeya-tanricasi-hayran",
         medal: "hayran",
@@ -778,34 +869,86 @@ notes: [
         notes: []
     },
 
-    {
-        id: "muazzam-dovus-hayran",
-        medal: "hayran",
-        medalLabel: "Hayran Madalyonu",
-        reputation: "Muazzam Dövüş",
-        questName: "Muazzam Dövüş Hayran Görevi",
-        level: 7,
-        icon: madalyonPath + "muazzam-hayran.gif",
-        npc: "Kumandan Gadrivei / Kumandan Darofei",
-        location: "Sartnog Arenası / O'Delvays Arenası",
-        shortInfo: "Zafer/liderlik, kombo küpleri ve savaş kaynakları.",
-        requirements: [
-            item("Muazzam Dövüş Zaferi", "1000", "muazzam-dovus-zaferi.png"),
-            item("Muazzam Liderlik", "100", "muazzam-liderlik.png"),
-            item("Şeytani Kombo-Kübü", "30", "seytani-kombo-kubu.png"),
-            item("İblis Kombo-Kübü", "5", "iblis-kombo-kubu.png"),
-            item("Mührik İblis Kombo-Kübü", "1", "muhrik-iblis-kombo-kubu.png"),
-            item("Edal", "30", "edal.png"),
-            item("Kafa Derisi", "300", "kafa-derisi.png"),
-            item("Ragtihron'un Derisi", "30", "ragtihronun-derisi.png"),
-            item("Kabarcıklı Metal", "30", "kabarcikli-metal.png"),
-            item("Öfkeli Göz", "100", "ofkeli-goz.png"),
-            item("Ölü Savaşçının Kafatası", "300", "olu-savascinin-kafatasi.png")
-        ],
-        notes: [
-            "1000 zafer veya 100 Muazzam Liderlik yeterlidir."
-        ]
-    },
+   {
+    id: "muazzam-dovus-hayran",
+    medal: "hayran",
+    medalLabel: "Hayran Madalyonu",
+    reputation: "Muazzam Dövüş",
+    questName: "Muazzam Dövüş Hayran Görevi",
+    level: 7,
+    icon: madalyonPath + "muazzam-hayran.gif",
+    npc: "Kumandan Gadrivei / Kumandan Darofei",
+    location: "Sartnog Arenası / O'Delvays Arenası",
+    shortInfo: "Muazzam Dövüş hayran görevi 4 aşamalı teslim sistemiyle ilerler.",
+
+    sectionsTitle: "Görev Aşamaları",
+
+    sections: [
+        {
+            title: "1. Aşama: Zafer veya Liderlik",
+            location: "Kumandan Gadrivei / Kumandan Darofei",
+            info: "Kumandan sizden Muazzam Dövüşlerde 1000 zafer veya 100 adet Muazzam Liderlik ister. Bunu tamamladıktan sonra tekrar kumandana dönülür.",
+            items: [
+                item("Muazzam Dövüş Zaferi", "1000", "muazzam-liderlik.png"),
+                item("Muazzam Liderlik", "100", "muazzam-liderlik.png")
+            ]
+        },
+
+        {
+            title: "2. Aşama: Eleonora ve Ejderha Teslimleri",
+            location: "Eleonora / Ejderha",
+            info: "Eleonora'ya kombo küpleri ve Edal teslim edilir. Ejderha'ya ise Kafa Derisi götürülür. Sonrasında tekrar kumandana dönülür.",
+            items: [
+                item("Şeytani Kombo-Kübü", "30", "seytani-kombo-kubu.png"),
+                item("İblis Kombo-Kübü", "5", "iblis-kombo-kubu.png"),
+                item("Mührik İblis Kombo-Kübü", "1", "muhrik-iblis-kombo-kubu.png"),
+                item("Edal", "30", "edal.png"),
+                item("Kafa Derisi", "300", "kafa-derisi.png")
+            ]
+        },
+
+        {
+            title: "3. Aşama: Deri ve Metal Teslimi",
+            location: "Görev teslim noktası",
+            info: "Bu aşamada Ragtihron'un Derisi ve Kabarcıklı Metal teslim edilir.",
+            items: [
+                item("Ragtihron'un Derisi", "30", "ragtihronun-derisi.png"),
+                item("Kabarcıklı Metal", "30", "kabarcikli-metal.png")
+            ]
+        },
+
+        {
+            title: "4. Aşama: Son Teslim",
+            location: "Görev teslim noktası",
+            info: "Son aşamada Öfkeli Göz ve Ölü Savaşçının Kafatası teslim edilir.",
+            items: [
+                item("Öfkeli Göz", "100", "ofkeli-goz.png"),
+                item("Ölü Savaşçının Kafatası", "300", "olu-savascinin-kafatasi.png")
+            ]
+        }
+    ],
+
+    notesTitle: "Görev Notları",
+
+    notes: [
+        {
+            title: "Zafer veya Liderlik Seçeneği",
+            text: "İlk aşamada 1000 Muazzam Dövüş Zaferi veya 100 adet Muazzam Liderlik yeterlidir. İkisinden birini tamamlamak gerekir."
+        },
+        {
+            title: "Kumandana Dönüş",
+            text: "İlk aşama tamamlandıktan sonra kumandana geri dönülür. Sonraki teslimlerde de aşama ilerlemesine göre tekrar kumandana dönmek gerekebilir."
+        },
+        {
+            title: "Eleonora ve Ejderha Aşaması",
+            text: "İkinci aşamada kombo küpleri ve Edal Eleonora'ya, Kafa Derisi ise Ejderha'ya götürülür."
+        },
+        {
+            title: "Aşamalı Görev",
+            text: "Bu görev tek seferlik düz kaynak teslimi gibi değil, aşama aşama ilerleyen bir hayran görevidir."
+        }
+    ]
+},
 
     {
         id: "jaggernaut-hayran",
@@ -1110,11 +1253,11 @@ notes: [
             item("Krofdor'ların El Yazıları", "40", "krofdorlarin-el-yazilari.png"),
             item("Eldiv'lerin El Yazıları", "30", "eldivlerin-el-yazilari.png"),
             item("Elf'lerin El Yazıları", "20", "elflerin-el-yazilari.png"),
-            item("Dağ Sakinleri El Yazıları", "10", "assents/images/kaynaklar/dag-sakinleri-el-yazilari.png")
+            item("Dağ Sakinleri El Yazıları", "10", "dag-sakinleri-el-yazilari.png")
         
         ],
         notes: [
-            "Ritüel Mum, Tüccar Tao Mun mağazasından alınabilir."
+            ""
         ]
     }
 ];

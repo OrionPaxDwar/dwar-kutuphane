@@ -583,3 +583,26 @@
     font-weight: 700;
     font-style: normal;
 }
+.fan-section-preview {
+    margin: 16px 0 18px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.fan-section-preview img {
+    max-width: 200%;
+    max-height: 320px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(245, 210, 122, 0.24);
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.65),
+        0 0 14px rgba(245, 210, 122, 0.10);
+}
