@@ -1,0 +1,564 @@
+.dwarf-guide-page {
+    padding-top: 86px;
+}
+
+.dwarf-hero {
+    width: min(1180px, 94%);
+    margin: 0 auto 28px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 28px;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at top left, rgba(132, 92, 42, 0.28), transparent 42%),
+        linear-gradient(to bottom, rgba(34, 21, 10, 0.92), rgba(7, 5, 4, 0.94));
+
+    border: 1px solid rgba(245, 210, 122, 0.24);
+    border-radius: 24px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.72);
+}
+
+.dwarf-hero span {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #d7ad56;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.dwarf-hero h1 {
+    margin-bottom: 14px;
+
+    color: #ffe18a;
+
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    text-shadow: 0 0 18px #000;
+}
+
+.dwarf-hero p {
+    color: #ead7b3;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.dwarf-hero-image {
+    height: 240px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(245, 210, 122, 0.22);
+    border-radius: 18px;
+}
+
+.dwarf-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.dwarf-info-strip {
+    width: min(1180px, 94%);
+    margin: 0 auto 28px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.dwarf-info-strip div {
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 16px;
+}
+
+.dwarf-info-strip strong {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1a1108;
+    background: linear-gradient(to bottom, #ffe18a, #b87928);
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.dwarf-info-strip span {
+    color: #ead7b3;
+
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+.dwarf-layout {
+    width: min(1180px, 94%);
+    margin: 0 auto 50px;
+
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.dwarf-stone-list {
+    position: sticky;
+    top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.dwarf-line-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dwarf-line-group h3 {
+    padding: 10px 12px;
+
+    color: #ffe18a;
+    background: rgba(0, 0, 0, 0.36);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 12px;
+
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.dwarf-stone-card {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 14px;
+    align-items: center;
+
+    padding: 14px;
+
+    text-align: left;
+    cursor: pointer;
+
+    background: linear-gradient(to right, rgba(29, 18, 9, 0.94), rgba(7, 5, 4, 0.96));
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 16px;
+
+    transition: 0.22s ease;
+}
+
+.dwarf-stone-card:hover,
+.dwarf-stone-card.active {
+    transform: translateX(5px);
+
+    border-color: rgba(255, 225, 138, 0.65);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.72);
+}
+
+.dwarf-stone-card img {
+    width: 64px;
+    height: 64px;
+
+    object-fit: contain;
+}
+
+.dwarf-stone-card strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.dwarf-stone-card span {
+    color: #d9c39b;
+
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.dwarf-gray {
+    border-left: 5px solid #9a9a9a;
+}
+
+.dwarf-green {
+    border-left: 5px solid #43b85c;
+}
+
+.dwarf-blue {
+    border-left: 5px solid #4ca3ff;
+}
+
+.dwarf-purple {
+    border-left: 5px solid #a463ff;
+}
+
+.dwarf-red {
+    border-left: 5px solid #d8483a;
+}
+
+.dwarf-detail-card {
+    padding: 24px;
+
+    background:
+        radial-gradient(circle at top right, rgba(245, 210, 122, 0.11), transparent 34%),
+        linear-gradient(to bottom, rgba(34, 21, 10, 0.92), rgba(7, 5, 4, 0.94));
+
+    border: 1px solid rgba(245, 210, 122, 0.24);
+    border-radius: 22px;
+
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.72);
+}
+
+.dwarf-detail-header {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.dwarf-detail-main-image {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.36);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 18px;
+}
+
+.dwarf-detail-main-image img {
+    width: 82px;
+    height: 82px;
+
+    object-fit: contain;
+}
+
+.dwarf-detail-header span {
+    display: inline-block;
+    margin-bottom: 8px;
+
+    color: #d7ad56;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.dwarf-detail-header h2 {
+    margin-bottom: 8px;
+
+    color: #ffe18a;
+
+    font-size: 38px;
+    line-height: 1.05;
+}
+
+.dwarf-detail-header p {
+    color: #ead7b3;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.dwarf-flow-box {
+    margin-bottom: 22px;
+    padding: 18px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 14px;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.32);
+
+    border: 1px solid rgba(245, 210, 122, 0.16);
+    border-radius: 18px;
+}
+
+.dwarf-flow-box div {
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(245, 210, 122, 0.13);
+    border-radius: 14px;
+}
+
+.dwarf-flow-box img {
+    width: 74px;
+    height: 74px;
+
+    object-fit: contain;
+}
+
+.dwarf-flow-box strong {
+    color: #ffe18a;
+
+    font-size: 16px;
+}
+
+.dwarf-flow-box span {
+    color: #ead7b3;
+
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.dwarf-flow-box b {
+    color: #ffe18a;
+
+    font-size: 30px;
+    text-shadow: 0 0 10px #000;
+}
+
+.dwarf-region-grid {
+    margin-bottom: 22px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.dwarf-region-card {
+    padding: 18px;
+
+    background: rgba(0, 0, 0, 0.32);
+
+    border: 1px solid rgba(245, 210, 122, 0.16);
+    border-radius: 16px;
+}
+
+.dwarf-region-card span {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #d7ad56;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.dwarf-region-card strong {
+    color: #ffe18a;
+
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.dwarf-detail-section {
+    margin-bottom: 22px;
+}
+
+.dwarf-detail-section h3,
+.dwarf-trade-card h3 {
+    margin-bottom: 14px;
+
+    color: #ffe18a;
+
+    font-size: 26px;
+    line-height: 1.15;
+}
+
+.dwarf-encounter-box,
+.dwarf-recipe-card,
+.dwarf-trade-card {
+    padding: 18px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(245, 210, 122, 0.18);
+    border-radius: 16px;
+}
+
+.dwarf-encounter-box p,
+.dwarf-recipe-card p,
+.dwarf-trade-card p {
+    margin-bottom: 14px;
+
+    color: #ead7b3;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.dwarf-enemy-grid,
+.dwarf-reward-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.dwarf-enemy-card,
+.dwarf-item-card {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    padding: 12px;
+
+    background: rgba(0, 0, 0, 0.32);
+
+    border: 1px solid rgba(245, 210, 122, 0.14);
+    border-radius: 14px;
+}
+
+.dwarf-enemy-card img,
+.dwarf-item-card img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+}
+
+.dwarf-enemy-card strong,
+.dwarf-item-card strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.dwarf-enemy-card span,
+.dwarf-item-card span {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.dwarf-enemy-card em {
+    display: block;
+    margin-top: 5px;
+
+    color: #d7ad56;
+
+    font-size: 13px;
+    line-height: 1.35;
+    font-style: normal;
+}
+
+.dwarf-recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.dwarf-recipe-items {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.dwarf-recipe-items b {
+    color: #ffe18a;
+
+    font-size: 26px;
+    font-weight: 900;
+    text-shadow: 0 0 10px #000;
+}
+
+.dwarf-empty-box {
+    padding: 18px;
+
+    color: #ead7b3;
+    background: rgba(0, 0, 0, 0.32);
+
+    border: 1px dashed rgba(245, 210, 122, 0.22);
+    border-radius: 14px;
+}
+
+@media (max-width: 1050px) {
+    .dwarf-hero,
+    .dwarf-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dwarf-stone-list {
+        position: static;
+    }
+
+    .dwarf-info-strip,
+    .dwarf-region-grid,
+    .dwarf-enemy-grid,
+    .dwarf-reward-grid,
+    .dwarf-recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dwarf-flow-box,
+    .dwarf-recipe-items {
+        grid-template-columns: 1fr;
+    }
+
+    .dwarf-flow-box b,
+    .dwarf-recipe-items b {
+        text-align: center;
+    }
+}
+
+@media (max-width: 620px) {
+    .dwarf-info-strip,
+    .dwarf-region-grid,
+    .dwarf-enemy-grid,
+    .dwarf-reward-grid,
+    .dwarf-recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dwarf-detail-header {
+        grid-template-columns: 1fr;
+    }
+
+    .dwarf-hero-image {
+        height: 190px;
+    }
+}

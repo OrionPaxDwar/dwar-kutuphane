@@ -35,3 +35,11 @@
 .month-shop-grid .shop-card-content {
     min-height: 128px;
 }
+.month-shop-grid {
+    width: min(1180px, 94%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
