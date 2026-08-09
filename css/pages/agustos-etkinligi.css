@@ -1,0 +1,1146 @@
+.august-event-page {
+    padding-top: 86px;
+}
+
+/* ÜST KAPAK ALANI */
+
+.august-hero {
+    width: min(1220px, 94%);
+    margin: 0 auto 30px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at top left, rgba(255, 225, 138, 0.14), transparent 42%),
+        radial-gradient(circle at bottom right, rgba(139, 231, 196, 0.14), transparent 38%),
+        linear-gradient(to bottom, rgba(18, 34, 32, 0.94), rgba(5, 9, 9, 0.96));
+
+    border: 1px solid rgba(139, 231, 196, 0.22);
+    border-radius: 26px;
+
+    box-shadow: 0 0 34px rgba(0, 0, 0, 0.76);
+}
+
+.august-hero-content > span {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #8be7c4;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.august-hero-content h1 {
+    margin-bottom: 14px;
+
+    color: #ffe18a;
+
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    text-shadow: 0 0 18px #000;
+}
+
+.august-hero-content p {
+    max-width: 760px;
+
+    color: #d8f3e7;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.august-meta-grid {
+    margin-top: 22px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.august-meta-grid div {
+    padding: 14px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(139, 231, 196, 0.18);
+    border-radius: 16px;
+}
+
+.august-meta-grid span {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #8be7c4;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.august-meta-grid strong {
+    color: #ffe18a;
+
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.august-hero-card {
+    height: 360px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 20px;
+
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.66);
+}
+
+.august-hero-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ANA GÖREV HARİTASI */
+
+.august-layout {
+    width: min(1220px, 94%);
+    margin: 0 auto 60px;
+
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 26px;
+    align-items: start;
+}
+
+/* SOL GÖREV ZİNCİRİ */
+
+.august-map-panel {
+    position: sticky;
+    top: 90px;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at top left, rgba(255, 225, 138, 0.12), transparent 42%),
+        linear-gradient(to bottom, rgba(18, 34, 32, 0.94), rgba(5, 9, 9, 0.96));
+
+    border: 1px solid rgba(139, 231, 196, 0.22);
+    border-radius: 24px;
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.72);
+}
+
+.august-map-panel h2 {
+    margin-bottom: 16px;
+
+    color: #ffe18a;
+
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.august-map-step {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 14px;
+
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    text-align: left;
+    cursor: pointer;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(139, 231, 196, 0.16);
+    border-radius: 16px;
+
+    transition: 0.22s ease;
+}
+
+.august-map-step > span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1b1208;
+    background: linear-gradient(to bottom, #ffe18a, #c98a32);
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.august-map-step strong {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #ffe18a;
+
+    font-size: 17px;
+    line-height: 1.15;
+}
+
+.august-map-step em {
+    color: #d8f3e7;
+
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.25;
+}
+
+.august-map-step:hover,
+.august-map-step.active {
+    transform: translateX(5px);
+
+    border-color: rgba(255, 225, 138, 0.65);
+    box-shadow: 0 0 18px rgba(139, 231, 196, 0.16);
+}
+
+/* SAĞ DETAY PANELİ */
+
+.august-quest-card {
+    padding: 26px;
+
+    background:
+        radial-gradient(circle at top right, rgba(139, 231, 196, 0.16), transparent 36%),
+        radial-gradient(circle at bottom left, rgba(255, 225, 138, 0.10), transparent 42%),
+        linear-gradient(to bottom, rgba(18, 34, 32, 0.94), rgba(5, 9, 9, 0.96));
+
+    border: 1px solid rgba(139, 231, 196, 0.22);
+    border-radius: 26px;
+
+    box-shadow: 0 0 34px rgba(0, 0, 0, 0.76);
+}
+
+.august-quest-header {
+    margin-bottom: 22px;
+}
+
+.august-quest-header span {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #8be7c4);
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.august-quest-header h2 {
+    margin-bottom: 12px;
+
+    color: #ffe18a;
+
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1;
+    text-shadow: 0 0 16px #000;
+}
+
+.august-quest-header p {
+    color: #d8f3e7;
+
+    font-size: 18px;
+    line-height: 1.58;
+}
+
+/* AMAÇ KARTI */
+
+.august-objective-card {
+    margin-bottom: 22px;
+    padding: 18px;
+
+    background:
+        linear-gradient(to right, rgba(255, 225, 138, 0.16), rgba(139, 231, 196, 0.08));
+
+    border-left: 6px solid #ffe18a;
+    border-radius: 16px;
+}
+
+.august-objective-card strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ffe18a;
+
+    font-size: 18px;
+}
+
+.august-objective-card p {
+    color: #ffffff;
+
+    font-size: 19px;
+    line-height: 1.45;
+    font-weight: 800;
+}
+
+/* ORTAK BÖLÜMLER */
+
+.august-section {
+    margin-bottom: 24px;
+}
+
+.august-section h3 {
+    margin-bottom: 14px;
+
+    color: #ffe18a;
+
+    font-size: 27px;
+    line-height: 1.15;
+}
+
+.august-character-grid,
+.august-method-grid,
+.august-item-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* KARAKTER / YÖNTEM / NESNE KARTLARI */
+
+.august-character-card {
+    min-height: 210px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.34);
+    border: 1px solid rgba(139, 231, 196, 0.16);
+    border-radius: 18px;
+}
+
+.august-character-card img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 12px;
+    display: block;
+}
+@media (max-width: 620px) {
+    .august-character-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .august-character-card img {
+        width: 170px;
+        height: 170px;
+        margin: 0 auto;
+    }
+}
+.august-method-card {
+    min-height: 130px;
+    grid-template-columns: 110px 1fr;
+}
+
+.august-method-card img {
+    width: 102px;
+    height: 102px;
+    border-radius: 16px;
+}
+
+.august-item-card {
+    min-height: 110px;
+    grid-template-columns: 86px 1fr;
+}
+
+.august-item-card img {
+    width: 78px;
+    height: 78px;
+}
+
+.august-character-card img,
+.august-method-card img {
+    object-fit: cover;
+}
+
+.august-item-card img {
+    object-fit: contain;
+}
+
+.august-character-card span {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+
+    color: #1b1208;
+    background: #8be7c4;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.august-character-card strong,
+.august-method-card strong,
+.august-item-card strong {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #ffe18a;
+
+    font-size: 19px;
+    line-height: 1.15;
+}
+
+.august-character-card p,
+.august-method-card p {
+    margin-bottom: 6px;
+
+    color: #d8f3e7;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.august-character-card em {
+    color: #d7ad56;
+
+    font-size: 13px;
+    font-style: normal;
+}
+
+.august-item-card span {
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* SONRAKİ AŞAMA */
+
+.august-next-target {
+    margin-bottom: 24px;
+    padding: 18px;
+
+    background:
+        radial-gradient(circle at right, rgba(139, 231, 196, 0.16), transparent 50%),
+        rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(139, 231, 196, 0.20);
+    border-radius: 18px;
+}
+
+.august-next-target > span {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #8be7c4;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.august-next-target p {
+    margin-bottom: 12px;
+
+    color: #d8f3e7;
+
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.august-next-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.august-next-tags strong {
+    display: inline-block;
+    padding: 6px 10px;
+
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #d7ad56);
+
+    border-radius: 999px;
+
+    font-size: 14px;
+}
+
+/* NOTLAR */
+
+.august-note-list {
+    display: grid;
+    gap: 10px;
+}
+
+.august-note-list p {
+    padding: 12px 14px;
+
+    color: #d8f3e7;
+    background: rgba(0, 0, 0, 0.32);
+
+    border-left: 4px solid #8be7c4;
+    border-radius: 12px;
+
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+/* MOBİL */
+
+@media (max-width: 1050px) {
+    .august-hero,
+    .august-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .august-map-panel {
+        position: static;
+    }
+
+    .august-hero-card {
+        height: 320px;
+    }
+
+    .august-character-grid,
+    .august-method-grid,
+    .august-item-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .august-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .august-character-card,
+    .august-method-card,
+    .august-item-card {
+        grid-template-columns: 1fr;
+    }
+
+    .august-character-card img,
+    .august-method-card img,
+    .august-item-card img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .august-item-card img {
+        object-fit: contain;
+    }
+
+    .august-hero-card {
+        height: 240px;
+    }
+}
+.august-main-item-box {
+    margin-bottom: 24px;
+    padding: 18px;
+
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at left, rgba(255, 225, 138, 0.14), transparent 48%),
+        rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(255, 225, 138, 0.26);
+    border-radius: 18px;
+}
+
+.august-main-item-box img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.august-main-item-box span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #8be7c4;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.august-main-item-box strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.august-main-item-box em {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 9px;
+
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #d7ad56);
+
+    border-radius: 999px;
+
+    font-style: normal;
+    font-weight: 900;
+}
+
+.august-main-item-box p {
+    color: #d8f3e7;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.august-mini-character-list {
+    margin-top: 14px;
+
+    display: grid;
+    gap: 10px;
+}
+
+.august-mini-character {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    padding: 10px;
+
+    background: rgba(0, 0, 0, 0.28);
+
+    border: 1px solid rgba(139, 231, 196, 0.14);
+    border-radius: 14px;
+}
+
+.august-mini-character img {
+    width: 66px;
+    height: 66px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid rgba(255, 225, 138, 0.22);
+    border-radius: 12px;
+}
+
+.august-mini-character span {
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 3px 7px;
+
+    color: #1b1208;
+    background: #8be7c4;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.august-mini-character strong {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #ffe18a;
+
+    font-size: 16px;
+    line-height: 1.15;
+}
+
+.august-mini-character em {
+    color: #d7ad56;
+
+    font-size: 13px;
+    font-style: normal;
+}
+
+@media (max-width: 620px) {
+    .august-main-item-box,
+    .august-mini-character {
+        grid-template-columns: 1fr;
+    }
+
+    .august-main-item-box img,
+    .august-mini-character img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .august-main-item-box img {
+        object-fit: contain;
+    }
+}
+/* AĞUSTOS - ELDE ETME YOLLARI YENİ TASARIM */
+
+.august-method-grid {
+    display: block;
+}
+
+.august-method-list {
+    display: grid;
+    gap: 18px;
+}
+
+.august-method-row {
+    display: grid;
+    grid-template-columns: 52px 260px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    padding: 18px;
+
+    background:
+        radial-gradient(circle at left, rgba(255, 225, 138, 0.10), transparent 42%),
+        rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(139, 231, 196, 0.18);
+    border-radius: 18px;
+}
+
+.august-method-number {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1b1208;
+    background: linear-gradient(to bottom, #ffe18a, #c98a32);
+
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.august-method-image {
+    width: 260px;
+    height: 120px;
+
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.26);
+
+    border: 1px solid rgba(255, 225, 138, 0.22);
+    border-radius: 14px;
+}
+
+.august-method-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.august-method-content strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ffe18a;
+
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.august-method-content p {
+    color: #d8f3e7;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Görsel olmayan yöntemlerde içerik genişlesin */
+.august-method-row:has(.august-method-content):not(:has(.august-method-image)) {
+    grid-template-columns: 52px 1fr;
+}
+
+/* Ağustos karakterleri mini kartları */
+.august-mini-character-list {
+    margin-top: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.august-mini-character {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    padding: 12px;
+
+    background: rgba(0, 0, 0, 0.28);
+
+    border: 1px solid rgba(139, 231, 196, 0.16);
+    border-radius: 14px;
+}
+
+.august-mini-character img {
+    width: 84px;
+    height: 84px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 12px;
+}
+
+.august-mini-character span {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 3px 8px;
+
+    color: #1b1208;
+    background: #8be7c4;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.august-mini-character strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 17px;
+    line-height: 1.15;
+}
+
+.august-mini-character em {
+    color: #d7ad56;
+
+    font-size: 13px;
+    font-style: normal;
+}
+
+/* Mobil */
+@media (max-width: 900px) {
+    .august-method-row {
+        grid-template-columns: 52px 1fr;
+    }
+
+    .august-method-image {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 180px;
+    }
+
+    .august-mini-character-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .august-method-row {
+        grid-template-columns: 1fr;
+    }
+
+    .august-method-number {
+        margin-bottom: -4px;
+    }
+
+    .august-method-image {
+        height: 170px;
+    }
+
+    .august-mini-character {
+        grid-template-columns: 1fr;
+    }
+
+    .august-mini-character img {
+        width: 100%;
+        height: 170px;
+    }
+}
+.august-location-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.august-location-tags span {
+    display: inline-block;
+    padding: 8px 12px;
+
+    color: #fff4cf;
+    background: rgba(255, 225, 138, 0.10);
+
+    border: 1px solid rgba(255, 225, 138, 0.28);
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+.august-source-flow {
+    margin-top: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.august-source-item {
+    width: 130px;
+    min-height: 142px;
+    padding: 12px;
+
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 8px;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(139, 231, 196, 0.22);
+    border-radius: 16px;
+}
+
+.august-source-item img {
+    width: 82px;
+    height: 82px;
+
+    object-fit: contain;
+}
+
+.august-source-item strong {
+    color: #ffe18a;
+
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.august-region-boxes {
+    margin-top: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.august-region-box {
+    padding: 15px;
+
+    background:
+        radial-gradient(circle at top left, rgba(255, 225, 138, 0.14), transparent 48%),
+        rgba(0, 0, 0, 0.32);
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 16px;
+}
+
+.august-region-box span {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 4px 9px;
+
+    color: #1b1208;
+    background: #8be7c4;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.august-region-box strong {
+    display: block;
+
+    color: #ffe18a;
+
+    font-size: 22px;
+    line-height: 1.15;
+}
+
+@media (max-width: 620px) {
+    .august-source-flow {
+        justify-content: center;
+    }
+
+    .august-region-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .august-source-item {
+        width: 120px;
+    }
+}
+.august-feeding-stage-list {
+    display: grid;
+    gap: 20px;
+}
+
+.august-feeding-stage {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.30);
+    border: 1px solid rgba(255, 225, 138, 0.18);
+    border-radius: 20px;
+}
+
+.august-feeding-stage-header {
+    margin-bottom: 10px;
+}
+
+.august-feeding-stage-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #d7ad56);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.august-feeding-stage-header h4 {
+    margin: 0;
+    color: #ffe18a;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.august-feeding-stage-text {
+    margin: 0 0 16px;
+    color: #f7f3dd;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.august-region-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.august-region-card {
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(139, 231, 196, 0.20);
+    border-radius: 16px;
+}
+
+.august-region-card span {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    color: #1b1208;
+    background: #8be7c4;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.august-region-card strong {
+    display: block;
+    color: #ffe18a;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.august-big-flow {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+}
+
+.august-big-flow-card {
+    width: 170px;
+    min-height: 200px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.34);
+    border: 1px solid rgba(139, 231, 196, 0.20);
+    border-radius: 18px;
+    text-align: center;
+}
+
+.august-big-flow-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 225, 138, 0.22);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.august-big-flow-card strong {
+    color: #ffe18a;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.august-big-flow-symbol {
+    color: #ffe18a;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+@media (max-width: 900px) {
+    .august-region-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .august-big-flow {
+        justify-content: center;
+    }
+
+    .august-big-flow-card {
+        width: 150px;
+        min-height: 185px;
+    }
+
+    .august-big-flow-card img {
+        width: 96px;
+        height: 96px;
+    }
+
+    .august-big-flow-card strong {
+        font-size: 20px;
+    }
+}
