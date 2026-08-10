@@ -1,6 +1,7 @@
 const augustImagePath = "../../assents/images/etkinlikler/agustos/";
 const augustResourcePath = "../../assents/images/kaynaklar/";
 const augustShopRewardPath = "../../assents/images/magazalar/sezonluk/agustos/";
+const natureCharacterPath = "../../assents/images/karakterler/";
 const augustEventSteps = [
     {
         id: "baslangic",
@@ -14,14 +15,14 @@ const augustEventSteps = [
             {
                 race: "İnsan",
                 name: "Denizkızı Sabina",
-                location: "Karat Dağınıkları",
-                image: augustImagePath + "denizkizi-sabina.png"
+                location: "Lenriya Şelalesi",
+                image: natureCharacterPath + "denizkizi-sabina.png"
             },
             {
                 race: "Magron",
                 name: "Denizkızı Matrona",
-                location: "Konum eklenecek",
-                image: augustImagePath + "denizkizi-matrona.png"
+                location: "Sinsi Göl",
+                image: natureCharacterPath + "denizkizi-matrona.png"
             }
         ],
 
@@ -48,13 +49,13 @@ const augustEventSteps = [
                 race: "İnsan",
                 name: "Balıkçı Nealon",
                 location: "Karat Dağınıkları",
-                image: augustImagePath + "balikci-nealon.png"
+                image: natureCharacterPath + "balikci-nealon.png"
             },
             {
                 race: "Magron",
                 name: "Balıkçı Verniz",
-                location: "Konum eklenecek",
-                image: augustImagePath + "balikci-verniz.png"
+                location: "Muntarya Dağlıkları",
+                image: natureCharacterPath + "balikci-verniz.png"
             }
         ],
 
@@ -82,14 +83,14 @@ const augustEventSteps = [
                     {
                         race: "İnsan",
                         name: "Bataklık-Kızı Fionola",
-                        location: "Konum eklenecek",
-                        image: augustImagePath + "bataklik-kizi-fionola.png"
+                        location: "Kurt Çölü",
+                        image: natureCharacterPath + "bataklik-kizi-fionola.png"
                     },
                     {
                         race: "Magron",
                         name: "Çiftçi Teo",
-                        location: "Konum eklenecek",
-                        image: augustImagePath + "ciftci-teo.png"
+                        location: "Sinsi Göl",
+                        image: natureCharacterPath + "ciftci-teo.png"
                     }
                 ]
             },
@@ -121,13 +122,13 @@ const augustEventSteps = [
                 race: "İnsan",
                 name: "Balıkçı Nealon",
                 location: "Karat Dağınıkları",
-                image: augustImagePath + "balikci-nealon.png"
+                image: natureCharacterPath + "balikci-nealon.png"
             },
             {
                 race: "Magron",
                 name: "Balıkçı Verniz",
-                location: "Konum eklenecek",
-                image: augustImagePath + "balikci-verniz.png"
+                location: "Muntarya Dağlıkları",
+                image: natureCharacterPath + "balikci-verniz.png"
             }
         ],
 
@@ -158,7 +159,11 @@ const augustEventSteps = [
                 title: "Magron Tarafı Bölgeleri",
                 text: "Magron tarafındaki Yavru Altın Balık bölgeleri daha sonra eklenecek.",
                 locations: [
-                    "Konum eklenecek"
+                    "Yabancılaşma Çölü",
+                    "Muntarya Dağlıkları",
+                    "Terkedilmiş Mezarlıkları",
+                    "Zyigolt Ormanı",
+                    "Korku Limanı"
                 ]
             }
         ],
@@ -184,13 +189,13 @@ const augustEventSteps = [
             race: "İnsan",
             name: "Denizkızı Sabina",
             location: "Karat Dağınıkları",
-            image: augustImagePath + "denizkizi-sabina.png"
+            image: natureCharacterPath + "denizkizi-sabina.png"
         },
         {
             race: "Magron",
             name: "Denizkızı Matrona",
             location: "Konum eklenecek",
-            image: augustImagePath + "denizkizi-matrona.png"
+            image: natureCharacterPath + "denizkizi-matrona.png"
         }
     ],
 
@@ -224,7 +229,12 @@ const augustEventSteps = [
             locations: [
                 {
                     race: "İnsan",
-                    location: "Şehir Kapısı"
+                    location: [
+                        "Faynir Vilayeti",
+                        "Ölüm yamacı",
+                        "Kader yokuşu",
+                        "Hayaller Çayırı"
+                    ]
                 },
                 {
                     race: "Magron",
@@ -238,7 +248,7 @@ const augustEventSteps = [
             text: "Yavru Altın Balık, 1 ile 3 arası Sinek Sürüsü ile beslendikten sonra Güçlü Altın Balık olur.",
             from: {
                 name: "Yavru Altın Balık",
-                image: augustResourcePath + "yavru-altin-balik.png"
+                image: augustImagePath + "yavru-altin-balik.png"
             },
             material: {
                 name: "1-3x Sinek Sürüsü",
@@ -246,7 +256,7 @@ const augustEventSteps = [
             },
             result: {
                 name: "Güçlü Altın Balık",
-                image: augustResourcePath + "guclu-altin-balik.png"
+                image: augustImagePath + "guclu-altin-balik.png"
             }
         },
         {
@@ -255,7 +265,7 @@ const augustEventSteps = [
             text: "Güçlü Altın Balık, 6 ile 10 arası Sinek Sürüsü ile beslendikten sonra Büyümüş Altın Balık olur.",
             from: {
                 name: "Güçlü Altın Balık",
-                image: augustResourcePath + "guclu-altin-balik.png"
+                image: augustImagePath + "guclu-altin-balik.png"
             },
             material: {
                 name: "6-10x Sinek Sürüsü",
@@ -263,7 +273,7 @@ const augustEventSteps = [
             },
             result: {
                 name: "Büyümüş Altın Balık",
-                image: augustResourcePath + "buyumus-altin-balik.png"
+                image: augustImagePath + "buyumus-altin-balik.png"
             }
         },
         {
@@ -272,7 +282,7 @@ const augustEventSteps = [
             text: "Büyümüş Altın Balık, 15 ile 20 arası Sinek Sürüsü ile beslendikten sonra Altın Balık olur.",
             from: {
                 name: "Büyümüş Altın Balık",
-                image: augustResourcePath + "buyumus-altin-balik.png"
+                image: augustImagePath + "buyumus-altin-balik.png"
             },
             material: {
                 name: "15-20x Sinek Sürüsü",
@@ -280,7 +290,7 @@ const augustEventSteps = [
             },
             result: {
                 name: "Altın Balık",
-                image: augustResourcePath + "altin-balik.png"
+                image: augustImagePath + "altin-balik.png"
             }
         },
         {
@@ -311,13 +321,13 @@ const augustEventSteps = [
             race: "İnsan",
             name: "Kuyumcu Efrosi",
             location: "Zanaatçılar Birliği",
-            image: augustImagePath + "kuyumcu-efrosi.png"
+            image: natureCharacterPath + "kuyumcu-efrosi.png"
         },
         {
             race: "Magron",
-            name: "Magron Kuyumcusu",
+            name: "Kuyumcu Krefile",
             location: "Zanaatçılar Birliği",
-            image: augustImagePath + "kuyumcu-magron.png"
+            image: natureCharacterPath + "kuyumcu-krefile.png"
         }
     ],
 
@@ -326,7 +336,7 @@ const augustEventSteps = [
     mainItem: {
         name: "Altın Balıklı Elmas Fanus",
         amount: "1",
-        image: augustResourcePath + "altin-balikli-elmas-fanus.png",
+        image: augustImagePath + "altin-balikli-elmas-fanus.png",
         text: "Denizkızının istediği ana görev nesnesidir. Altın Balık ve Elmas Akvaryum birleştirilerek elde edilir."
     },
 
@@ -345,13 +355,13 @@ const augustEventSteps = [
                     race: "İnsan",
                     npc: "Kuyumcu Efrosi",
                     location: "Zanaatçılar Birliği",
-                    image: augustImagePath + "kuyumcu-efrosi.png"
+                    image: natureCharacterPath + "kuyumcu-efrosi.png"
                 },
                 {
                     race: "Magron",
                     npc: "Magron Kuyumcusu",
                     location: "Zanaatçılar Birliği",
-                    image: augustImagePath + "kuyumcu-magron.png"
+                    image: natureCharacterPath + "kuyumcu-krefile.png"
                 }
             ]
         },
@@ -379,7 +389,7 @@ const augustEventSteps = [
             resultItem: {
                 name: "Elmas Akvaryum",
                 amount: "1",
-                image: augustResourcePath + "elmas-akvaryum.png"
+                image: augustImagePath + "elmas-akvaryum.png"
             }
         },
         {
@@ -388,15 +398,15 @@ const augustEventSteps = [
             text: "Elmas Akvaryum alındıktan sonra Altın Balık kullanılır. Altın Balık, Elmas Akvaryum içine konur ve Altın Balıklı Elmas Fanus oluşur.",
             from: {
                 name: "Altın Balık",
-                image: augustResourcePath + "altin-balik.png"
+                image: augustImagePath + "altin-balik.png"
             },
             material: {
                 name: "Elmas Akvaryum",
-                image: augustResourcePath + "elmas-akvaryum.png"
+                image: augustImagePath + "elmas-akvaryum.png"
             },
             result: {
                 name: "Altın Balıklı Elmas Fanus",
-                image: augustResourcePath + "altin-balikli-elmas-fanus.png"
+                image: augustImagePath + "altin-balikli-elmas-fanus.png"
             }
         },
         {
@@ -427,13 +437,13 @@ const augustEventSteps = [
             race: "İnsan",
             name: "Deniz Kızı Sabina",
             location: "Karat Dağınıkları",
-            image: augustImagePath + "denizkizi-sabina.png"
+            image: natureCharacterPath + "denizkizi-sabina.png"
         },
         {
             race: "Magron",
             name: "Deniz Kızı Matrona",
             location: "Konum eklenecek",
-            image: augustImagePath + "denizkizi-matrona.png"
+            image: natureCharacterPath + "denizkizi-matrona.png"
         }
     ],
 
