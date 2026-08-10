@@ -1,0 +1,736 @@
+.nature-event-page {
+    padding-top: 86px;
+}
+
+.nature-hero,
+.nature-layout {
+    width: min(1220px, 94%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+   ÜST KAPAK
+========================= */
+
+.nature-hero {
+    margin-bottom: 30px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at top left, rgba(128, 225, 137, 0.16), transparent 42%),
+        radial-gradient(circle at bottom right, rgba(255, 225, 138, 0.12), transparent 38%),
+        linear-gradient(to bottom, rgba(18, 34, 24, 0.95), rgba(5, 9, 7, 0.97));
+
+    border: 1px solid rgba(128, 225, 137, 0.24);
+    border-radius: 26px;
+    box-shadow: 0 0 34px rgba(0, 0, 0, 0.76);
+}
+
+.nature-hero-content > span {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #95f0a5;
+
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.nature-hero-content h1 {
+    margin-bottom: 14px;
+
+    color: #ffe18a;
+
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    text-shadow: 0 0 18px #000;
+}
+
+.nature-hero-content p {
+    max-width: 760px;
+
+    color: #dfffe3;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.nature-meta-grid {
+    margin-top: 22px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.nature-meta-grid div {
+    padding: 14px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(128, 225, 137, 0.20);
+    border-radius: 16px;
+}
+
+.nature-meta-grid span {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #95f0a5;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.nature-meta-grid strong {
+    color: #ffe18a;
+
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.nature-hero-card {
+    height: 360px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 20px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.66);
+}
+
+.nature-hero-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================
+   ANA YERLEŞİM
+========================= */
+
+.nature-layout {
+    margin-bottom: 60px;
+
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 26px;
+    align-items: start;
+}
+
+/* =========================
+   SOL AŞAMA PANELİ
+========================= */
+
+.nature-step-panel {
+    position: sticky;
+    top: 90px;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at top left, rgba(128, 225, 137, 0.14), transparent 42%),
+        linear-gradient(to bottom, rgba(18, 34, 24, 0.95), rgba(5, 9, 7, 0.97));
+
+    border: 1px solid rgba(128, 225, 137, 0.22);
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.72);
+}
+
+.nature-step-panel h2 {
+    margin-bottom: 16px;
+
+    color: #ffe18a;
+
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.nature-step-btn {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 14px;
+
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    text-align: left;
+    cursor: pointer;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(128, 225, 137, 0.18);
+    border-radius: 16px;
+
+    transition: 0.22s ease;
+}
+
+.nature-step-btn > span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #102015;
+    background: linear-gradient(to bottom, #a8ffb1, #5db96a);
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.nature-step-btn strong {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #ffe18a;
+
+    font-size: 17px;
+    line-height: 1.15;
+}
+
+.nature-step-btn em {
+    color: #dfffe3;
+
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.25;
+}
+
+.nature-step-btn:hover,
+.nature-step-btn.active {
+    transform: translateX(5px);
+
+    border-color: rgba(255, 225, 138, 0.65);
+    box-shadow: 0 0 18px rgba(128, 225, 137, 0.16);
+}
+
+/* =========================
+   SAĞ DETAY PANELİ
+========================= */
+
+.nature-detail-card {
+    padding: 26px;
+
+    background:
+        radial-gradient(circle at top right, rgba(128, 225, 137, 0.16), transparent 36%),
+        radial-gradient(circle at bottom left, rgba(255, 225, 138, 0.10), transparent 42%),
+        linear-gradient(to bottom, rgba(18, 34, 24, 0.95), rgba(5, 9, 7, 0.97));
+
+    border: 1px solid rgba(128, 225, 137, 0.22);
+    border-radius: 26px;
+    box-shadow: 0 0 34px rgba(0, 0, 0, 0.76);
+}
+
+.nature-detail-header {
+    margin-bottom: 22px;
+}
+
+.nature-detail-header > span {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+
+    color: #102015;
+    background: linear-gradient(to right, #a8ffb1, #ffe18a);
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.nature-detail-header h2 {
+    margin-bottom: 12px;
+
+    color: #ffe18a;
+
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1;
+    text-shadow: 0 0 16px #000;
+}
+
+.nature-detail-header p,
+.nature-section p {
+    color: #dfffe3;
+
+    font-size: 17px;
+    line-height: 1.58;
+}
+
+/* =========================
+   ORTAK KARTLAR
+========================= */
+
+.nature-objective-card,
+.nature-main-item,
+.nature-profession-card,
+.nature-wood-card {
+    margin-bottom: 24px;
+    padding: 18px;
+
+    background:
+        radial-gradient(circle at left, rgba(128, 225, 137, 0.10), transparent 46%),
+        rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(128, 225, 137, 0.20);
+    border-radius: 18px;
+}
+
+.nature-section {
+    margin-bottom: 28px;
+}
+
+.nature-section-header {
+    margin-bottom: 18px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nature-section h3 {
+    color: #ffe18a;
+
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+/* =========================
+   AMAÇ KARTI
+========================= */
+
+.nature-objective-card {
+    border-left: 6px solid #a8ffb1;
+}
+
+.nature-objective-card strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #a8ffb1;
+
+    font-size: 18px;
+}
+
+.nature-objective-card p {
+    color: #ffffff;
+
+    font-size: 19px;
+    line-height: 1.45;
+    font-weight: 800;
+}
+
+/* =========================
+   ETKİNLİK KAYNAĞI
+========================= */
+
+.nature-main-item {
+    padding: 16px;
+
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    border-color: rgba(168, 255, 177, 0.22);
+}
+
+.nature-main-item img {
+    width: 88px;
+    height: 88px;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.nature-main-item span,
+.nature-npc-card span,
+.nature-reward-box span {
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 4px 9px;
+
+    color: #102015;
+    background: #a8ffb1;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.nature-main-item strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ffe18a;
+
+    font-size: 26px;
+    line-height: 1.1;
+}
+
+.nature-main-item p {
+    color: #dfffe3;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+/* =========================
+   ROZETLER
+========================= */
+
+.nature-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nature-badges span {
+    display: inline-block;
+    padding: 6px 10px;
+
+    color: #102015;
+    background: linear-gradient(to right, #a8ffb1, #ffe18a);
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+/* =========================
+   MESLEK KARTLARI
+========================= */
+
+.nature-profession-list {
+    display: grid;
+    gap: 20px;
+}
+
+.nature-profession-card {
+    padding: 20px;
+
+    border-color: rgba(168, 255, 177, 0.20);
+}
+
+.nature-profession-title {
+    margin-bottom: 18px;
+}
+
+.nature-profession-title span {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 7px 12px;
+
+    color: #102015;
+    background: linear-gradient(to right, #a8ffb1, #5db96a);
+
+    border-radius: 999px;
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.nature-profession-title p {
+    margin: 0;
+
+    color: #dfffe3;
+
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.nature-profession-bottom {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    gap: 18px;
+    align-items: start;
+}
+
+.nature-profession-bottom h4 {
+    margin-bottom: 12px;
+
+    color: #a8ffb1;
+
+    font-size: 20px;
+}
+
+/* =========================
+   KARAKTER / NPC KARTLARI
+========================= */
+
+.nature-npc-pair {
+    margin-bottom: 18px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.nature-npc-card {
+    min-height: 170px;
+    padding: 18px;
+
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(128, 225, 137, 0.18);
+    border-radius: 18px;
+}
+
+.nature-npc-card img {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border: 1px solid rgba(255, 225, 138, 0.22);
+    border-radius: 14px;
+}
+
+.nature-npc-card strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 22px;
+    line-height: 1.15;
+}
+
+.nature-npc-card em {
+    color: #d7ad56;
+
+    font-size: 15px;
+    font-style: normal;
+}
+
+/* =========================
+   KAYNAKLAR / ÖDÜLLER
+========================= */
+
+.nature-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+}
+
+.nature-resource-card,
+.nature-reward-box {
+    padding: 12px;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 8px;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(255, 225, 138, 0.20);
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.nature-resource-card {
+    min-height: 132px;
+}
+
+.nature-reward-box {
+    min-height: 160px;
+
+    border-color: rgba(255, 225, 138, 0.24);
+}
+
+.nature-resource-card img {
+    width: 64px;
+    height: 64px;
+
+    object-fit: contain;
+}
+
+.nature-reward-box img {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+}
+
+.nature-resource-card strong,
+.nature-reward-box em {
+    color: #ffe18a;
+
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.nature-resource-card span,
+.nature-reward-box strong {
+    min-width: 38px;
+    padding: 4px 9px;
+
+    color: #102015;
+    background: linear-gradient(to right, #a8ffb1, #ffe18a);
+
+    border-radius: 999px;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.nature-reward-box strong {
+    font-size: 22px;
+}
+
+.nature-empty-box {
+    padding: 16px;
+
+    color: #dfffe3;
+    background: rgba(0, 0, 0, 0.26);
+
+    border: 1px dashed rgba(128, 225, 137, 0.28);
+    border-radius: 14px;
+}
+
+/* =========================
+   ODUNİ GÖREVİ
+========================= */
+
+.nature-wood-card {
+    border-color: rgba(255, 225, 138, 0.26);
+
+    background:
+        radial-gradient(circle at top left, rgba(255, 225, 138, 0.10), transparent 44%),
+        rgba(0, 0, 0, 0.34);
+}
+
+.nature-wood-flow {
+    margin-top: 18px;
+    padding-top: 14px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+
+    border-top: 1px solid rgba(255, 225, 138, 0.16);
+}
+
+.nature-resource-card.large {
+    width: 170px;
+    min-height: 190px;
+}
+
+.nature-resource-card.large img {
+    width: 100px;
+    height: 100px;
+}
+
+.nature-flow-arrow {
+    color: #a8ffb1;
+
+    font-size: 34px;
+    font-weight: 900;
+}
+
+/* =========================
+   NOTLAR
+========================= */
+
+.nature-note-list {
+    display: grid;
+    gap: 10px;
+}
+
+.nature-note-list p {
+    margin: 0;
+    padding: 14px;
+
+    color: #f7f3dd;
+    background: rgba(0, 0, 0, 0.28);
+
+    border: 1px solid rgba(255, 225, 138, 0.16);
+    border-radius: 14px;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+    .nature-hero,
+    .nature-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .nature-step-panel {
+        position: static;
+    }
+
+    .nature-hero-card {
+        height: 320px;
+    }
+}
+
+@media (max-width: 760px) {
+    .nature-meta-grid,
+    .nature-npc-pair,
+    .nature-profession-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .nature-main-item,
+    .nature-npc-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .nature-main-item img {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto;
+
+        object-fit: contain;
+    }
+
+    .nature-npc-card img {
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .nature-wood-flow {
+        justify-content: center;
+    }
+}

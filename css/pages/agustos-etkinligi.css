@@ -2,7 +2,9 @@
     padding-top: 86px;
 }
 
-/* ÜST KAPAK ALANI */
+/* =========================
+   ÜST KAPAK
+========================= */
 
 .august-hero {
     width: min(1220px, 94%);
@@ -21,7 +23,6 @@
 
     border: 1px solid rgba(139, 231, 196, 0.22);
     border-radius: 26px;
-
     box-shadow: 0 0 34px rgba(0, 0, 0, 0.76);
 }
 
@@ -106,7 +107,9 @@
     object-position: center;
 }
 
-/* ANA GÖREV HARİTASI */
+/* =========================
+   ANA YERLEŞİM
+========================= */
 
 .august-layout {
     width: min(1220px, 94%);
@@ -118,7 +121,9 @@
     align-items: start;
 }
 
-/* SOL GÖREV ZİNCİRİ */
+/* =========================
+   SOL GÖREV LİSTESİ
+========================= */
 
 .august-map-panel {
     position: sticky;
@@ -132,7 +137,6 @@
 
     border: 1px solid rgba(139, 231, 196, 0.22);
     border-radius: 24px;
-
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.72);
 }
 
@@ -209,7 +213,9 @@
     box-shadow: 0 0 18px rgba(139, 231, 196, 0.16);
 }
 
-/* SAĞ DETAY PANELİ */
+/* =========================
+   SAĞ DETAY PANELİ
+========================= */
 
 .august-quest-card {
     padding: 26px;
@@ -221,7 +227,6 @@
 
     border: 1px solid rgba(139, 231, 196, 0.22);
     border-radius: 26px;
-
     box-shadow: 0 0 34px rgba(0, 0, 0, 0.76);
 }
 
@@ -260,14 +265,28 @@
     line-height: 1.58;
 }
 
-/* AMAÇ KARTI */
+/* =========================
+   ORTAK KART / BAŞLIK
+========================= */
+
+.august-section {
+    margin-bottom: 24px;
+}
+
+.august-section h3 {
+    margin-bottom: 14px;
+
+    color: #ffe18a;
+
+    font-size: 27px;
+    line-height: 1.15;
+}
 
 .august-objective-card {
     margin-bottom: 22px;
     padding: 18px;
 
-    background:
-        linear-gradient(to right, rgba(255, 225, 138, 0.16), rgba(139, 231, 196, 0.08));
+    background: linear-gradient(to right, rgba(255, 225, 138, 0.16), rgba(139, 231, 196, 0.08));
 
     border-left: 6px solid #ffe18a;
     border-radius: 16px;
@@ -290,40 +309,102 @@
     font-weight: 800;
 }
 
-/* ORTAK BÖLÜMLER */
+/* =========================
+   ANA NESNE
+========================= */
 
-.august-section {
+.august-main-item-box {
     margin-bottom: 24px;
+    padding: 18px;
+
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at left, rgba(255, 225, 138, 0.14), transparent 48%),
+        rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(255, 225, 138, 0.26);
+    border-radius: 18px;
 }
 
-.august-section h3 {
-    margin-bottom: 14px;
+.august-main-item-box img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.august-main-item-box span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #8be7c4;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.august-main-item-box strong {
+    display: block;
+    margin-bottom: 5px;
 
     color: #ffe18a;
 
-    font-size: 27px;
-    line-height: 1.15;
+    font-size: 28px;
+    line-height: 1.1;
 }
 
-.august-character-grid,
-.august-method-grid,
-.august-item-grid {
+.august-main-item-box em {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 9px;
+
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #d7ad56);
+
+    border-radius: 999px;
+
+    font-style: normal;
+    font-weight: 900;
+}
+
+.august-main-item-box p {
+    color: #d8f3e7;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+/* =========================
+   KARAKTERLER
+========================= */
+
+.august-character-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
 
-/* KARAKTER / YÖNTEM / NESNE KARTLARI */
-
 .august-character-card {
     min-height: 210px;
+    padding: 18px;
+
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 18px;
     align-items: center;
 
-    padding: 18px;
     background: rgba(0, 0, 0, 0.34);
+
     border: 1px solid rgba(139, 231, 196, 0.16);
     border-radius: 18px;
 }
@@ -331,58 +412,21 @@
 .august-character-card img {
     width: 170px;
     height: 170px;
+
     object-fit: cover;
     object-position: center;
+
     border: 1px solid rgba(255, 225, 138, 0.24);
     border-radius: 12px;
-    display: block;
-}
-@media (max-width: 620px) {
-    .august-character-card {
-        grid-template-columns: 1fr;
-        min-height: auto;
-    }
-
-    .august-character-card img {
-        width: 170px;
-        height: 170px;
-        margin: 0 auto;
-    }
-}
-.august-method-card {
-    min-height: 130px;
-    grid-template-columns: 110px 1fr;
 }
 
-.august-method-card img {
-    width: 102px;
-    height: 102px;
-    border-radius: 16px;
-}
-
-.august-item-card {
-    min-height: 110px;
-    grid-template-columns: 86px 1fr;
-}
-
-.august-item-card img {
-    width: 78px;
-    height: 78px;
-}
-
-.august-character-card img,
-.august-method-card img {
-    object-fit: cover;
-}
-
-.august-item-card img {
-    object-fit: contain;
-}
-
-.august-character-card span {
+.august-character-card span,
+.august-mini-character span,
+.august-jeweler-card span,
+.august-region-card span {
     display: inline-block;
-    margin-bottom: 5px;
-    padding: 4px 8px;
+    margin-bottom: 6px;
+    padding: 4px 9px;
 
     color: #1b1208;
     background: #8be7c4;
@@ -393,43 +437,721 @@
     font-weight: 900;
 }
 
-.august-character-card strong,
-.august-method-card strong,
-.august-item-card strong {
+.august-character-card strong {
     display: block;
     margin-bottom: 6px;
 
     color: #ffe18a;
 
-    font-size: 19px;
+    font-size: 22px;
     line-height: 1.15;
 }
 
-.august-character-card p,
-.august-method-card p {
-    margin-bottom: 6px;
-
-    color: #d8f3e7;
-
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.august-character-card em {
+.august-character-card em,
+.august-mini-character em,
+.august-jeweler-card em {
     color: #d7ad56;
 
-    font-size: 13px;
+    font-size: 14px;
     font-style: normal;
 }
 
-.august-item-card span {
-    color: #ffffff;
+/* =========================
+   ELDE ETME / BÖLGE BİLGİSİ
+========================= */
+
+.august-method-list {
+    display: grid;
+    gap: 18px;
+}
+
+.august-method-row {
+    padding: 18px;
+
+    display: grid;
+    grid-template-columns: 52px 260px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at left, rgba(255, 225, 138, 0.10), transparent 42%),
+        rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(139, 231, 196, 0.18);
+    border-radius: 18px;
+}
+
+.august-method-row:not(:has(.august-method-image)) {
+    grid-template-columns: 52px 1fr;
+}
+
+.august-method-number {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1b1208;
+    background: linear-gradient(to bottom, #ffe18a, #c98a32);
+
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.august-method-image {
+    width: 260px;
+    height: 120px;
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.26);
+
+    border: 1px solid rgba(255, 225, 138, 0.22);
+    border-radius: 14px;
+}
+
+.august-method-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.august-method-content strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ffe18a;
+
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.august-method-content p {
+    color: #d8f3e7;
 
     font-size: 16px;
+    line-height: 1.5;
+}
+
+.august-location-tags {
+    margin-top: 14px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.august-location-tags span {
+    display: inline-block;
+    padding: 8px 12px;
+
+    color: #fff4cf;
+    background: rgba(255, 225, 138, 0.10);
+
+    border: 1px solid rgba(255, 225, 138, 0.28);
+    border-radius: 999px;
+
+    font-size: 14px;
     font-weight: 800;
 }
 
-/* SONRAKİ AŞAMA */
+/* mini karakterler */
+
+.august-mini-character-list {
+    margin-top: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.august-mini-character {
+    padding: 12px;
+
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 12px;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.28);
+
+    border: 1px solid rgba(139, 231, 196, 0.16);
+    border-radius: 14px;
+}
+
+.august-mini-character img {
+    width: 84px;
+    height: 84px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid rgba(255, 225, 138, 0.24);
+    border-radius: 12px;
+}
+
+.august-mini-character strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 17px;
+    line-height: 1.15;
+}
+
+/* =========================
+   BESLEME / AKIŞ ORTAK
+========================= */
+
+.august-feeding-stage-list,
+.august-fanus-step-list,
+.august-bone-source-list,
+.august-reward-group-list {
+    display: grid;
+    gap: 20px;
+}
+
+.august-feeding-stage,
+.august-fanus-step-card,
+.august-bone-source-card,
+.august-reward-group {
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at top left, rgba(255, 225, 138, 0.10), transparent 46%),
+        rgba(0, 0, 0, 0.32);
+
+    border: 1px solid rgba(255, 225, 138, 0.18);
+    border-radius: 20px;
+}
+
+.august-feeding-stage-header,
+.august-fanus-step-header,
+.august-bone-source-header,
+.august-reward-group-header {
+    margin-bottom: 12px;
+}
+
+.august-feeding-stage-label,
+.august-fanus-step-header span,
+.august-bone-source-header span {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 6px 12px;
+
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #d7ad56);
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.august-feeding-stage-header h4,
+.august-fanus-step-header h4,
+.august-bone-source-header h4,
+.august-reward-group-header h4 {
+    margin: 0;
+
+    color: #ffe18a;
+
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.august-feeding-stage-text,
+.august-fanus-step-card p,
+.august-bone-source-card p,
+.august-reward-group-header p {
+    margin: 0 0 16px;
+
+    color: #f7f3dd;
+
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.august-big-flow,
+.august-bone-flow,
+.august-choice-result {
+    margin-top: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.august-big-flow-card,
+.august-bone-flow-item {
+    width: 170px;
+    min-height: 200px;
+    padding: 14px;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 8px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(139, 231, 196, 0.20);
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.august-big-flow-card img,
+.august-bone-flow-item img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(255, 225, 138, 0.22);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.august-big-flow-card strong,
+.august-bone-flow-item span {
+    color: #ffe18a;
+
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.august-big-flow-symbol,
+.august-bone-flow-arrow,
+.august-exchange-arrow {
+    color: #8be7c4;
+
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.august-bone-flow-item strong,
+.august-exchange-item strong,
+.august-choice-card span {
+    min-width: 42px;
+    padding: 5px 10px;
+
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #d7ad56);
+
+    border-radius: 999px;
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* şehir / bölge kutuları */
+
+.august-region-grid,
+.august-region-boxes {
+    margin-top: 14px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.august-region-card,
+.august-region-box {
+    padding: 16px;
+
+    background: rgba(0, 0, 0, 0.28);
+
+    border: 1px solid rgba(139, 231, 196, 0.20);
+    border-radius: 16px;
+}
+
+.august-region-card strong,
+.august-region-box strong {
+    display: block;
+
+    color: #ffe18a;
+
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+/* =========================
+   ELMAS FANUS / KUYUMCU
+========================= */
+
+.august-jeweler-grid {
+    margin-top: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.august-jeweler-card {
+    padding: 14px;
+
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 14px;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(139, 231, 196, 0.18);
+    border-radius: 18px;
+}
+
+.august-jeweler-card img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid rgba(255, 225, 138, 0.22);
+    border-radius: 14px;
+}
+
+.august-jeweler-card strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #ffe18a;
+
+    font-size: 22px;
+    line-height: 1.15;
+}
+
+/* seçim alanı */
+
+.august-choice-area {
+    margin-top: 22px;
+    padding: 18px;
+
+    background:
+        radial-gradient(circle at center, rgba(255, 225, 138, 0.08), transparent 58%),
+        rgba(0, 0, 0, 0.24);
+
+    border: 1px solid rgba(139, 231, 196, 0.14);
+    border-radius: 18px;
+}
+
+.august-choice-title {
+    margin-bottom: 18px;
+
+    color: #8be7c4;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.august-choice-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 14px;
+    align-items: center;
+}
+
+.august-choice-card {
+    min-height: 220px;
+    padding: 16px;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 10px;
+
+    background:
+        radial-gradient(circle at top, rgba(255, 225, 138, 0.08), transparent 54%),
+        rgba(0, 0, 0, 0.36);
+
+    border: 1px solid rgba(255, 225, 138, 0.28);
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.august-choice-card img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(255, 225, 138, 0.18);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.august-choice-card strong {
+    color: #ffe18a;
+
+    font-size: 18px;
+    line-height: 1.15;
+}
+
+.august-choice-or {
+    color: #8be7c4;
+
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.august-choice-result {
+    margin-top: 24px;
+    padding-top: 22px;
+
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+
+    border-top: 1px solid rgba(255, 225, 138, 0.18);
+}
+
+.august-choice-result .august-big-flow-symbol {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1b1208;
+    background: linear-gradient(to bottom, #ffe18a, #c98a32);
+
+    border-radius: 50%;
+
+    font-size: 30px;
+    font-weight: 900;
+
+    transform: rotate(90deg);
+}
+
+.august-choice-result .august-big-flow-card {
+    width: 210px;
+    min-height: 230px;
+
+    border-color: rgba(139, 231, 196, 0.30);
+}
+
+/* =========================
+   BALIK KEMİĞİ KAYNAKLARI
+========================= */
+
+.august-exchange-table {
+    display: grid;
+    gap: 14px;
+    max-width: 620px;
+}
+
+.august-exchange-row {
+    padding: 14px;
+
+    display: grid;
+    grid-template-columns: 1fr 44px 1fr;
+    gap: 14px;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(139, 231, 196, 0.18);
+    border-radius: 18px;
+}
+
+.august-exchange-item {
+    min-height: 150px;
+    padding: 12px;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 7px;
+
+    background: rgba(0, 0, 0, 0.26);
+
+    border: 1px solid rgba(255, 225, 138, 0.20);
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.august-exchange-item img {
+    width: 88px;
+    height: 88px;
+
+    object-fit: contain;
+}
+
+.august-exchange-item span {
+    color: #ffe18a;
+
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+/* =========================
+   ÖDÜLLER
+========================= */
+
+.august-reward-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.august-reward-card {
+    min-height: 245px;
+    padding: 14px;
+
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 10px;
+
+    background: rgba(0, 0, 0, 0.34);
+
+    border: 1px solid rgba(139, 231, 196, 0.18);
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.august-reward-image {
+    width: 92px;
+    height: 92px;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(255, 225, 138, 0.20);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.august-reward-card > strong {
+    color: #ffe18a;
+
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.august-reward-cost {
+    padding: 6px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    background: rgba(0, 0, 0, 0.30);
+
+    border: 1px solid rgba(255, 225, 138, 0.20);
+    border-radius: 999px;
+}
+
+.august-reward-cost img {
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
+}
+
+.august-reward-cost span {
+    color: #ffe18a;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.august-reward-content-btn {
+    padding: 7px 11px;
+
+    color: #1b1208;
+    background: linear-gradient(to right, #ffe18a, #d7ad56);
+
+    border: 0;
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.august-reward-contents {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+
+    display: none;
+    gap: 8px;
+
+    background: rgba(0, 0, 0, 0.32);
+
+    border: 1px solid rgba(139, 231, 196, 0.18);
+    border-radius: 14px;
+}
+
+.august-reward-contents.active {
+    display: grid;
+}
+
+.august-reward-content-item {
+    padding: 8px;
+
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 8px;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.24);
+
+    border: 1px solid rgba(255, 225, 138, 0.14);
+    border-radius: 10px;
+}
+
+.august-reward-content-item img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+}
+
+.august-reward-content-item strong {
+    display: block;
+
+    color: #ffe18a;
+
+    font-size: 13px;
+    line-height: 1.15;
+    text-align: left;
+}
+
+.august-reward-content-item span {
+    display: block;
+    margin-top: 3px;
+
+    color: #8be7c4;
+
+    font-size: 12px;
+    font-weight: 900;
+    text-align: left;
+}
+
+/* =========================
+   SONRAKİ AŞAMA / NOTLAR
+========================= */
 
 .august-next-target {
     margin-bottom: 24px;
@@ -480,27 +1202,27 @@
     font-size: 14px;
 }
 
-/* NOTLAR */
-
 .august-note-list {
     display: grid;
     gap: 10px;
 }
 
 .august-note-list p {
-    padding: 12px 14px;
+    margin: 0;
+    padding: 14px;
 
-    color: #d8f3e7;
-    background: rgba(0, 0, 0, 0.32);
+    color: #f7f3dd;
+    background: rgba(0, 0, 0, 0.28);
 
-    border-left: 4px solid #8be7c4;
-    border-radius: 12px;
+    border: 1px solid rgba(255, 225, 138, 0.16);
+    border-radius: 14px;
 
-    font-size: 15px;
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
-/* MOBİL */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 1050px) {
     .august-hero,
@@ -516,339 +1238,11 @@
         height: 320px;
     }
 
-    .august-character-grid,
-    .august-method-grid,
-    .august-item-grid {
+    .august-character-grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 620px) {
-    .august-meta-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .august-character-card,
-    .august-method-card,
-    .august-item-card {
-        grid-template-columns: 1fr;
-    }
-
-    .august-character-card img,
-    .august-method-card img,
-    .august-item-card img {
-        width: 100%;
-        height: 180px;
-    }
-
-    .august-item-card img {
-        object-fit: contain;
-    }
-
-    .august-hero-card {
-        height: 240px;
-    }
-}
-.august-main-item-box {
-    margin-bottom: 24px;
-    padding: 18px;
-
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 18px;
-    align-items: center;
-
-    background:
-        radial-gradient(circle at left, rgba(255, 225, 138, 0.14), transparent 48%),
-        rgba(0, 0, 0, 0.34);
-
-    border: 1px solid rgba(255, 225, 138, 0.26);
-    border-radius: 18px;
-}
-
-.august-main-item-box img {
-    width: 110px;
-    height: 110px;
-    object-fit: contain;
-
-    border: 1px solid rgba(255, 225, 138, 0.24);
-    border-radius: 16px;
-    background: rgba(0, 0, 0, 0.28);
-}
-
-.august-main-item-box span {
-    display: block;
-    margin-bottom: 5px;
-
-    color: #8be7c4;
-
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.august-main-item-box strong {
-    display: block;
-    margin-bottom: 5px;
-
-    color: #ffe18a;
-
-    font-size: 28px;
-    line-height: 1.1;
-}
-
-.august-main-item-box em {
-    display: inline-block;
-    margin-bottom: 8px;
-    padding: 4px 9px;
-
-    color: #1b1208;
-    background: linear-gradient(to right, #ffe18a, #d7ad56);
-
-    border-radius: 999px;
-
-    font-style: normal;
-    font-weight: 900;
-}
-
-.august-main-item-box p {
-    color: #d8f3e7;
-
-    font-size: 16px;
-    line-height: 1.45;
-}
-
-.august-mini-character-list {
-    margin-top: 14px;
-
-    display: grid;
-    gap: 10px;
-}
-
-.august-mini-character {
-    display: grid;
-    grid-template-columns: 74px 1fr;
-    gap: 12px;
-    align-items: center;
-
-    padding: 10px;
-
-    background: rgba(0, 0, 0, 0.28);
-
-    border: 1px solid rgba(139, 231, 196, 0.14);
-    border-radius: 14px;
-}
-
-.august-mini-character img {
-    width: 66px;
-    height: 66px;
-
-    object-fit: cover;
-    object-position: center;
-
-    border: 1px solid rgba(255, 225, 138, 0.22);
-    border-radius: 12px;
-}
-
-.august-mini-character span {
-    display: inline-block;
-    margin-bottom: 4px;
-    padding: 3px 7px;
-
-    color: #1b1208;
-    background: #8be7c4;
-
-    border-radius: 999px;
-
-    font-size: 11px;
-    font-weight: 900;
-}
-
-.august-mini-character strong {
-    display: block;
-    margin-bottom: 4px;
-
-    color: #ffe18a;
-
-    font-size: 16px;
-    line-height: 1.15;
-}
-
-.august-mini-character em {
-    color: #d7ad56;
-
-    font-size: 13px;
-    font-style: normal;
-}
-
-@media (max-width: 620px) {
-    .august-main-item-box,
-    .august-mini-character {
-        grid-template-columns: 1fr;
-    }
-
-    .august-main-item-box img,
-    .august-mini-character img {
-        width: 100%;
-        height: 160px;
-    }
-
-    .august-main-item-box img {
-        object-fit: contain;
-    }
-}
-/* AĞUSTOS - ELDE ETME YOLLARI YENİ TASARIM */
-
-.august-method-grid {
-    display: block;
-}
-
-.august-method-list {
-    display: grid;
-    gap: 18px;
-}
-
-.august-method-row {
-    display: grid;
-    grid-template-columns: 52px 260px 1fr;
-    gap: 18px;
-    align-items: center;
-
-    padding: 18px;
-
-    background:
-        radial-gradient(circle at left, rgba(255, 225, 138, 0.10), transparent 42%),
-        rgba(0, 0, 0, 0.34);
-
-    border: 1px solid rgba(139, 231, 196, 0.18);
-    border-radius: 18px;
-}
-
-.august-method-number {
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #1b1208;
-    background: linear-gradient(to bottom, #ffe18a, #c98a32);
-
-    border-radius: 50%;
-
-    font-size: 22px;
-    font-weight: 900;
-}
-
-.august-method-image {
-    width: 260px;
-    height: 120px;
-
-    overflow: hidden;
-
-    background: rgba(0, 0, 0, 0.26);
-
-    border: 1px solid rgba(255, 225, 138, 0.22);
-    border-radius: 14px;
-}
-
-.august-method-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-.august-method-content strong {
-    display: block;
-    margin-bottom: 8px;
-
-    color: #ffe18a;
-
-    font-size: 24px;
-    line-height: 1.1;
-}
-
-.august-method-content p {
-    color: #d8f3e7;
-
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Görsel olmayan yöntemlerde içerik genişlesin */
-.august-method-row:has(.august-method-content):not(:has(.august-method-image)) {
-    grid-template-columns: 52px 1fr;
-}
-
-/* Ağustos karakterleri mini kartları */
-.august-mini-character-list {
-    margin-top: 16px;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.august-mini-character {
-    display: grid;
-    grid-template-columns: 92px 1fr;
-    gap: 12px;
-    align-items: center;
-
-    padding: 12px;
-
-    background: rgba(0, 0, 0, 0.28);
-
-    border: 1px solid rgba(139, 231, 196, 0.16);
-    border-radius: 14px;
-}
-
-.august-mini-character img {
-    width: 84px;
-    height: 84px;
-
-    object-fit: cover;
-    object-position: center;
-
-    border: 1px solid rgba(255, 225, 138, 0.24);
-    border-radius: 12px;
-}
-
-.august-mini-character span {
-    display: inline-block;
-    margin-bottom: 5px;
-    padding: 3px 8px;
-
-    color: #1b1208;
-    background: #8be7c4;
-
-    border-radius: 999px;
-
-    font-size: 11px;
-    font-weight: 900;
-}
-
-.august-mini-character strong {
-    display: block;
-    margin-bottom: 5px;
-
-    color: #ffe18a;
-
-    font-size: 17px;
-    line-height: 1.15;
-}
-
-.august-mini-character em {
-    color: #d7ad56;
-
-    font-size: 13px;
-    font-style: normal;
-}
-
-/* Mobil */
 @media (max-width: 900px) {
     .august-method-row {
         grid-template-columns: 52px 1fr;
@@ -860,287 +1254,77 @@
         height: 180px;
     }
 
-    .august-mini-character-list {
+    .august-mini-character-list,
+    .august-region-grid,
+    .august-region-boxes,
+    .august-jeweler-grid {
         grid-template-columns: 1fr;
+    }
+
+    .august-big-flow,
+    .august-bone-flow,
+    .august-choice-result {
+        justify-content: center;
+    }
+
+    .august-choice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .august-choice-or {
+        padding: 4px 0;
     }
 }
 
 @media (max-width: 620px) {
-    .august-method-row {
+    .august-meta-grid {
         grid-template-columns: 1fr;
     }
 
-    .august-method-number {
-        margin-bottom: -4px;
+    .august-hero-card {
+        height: 240px;
+    }
+
+    .august-main-item-box,
+    .august-character-card,
+    .august-mini-character,
+    .august-jeweler-card,
+    .august-method-row,
+    .august-exchange-row {
+        grid-template-columns: 1fr;
+    }
+
+    .august-main-item-box img,
+    .august-character-card img,
+    .august-mini-character img,
+    .august-jeweler-card img {
+        width: 100%;
+        height: 170px;
+    }
+
+    .august-main-item-box img {
+        object-fit: contain;
     }
 
     .august-method-image {
         height: 170px;
     }
 
-    .august-mini-character {
-        grid-template-columns: 1fr;
+    .august-exchange-arrow {
+        transform: rotate(90deg);
     }
 
-    .august-mini-character img {
-        width: 100%;
-        height: 170px;
-    }
-}
-.august-location-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 14px;
-}
-
-.august-location-tags span {
-    display: inline-block;
-    padding: 8px 12px;
-
-    color: #fff4cf;
-    background: rgba(255, 225, 138, 0.10);
-
-    border: 1px solid rgba(255, 225, 138, 0.28);
-    border-radius: 999px;
-
-    font-size: 14px;
-    font-weight: 800;
-}
-.august-source-flow {
-    margin-top: 16px;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-}
-
-.august-source-item {
-    width: 130px;
-    min-height: 142px;
-    padding: 12px;
-
-    display: grid;
-    justify-items: center;
-    align-content: start;
-    gap: 8px;
-
-    background: rgba(0, 0, 0, 0.30);
-
-    border: 1px solid rgba(139, 231, 196, 0.22);
-    border-radius: 16px;
-}
-
-.august-source-item img {
-    width: 82px;
-    height: 82px;
-
-    object-fit: contain;
-}
-
-.august-source-item strong {
-    color: #ffe18a;
-
-    font-size: 14px;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.august-region-boxes {
-    margin-top: 16px;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
-    gap: 12px;
-}
-
-.august-region-box {
-    padding: 15px;
-
-    background:
-        radial-gradient(circle at top left, rgba(255, 225, 138, 0.14), transparent 48%),
-        rgba(0, 0, 0, 0.32);
-
-    border: 1px solid rgba(255, 225, 138, 0.24);
-    border-radius: 16px;
-}
-
-.august-region-box span {
-    display: inline-block;
-    margin-bottom: 7px;
-    padding: 4px 9px;
-
-    color: #1b1208;
-    background: #8be7c4;
-
-    border-radius: 999px;
-
-    font-size: 12px;
-    font-weight: 900;
-}
-
-.august-region-box strong {
-    display: block;
-
-    color: #ffe18a;
-
-    font-size: 22px;
-    line-height: 1.15;
-}
-
-@media (max-width: 620px) {
-    .august-source-flow {
-        justify-content: center;
+    .august-big-flow-card,
+    .august-bone-flow-item,
+    .august-choice-card {
+        width: 145px;
+        min-height: 170px;
     }
 
-    .august-region-boxes {
-        grid-template-columns: 1fr;
-    }
-
-    .august-source-item {
-        width: 120px;
-    }
-}
-.august-feeding-stage-list {
-    display: grid;
-    gap: 20px;
-}
-
-.august-feeding-stage {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.30);
-    border: 1px solid rgba(255, 225, 138, 0.18);
-    border-radius: 20px;
-}
-
-.august-feeding-stage-header {
-    margin-bottom: 10px;
-}
-
-.august-feeding-stage-label {
-    display: inline-block;
-    margin-bottom: 8px;
-    padding: 6px 12px;
-    color: #1b1208;
-    background: linear-gradient(to right, #ffe18a, #d7ad56);
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 900;
-}
-
-.august-feeding-stage-header h4 {
-    margin: 0;
-    color: #ffe18a;
-    font-size: 28px;
-    line-height: 1.2;
-}
-
-.august-feeding-stage-text {
-    margin: 0 0 16px;
-    color: #f7f3dd;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.august-region-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-top: 12px;
-}
-
-.august-region-card {
-    padding: 16px;
-    background: rgba(0, 0, 0, 0.28);
-    border: 1px solid rgba(139, 231, 196, 0.20);
-    border-radius: 16px;
-}
-
-.august-region-card span {
-    display: inline-block;
-    margin-bottom: 8px;
-    padding: 4px 10px;
-    color: #1b1208;
-    background: #8be7c4;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 900;
-}
-
-.august-region-card strong {
-    display: block;
-    color: #ffe18a;
-    font-size: 24px;
-    line-height: 1.2;
-}
-
-.august-big-flow {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 18px;
-}
-
-.august-big-flow-card {
-    width: 170px;
-    min-height: 200px;
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(0, 0, 0, 0.34);
-    border: 1px solid rgba(139, 231, 196, 0.20);
-    border-radius: 18px;
-    text-align: center;
-}
-
-.august-big-flow-card img {
-    width: 110px;
-    height: 110px;
-    object-fit: contain;
-    margin-bottom: 12px;
-    border: 1px solid rgba(255, 225, 138, 0.22);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.august-big-flow-card strong {
-    color: #ffe18a;
-    font-size: 24px;
-    line-height: 1.2;
-}
-
-.august-big-flow-symbol {
-    color: #ffe18a;
-    font-size: 34px;
-    font-weight: 900;
-    line-height: 1;
-}
-
-@media (max-width: 900px) {
-    .august-region-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .august-big-flow {
-        justify-content: center;
-    }
-
-    .august-big-flow-card {
-        width: 150px;
-        min-height: 185px;
-    }
-
-    .august-big-flow-card img {
-        width: 96px;
-        height: 96px;
-    }
-
-    .august-big-flow-card strong {
-        font-size: 20px;
+    .august-big-flow-card img,
+    .august-bone-flow-item img,
+    .august-choice-card img {
+        width: 82px;
+        height: 82px;
     }
 }
