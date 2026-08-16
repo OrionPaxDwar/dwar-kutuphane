@@ -91,7 +91,28 @@ const natureEventSteps = [
                         image: natureCharacterPath + "bitkici-magron.png"
                     },
 
-                    resources: []
+                    resources: [
+                        {
+                            name: "Anemon Çiçeği",
+                            amount: "50",
+                            image: natureResourcePath + "anemon.png"
+                        },
+                        {
+                            name: "Güzelavrat Otu",
+                            amount: "50",
+                            image: natureResourcePath + "guzelavrat-otu.png"
+                        },
+                        {
+                            name: "Zambak",
+                            amount: "50",
+                            image: natureResourcePath + "zambak.png"
+                        },
+                        {
+                            name: "Sümbül Çiçeği",
+                            amount: "50",
+                            image: natureResourcePath + "sumbul-cicegi.png"
+                        }
+                    ]
                 },
 
                 {
@@ -101,19 +122,40 @@ const natureEventSteps = [
 
                     humanNpc: {
                         race: "İnsan",
-                        name: "İnsan Balıkçı NPC",
-                        location: "Konum eklenecek",
-                        image:natureCharacterPath + "balikci-insan.png"
+                        name: "İnsan Balıkçı Nealon",
+                        location: "Karat Dağlıkları",
+                        image:natureCharacterPath + "balikci-nealon.png"
                     },
 
                     magronNpc: {
                         race: "Magron",
-                        name: "Magron Balıkçı NPC",
-                        location: "Konum eklenecek",
-                        image: natureCharacterPath + "balikci-magron.png"
+                        name: "Magron Balıkçı Verniz",
+                        location: "Sinsi Göl",
+                        image: natureCharacterPath + "balikci-verniz.png"
                     },
 
-                    resources: []
+                    resources: [
+                        {
+                            name: "Elmas Som Balığı",
+                            amount: "50",
+                            image: natureResourcePath + "elmas-som-baligi.png"
+                        },
+                        {
+                            name: "Kırmızı Şabut Balığı",
+                            amount: "50",
+                            image: natureResourcePath + "kirmizi-sabut-baligi.png"
+                        },
+                        {
+                            name: "Gök Mavisi Somon",
+                            amount: "50",
+                            image: natureResourcePath + "gok-mavisi-somon.png"
+                        },
+                        {
+                            name: "Billur Mersin Balığı",
+                            amount: "50",
+                            image: natureResourcePath + "billur-mersini-baligi.png"
+                        }
+                    ]
                 }
             ]
         },
@@ -122,7 +164,7 @@ const natureEventSteps = [
     title: "Ek Görev: Saldırgan Oduni Kesme",
     repeat: "12 saatte bir",
 
-    description: "Oduni kesme görevi ormancıdan alınır. Görev alındıktan sonra 3 adet Saldırgan Oduni saldırır. Her Saldırgan Oduni 6681 cana sahiptir. Üçü de kesildikten sonra 50 Doğanın Koruyucuları Jetonu alınır.",
+    description: "Oduni kesme görevi ormancıdan alınır. Görev alındıktan sonra 3 adet Saldırgan Oduni saldırır. Her Saldırgan Oduni  seviyenize göre gelmektedir. Üçü de kesildikten sonra 50 Doğanın Koruyucuları Jetonu alınır.",
 
     reward: {
         name: "Doğanın Koruyucuları Jetonu",
@@ -157,7 +199,7 @@ const natureEventSteps = [
             "Meslek kaynak takası 4 gün boyunca devam eder.",
             "Her meslek grubu kendi meslek NPC'sine gider.",
             "Oduni kesme görevi ormancıdan alınır ve 12 saatte bir tekrar eder.",
-            "Ormancıdan alınan ek görevde 3 adet Saldırgan Oduni kesilir. Her biri 6681 cana sahiptir."
+            "Ormancıdan alınan ek görevde seviyenize göre 3 adet Saldırgan Oduni kesilir."
         ]
     }
 ];
