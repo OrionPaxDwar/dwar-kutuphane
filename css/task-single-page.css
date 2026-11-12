@@ -1,0 +1,27 @@
+/* Tek sayfalık görev arşivi düzenlemeleri */
+body { min-height: 100vh; }
+.fan-quests-page { width: min(1440px, 96%); margin: 0 auto; padding: 38px 0 28px; }
+.fan-quests-hero { width: 100%; }
+.quest-tabs { width: min(1250px, 96%); display:flex; justify-content:center; gap:12px; margin: -8px auto 0; }
+.quest-tab { padding:13px 26px; color:#ead7b3; background:rgba(8,6,4,.86); border:1px solid rgba(245,210,122,.3); border-radius:12px; font-weight:800; cursor:pointer; transition:.2s; }
+.quest-tab:hover,.quest-tab.active { color:#2a0d04; background:linear-gradient(to bottom,#ffe18a,#d79a28); border-color:#ffe18a; }
+.fan-filter-panel { width:100%; }
+.fan-layout { width:100%; }
+.legal-top-btn { position:fixed; z-index:1000; top:16px; right:18px; padding:10px 15px; color:#ffe18a; background:rgba(10,8,6,.92); border:1px solid rgba(255,225,138,.55); border-radius:9px; cursor:pointer; font-weight:700; }
+.legal-modal { display:none; position:fixed; inset:0; z-index:1100; align-items:center; justify-content:center; padding:20px; }
+.legal-modal.active { display:flex; }
+.legal-modal-overlay { position:absolute; inset:0; background:rgba(0,0,0,.82); }
+.legal-modal-content { position:relative; z-index:1; width:min(760px,100%); max-height:85vh; overflow:auto; padding:30px; color:#ead7b3; background:#17100a; border:1px solid rgba(255,225,138,.5); border-radius:18px; }
+.legal-modal-content h2 { color:#ffe18a; margin:0 40px 20px 0; }
+.legal-modal-text h3 { color:#f5d27a; margin:18px 0 7px; }
+.legal-modal-text p { line-height:1.6; margin-bottom:10px; }
+.legal-modal-close { position:absolute; top:12px; right:16px; color:#ffe18a; background:none; border:0; font-size:32px; cursor:pointer; }
+.task-footer { width:100%; text-align:center; color:#a99470; font-size:13px; padding:20px 0 4px; }
+@media(max-width:800px) {
+ .fan-quests-page { padding-top:72px; }
+ .quest-tabs { display:grid; grid-template-columns:1fr 1fr; }
+ .quest-tab { padding:12px 8px; }
+ .fan-filter-panel { grid-template-columns:1fr; }
+ .fan-layout { grid-template-columns:1fr; }
+ .fan-sidebar { position:static; max-height:360px; }
+}

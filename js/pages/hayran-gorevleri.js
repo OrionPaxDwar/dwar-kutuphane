@@ -2,9 +2,9 @@ const fanMenuList = document.getElementById("fanMenuList");
 const fanDetailArea = document.getElementById("fanDetailArea");
 const fanSearchInput = document.getElementById("fanSearchInput");
 const fanLevelFilter = document.getElementById("fanLevelFilter");
-const fanMedalFilter = document.getElementById("fanMedalFilter");
 const fanResetBtn = document.getElementById("fanResetBtn");
 
+let pageQuestType = "hayran";
 let activeQuestId = null;
 
 function normalizeText(text) {
@@ -26,9 +26,12 @@ function normalizeText(text) {
 function getFilteredQuests() {
     const searchValue = normalizeText(fanSearchInput.value);
     const levelValue = fanLevelFilter.value;
-    const medalValue = fanMedalFilter.value;
-
     return fanQuests.filter(function (quest) {
+        const categoryMatch =
+            quest.medal === pageQuestType ||
+            (pageQuestType === "hayran" && quest.medal === "ozel");
+
+        if (!categoryMatch) return false;
         const searchableText = normalizeText(`
             ${quest.reputation}
             ${quest.questName}
@@ -44,11 +47,7 @@ function getFilteredQuests() {
             levelValue === "all" ||
             String(quest.level) === levelValue;
 
-        const medalMatch =
-            medalValue === "all" ||
-            quest.medal === medalValue;
-
-        return textMatch && levelMatch && medalMatch;
+        return textMatch && levelMatch;
     });
 }
 
@@ -317,15 +316,24 @@ function renderFanPage() {
 
 fanSearchInput.addEventListener("input", renderFanPage);
 fanLevelFilter.addEventListener("change", renderFanPage);
-fanMedalFilter.addEventListener("change", renderFanPage);
 
 fanResetBtn.addEventListener("click", function () {
     fanSearchInput.value = "";
     fanLevelFilter.value = "all";
-    fanMedalFilter.value = "all";
     activeQuestId = null;
 
     renderFanPage();
+});
+
+document.querySelectorAll("[data-quest-tab]").forEach(function (tab) {
+    tab.addEventListener("click", function () {
+        pageQuestType = tab.dataset.questTab;
+        document.querySelectorAll("[data-quest-tab]").forEach(function (item) {
+            item.classList.toggle("active", item === tab);
+        });
+        activeQuestId = null;
+        renderFanPage();
+    });
 });
 
 renderFanPage();

@@ -1,5 +1,5 @@
-const kaynakPath = "../../assents/images/kaynaklar/";
-const madalyonPath = "../../assents/images/madalyonlar/"
+const kaynakPath = "assents/images/kaynaklar/";
+const madalyonPath = "assents/images/madalyonlar/"
 function item(name, amount, image) {
     return {
         name: name,
@@ -303,7 +303,7 @@ const fanQuests = [
                     item("Adamotu", "500", "adamotu.png"),
                     item("Anemon", "500", "anemon.png"),
                     item("Lotus", "2000", "lotus.png"),
-                    item("Güzelavratotu", "3000", "guzelavratotu.png")
+                    item("Güzelavratotu", "3000", "guzelavrat-otu.png")
                 ]
             }
         ],

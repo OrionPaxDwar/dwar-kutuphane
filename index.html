@@ -2,155 +2,89 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dwar Kütüphane</title>
-
-    <!-- TEMEL CSS -->
+    <meta name="theme-color" content="#100c08">
+    <title>Hayran ve Yücelik Görevleri | Dwar</title>
     <link rel="stylesheet" href="css/base/reset.css">
     <link rel="stylesheet" href="css/base/layout.css">
     <link rel="stylesheet" href="css/base/buttons.css">
-
-    <!-- BİLEŞEN CSS -->
-    <link rel="stylesheet" href="css/components/cards.css">
-
-    <!-- SAYFA CSS -->
-    <link rel="stylesheet" href="css/pages/home.css">
-
-    <!-- MOBİL CSS -->
+    <link rel="stylesheet" href="css/components/info-boxes.css">
+    <link rel="stylesheet" href="css/components/tables.css">
+    <link rel="stylesheet" href="css/pages/hayran-gorevleri.css">
     <link rel="stylesheet" href="css/base/responsive.css">
+    <link rel="stylesheet" href="css/task-single-page.css">
 </head>
-
 <body>
-<button class="legal-top-btn" id="openLegalModal">
-    KVKK / Yasal Bilgilendirme
-</button>
-    <main class="home-page">
+    <button class="legal-top-btn" id="openLegalModal" type="button">KVKK / Yasal Bilgilendirme</button>
 
-        <section class="hero-title">
-            <h1>DWAR KÜTÜPHANE</h1>
+    <main class="page-shell fan-quests-page">
+        <header class="fan-quests-hero">
+            <span>DWAR GÖREV ARŞİVİ</span>
+            <h1>Görev Rehberi</h1>
+            <p>Hayran ve Yücelik görevleri, gerekli kaynaklar, NPC konumları ve görev notları.</p>
+        </header>
 
-            <p>
-                Dragons War dünyasının görev, karakter, yaratık, itibar, mağaza ve etkinlik arşivi
-            </p>
+        <nav class="quest-tabs" aria-label="Görev türü">
+            <button class="quest-tab active" type="button" data-quest-tab="hayran">Hayran Görevleri</button>
+            <button class="quest-tab" type="button" data-quest-tab="yucelik">Yücelik Görevleri</button>
+        </nav>
+
+        <section class="fan-filter-panel">
+            <label>
+                Görev Ara
+                <input type="search" id="fanSearchInput" placeholder="Görev, itibar, NPC veya konum ara...">
+            </label>
+            <label>
+                Seviye
+                <select id="fanLevelFilter">
+                    <option value="all">Tüm Seviyeler</option>
+                    <option value="5">Sv5</option>
+                    <option value="6">Sv6</option>
+                    <option value="7">Sv7</option>
+                    <option value="11">Sv11</option>
+                    <option value="12">Sv12</option>
+                    <option value="15">Sv15</option>
+                    <option value="16">Sv16</option>
+                </select>
+            </label>
+            <button class="gold-btn" id="fanResetBtn" type="button">Filtreyi Temizle</button>
         </section>
 
-        <section class="home-card-menu">
-
-            <a href="#" class="home-menu-card">
-                <img src="assents/images/menu-kartlari/gorevler.jpg" alt="Görevler">
-
-                <div class="home-card-content">
-                    <h2>Görevler</h2>
-                    <p>Görev zincirleri, gerekli eşyalar ve görev rehberleri.</p>
-                </div>
-            </a>
-
-            <a href="pages/itibarlar.html" class="home-menu-card">
-                <img src="assents/images/menu-kartlari/itibarlar.jpg" alt="İtibarlar">
-
-                <div class="home-card-content">
-                    <h2>İtibarlar</h2>
-                    <p>İtibar kasma yöntemleri, madalyonlar, kaynaklar ve görevler.</p>
-                </div>
-            </a>
-
-            <a href="pages/magazalar.html" class="home-menu-card">
-                <img src="assents/images/menu-kartlari/magazalar.jpg" alt="Mağazalar">
-
-                <div class="home-card-content">
-                    <h2>Mağazalar</h2>
-                    <p>Sezonluk, maraton, etkinlik ve özel mağazalar.</p>
-                </div>
-            </a>
-
-            <a href="pages/etkinlikler.html" class="home-menu-card">
-                <img src="assents/images/menu-kartlari/etkinlikler.jpg" alt="Etkinlikler">
-
-                <div class="home-card-content">
-                    <h2>Etkinlikler</h2>
-                    <p>Özel etkinlikler, dönemsel görevler, ödüller ve mağaza bağlantıları.</p>
-                </div>
-            </a>
-            <a href="pages/kilavuzlar.html" class="home-menu-card">
-    <img src="assents/images/menu-kartlari/kilavuzlar.jpg" alt="Kılavuzlar">
-
-    <div class="card-content">
-        <h2>Kılavuzlar</h2>
-        <p>Oyun sistemleri, geçiş rehberleri ve pratik bilgiler.</p>
-    </div>
-</a>
-
+        <section class="fan-layout">
+            <aside class="fan-sidebar">
+                <div class="fan-sidebar-title">Görev Listesi</div>
+                <div class="fan-menu-list" id="fanMenuList"></div>
+            </aside>
+            <section class="fan-detail-area" id="fanDetailArea" aria-live="polite">
+                <div class="fan-detail-empty">Görevler yükleniyor...</div>
+            </section>
         </section>
-<div class="legal-modal" id="legalModal">
-    <div class="legal-modal-overlay" id="closeLegalOverlay"></div>
+        <footer class="task-footer">Dwar Görev Arşivi · Bilgilendirme ve rehber amaçlıdır.</footer>
+    </main>
 
-    <div class="legal-modal-content">
-
-        <button class="legal-modal-close" id="closeLegalModal">
-            ×
-        </button>
-
-        <h2>KVKK ve Yasal Bilgilendirme</h2>
-
-        <div class="legal-modal-text">
-
-            <h3>1. Genel Bilgilendirme</h3>
-
-            <p>
-                Bu site, oyuncular için hazırlanmış bağımsız bir Dwar Kütüphane rehber arşividir.
-                Site resmi oyun sitesi değildir.
-            </p>
-
-            <p>
-                Oyun içi isimler, görseller, ikonlar, görev bilgileri, kaynak adları ve benzeri içerikler
-                ilgili hak sahiplerine ve <strong>dwar.gen.tr</strong> adresine aittir.
-            </p>
-
-            <h3>2. İçerik Kullanımı</h3>
-
-            <p>
-                Bu sitede yer alan bilgiler oyunculara rehberlik etmek amacıyla düzenlenmiştir.
-                İçerikler ticari amaçla değil, bilgilendirme ve arşivleme amacıyla sunulmaktadır.
-            </p>
-
-            <p>
-                Hak sahibi olduğunuz bir içeriğin kaldırılması, düzeltilmesi veya kaynak gösterimiyle ilgili
-                bir talebiniz varsa site yöneticisiyle iletişime geçebilirsiniz.
-            </p>
-
-            <h3>3. Kişisel Veriler Hakkında Bilgilendirme</h3>
-
-            <p>
-                Bu sitede üyelik sistemi, giriş paneli, yorum alanı, iletişim formu, e-posta toplama alanı
-                veya ziyaretçilere ait kişisel veri toplayan herhangi bir sistem bulunmamaktadır.
-            </p>
-
-            <p>
-                Ziyaretçilerden ad, soyad, e-posta, telefon numarası, oyuncu hesabı bilgisi veya benzeri
-                kişisel veri talep edilmez ve saklanmaz.
-            </p>
-
-            <h3>4. Çerez ve Takip Sistemleri</h3>
-
-            <p>
-                Bu sitede kullanıcı davranışlarını takip eden özel bir çerez, analiz sistemi veya reklam takip
-                sistemi kullanılmamaktadır.
-            </p>
-
-            <h3>5. Değişiklik Hakkı</h3>
-
-            <p>
-                İleride siteye üyelik, yorum, iletişim formu, çekiliş katılım alanı veya benzeri veri toplayan
-                bir sistem eklenirse KVKK Aydınlatma Metni ayrıca güncellenecektir.
-            </p>
-
+    <div class="legal-modal" id="legalModal">
+        <div class="legal-modal-overlay" id="closeLegalOverlay"></div>
+        <div class="legal-modal-content" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+            <button class="legal-modal-close" id="closeLegalModal" type="button" aria-label="Kapat">×</button>
+            <h2 id="legalTitle">KVKK ve Yasal Bilgilendirme</h2>
+            <div class="legal-modal-text">
+                <h3>1. Genel Bilgilendirme</h3>
+                <p>Bu site, oyuncular için hazırlanmış bağımsız bir Dwar görev rehberi arşividir. Site resmi oyun sitesi değildir.</p>
+                <p>Oyun içi isimler, görseller, ikonlar, görev bilgileri ve benzeri içerikler ilgili hak sahiplerine ve dwar.gen.tr adresine aittir.</p>
+                <h3>2. İçerik Kullanımı</h3>
+                <p>Bilgiler oyunculara rehberlik etmek amacıyla sunulmaktadır. Hak sahibi olduğunuz bir içeriğin kaldırılması veya düzeltilmesiyle ilgili talebiniz varsa site yöneticisiyle iletişime geçebilirsiniz.</p>
+                <h3>3. Kişisel Veriler</h3>
+                <p>Bu sitede üyelik, giriş paneli, yorum alanı, iletişim formu veya e-posta toplama alanı bulunmamaktadır. Ziyaretçilerden kişisel veri talep edilmez ve site tarafından saklanmaz.</p>
+                <h3>4. Çerez ve Takip Sistemleri</h3>
+                <p>Bu sitede kullanıcı davranışlarını takip eden özel bir çerez, analiz veya reklam takip sistemi kullanılmamaktadır.</p>
+                <h3>5. Değişiklik Hakkı</h3>
+                <p>İleride kişisel veri toplayan bir sistem eklenirse bu bilgilendirme metni güncellenecektir.</p>
+            </div>
         </div>
-
     </div>
-</div>
 
+    <script src="data/itibarlar/hayran-kaynaklari.js"></script>
+    <script src="js/pages/hayran-gorevleri.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
